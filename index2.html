@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Адаптивное меню</title>
+        <link rel="stylesheet" href="./header.css">
+    </head>
+    <body>
+        <header>
+            <nav class="main-nav">
+                <div class="logo">Компания</div>
+
+                <!-- Основное меню -->
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">О нас</a></li>
+                    <li><a href="#price" class="nav-link">Прайс</a></li>
+                    <li><a href="#contacts" class="nav-link">Контакты</a></li>
+                </ul>
+
+                <!-- Бургер меню -->
+                <div class="burger" id="burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </header>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.getElementById('burger');
+            const navList = document.querySelector('.nav-list');
+
+            burger.addEventListener('click', () => {
+                navList.classList.toggle('active');
+            });
+        });
+    </script>
+    </body>
+</html>
