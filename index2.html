@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Адаптивное меню</title>
+ <link rel="stylesheet" href="./css/header.css">
+ <link rel="stylesheet" href="./css/main_photo.css">
+</head>
+<body>
+ <header>
+ <nav class="main-nav">
+ <div class="logo">Компания</div>
+ 
+ <!-- Основное меню -->
+ <ul class="nav-list">
+ <li><a href="#about" class="nav-link">О нас</a></li>
+ <li><a href="#price" class="nav-link">Прайс</a></li>
+ <li><a href="#contacts" class="nav-link">Контакты</a></li>
+ </ul>
+ 
+ <!-- Бургер меню -->
+ <div class="burger-wrapper">
+ <div class="burger" id="burger">
+ <div class="line"></div>
+ <div class="line"></div>
+ <div class="line"></div>
+ </div>
+ </div>
+ 
+ <!-- Мобильное меню -->
+ <ul class="mobile-menu" id="mobileMenu">
+ <li><a href="#about" class="nav-link">О нас</a></li>
+ <li><a href="#price" class="nav-link">Прайс</a></li>
+ <li><a href="#contacts" class="nav-link">Контакты</a></li>
+ </ul>
+ </nav>
+ </header>
+
+ <section class="main-photo">
+  <div class="container">
+   <h1>Ремонт квартир без посредников</h1>
+  </div>
+ </section>
+
+ <script>
+ document.addEventListener('DOMContentLoaded', () => {
+ const burger = document.getElementById('burger');
+ const mobileMenu = document.getElementById('mobileMenu');
+
+ burger.addEventListener('click', () => {
+ mobileMenu.classList.toggle('active');
+ });
+ });
+ </script>
+</body>
+</html>

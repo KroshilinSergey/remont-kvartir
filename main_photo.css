@@ -1,0 +1,47 @@
+/* Существующие стили... */
+
+.main-photo {
+ background-image: url('https://client-setting-co-institucional-images.s3.amazonaws.com/credito_para_remodelar_vivienda_f2f5661138.jpg');
+ background-size: cover;
+ background-position: center;
+ height: 600px; /* Высота секции */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: #fff;
+}
+
+.main-photo h1 {
+ font-size: 3rem;
+ font-weight: 700;
+ text-align: center;
+ text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+ margin: 0;
+ padding: 0 2rem;
+}
+
+.container {
+ width: 90%;
+ max-width: 1200px;
+ margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+ .main-photo {
+  height: 400px;
+ }
+ 
+ .main-photo h1 {
+  font-size: 2.5rem;
+ }
+}
+
+@media (max-width: 480px) {
+ .main-photo {
+  height: 300px;
+ }
+ 
+ .main-photo h1 {
+  font-size: 2rem;
+ }
+}
