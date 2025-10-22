@@ -1,0 +1,154 @@
+/* Основные стили для страницы */
+.main-photo {
+  background-image: url('https://github.com/KroshilinSergey/remont-kvartir/blob/main/Фото%201.jpg?raw=true');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding-top: 86px;
+  padding: 100px 0px 20px 0px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Стили для выпадающего меню */
+.menu {
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+/* Стили для стрелки */
+.dropdown::after {
+  content: '\25BC';
+  /* Символ стрелки вниз */
+  position: absolute;
+  right: -2px;
+  top: 35%;
+  transform-origin: center;
+  /* Точка вращения - центр */
+  transform-origin: center;
+  /* Точка вращения */
+  transition: transform 1s ease;
+  /* Плавная анимация */
+  font-size: 14px;
+  color: white;
+  /* Цвет стрелки */
+}
+
+.dropdown:hover::after {
+  transform: rotate(180deg) translateY(-50%);
+  transform-origin: center;
+}
+
+/* Стили для контента выпадающего меню */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  /* Плавность появления */
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    opacity 0.3s ease,
+    max-height 0.3s ease,
+    transform 0.3s ease;
+  transform: translateY(-10px);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  max-height: 300px;
+  transform: translateY(0);
+}
+
+
+/* Показать выпадающий список при наведении на кнопку */
+.dropdown:hover .dropdown-content a {
+  display: block;
+  color: black;
+}
+
+/* Анимация появления ссылок */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+/* Стили для ссылок */
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  transition: background-color 0.3s ease;
+  /* Плавная анимация при наведении */
+}
+
+.menu a:hover {
+  background-color: #a4e873;
+  color: #fff;
+  /* Изменение цвета текста при наведении */
+  border-radius: 5px;
+  /* Скругленные углы */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  /* Тень для эффекта глубины */
+}
+
+/* Дополнительные стили для активного состояния ссылки */
+.menu a.active {
+  background-color: #333;
+  font-weight: bold;
+  /* Жирный шрифт для активного элемента */
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+  .menu a {
+    padding: 8px 15px;
+    /* Уменьшение отступов для маленьких экранов */
+  }
+}

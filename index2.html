@@ -1,41 +1,84 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Адаптивное меню</title>
-        <link rel="stylesheet" href="./header.css">
-    </head>
-    <body>
-        <header>
-            <nav class="main-nav">
-                <div class="logo">Компания</div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивное меню</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main_photo.css">
+    <script src="./js/burger.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="main-nav">
+        <div class="logo"><img class="logo_img" src="./img/logo-2.png"
+            alt></div>
 
-                <!-- Основное меню -->
-                <ul class="nav-list">
-                    <li><a href="#about" class="nav-link">О нас</a></li>
-                    <li><a href="#price" class="nav-link">Прайс</a></li>
-                    <li><a href="#contacts" class="nav-link">Контакты</a></li>
-                </ul>
+        <!-- Основное меню -->
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">О нас</a></li>
+          <li><a href="#price" class="nav-link">Прайс</a></li>
+          <li><a href="#contacts" class="nav-link">Контакты</a></li>
+          <li>8-909-3629675</li>
+        </ul>
 
-                <!-- Бургер меню -->
-                <div class="burger" id="burger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-            </nav>
-        </header>
+        <!-- Бургер меню -->
+        <div class="burger-wrapper">
+          <div class="burger" id="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
 
-        <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const burger = document.getElementById('burger');
-            const navList = document.querySelector('.nav-list');
+        <!-- Мобильное меню -->
+        <ul class="mobile-menu" id="mobileMenu">
+          <li><a href="#about" class="nav-link">О нас</a></li>
+          <li><a href="#price" class="nav-link">Прайс</a></li>
+          <li><a href="#contacts" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
 
-            burger.addEventListener('click', () => {
-                navList.classList.toggle('active');
-            });
-        });
-    </script>
-    </body>
+    <section class="main-photo">
+      <div class="container">
+        <h1 class="title">Ремонт квартир без посредников</h1>
+       
+        <div class="menu">
+          <div class="dropdown-wrapper">
+            <div class="dropdown">
+              <a href="#">Услуги ремонта</a>
+              <div class="dropdown-content">
+                <a href="#">Демонтажные работы</a>
+                <a href="#">Покраска, малярные работы</a>
+                <a href="#">Монтаж гипсокартона (глк)</a>
+                <a href="#">Натяжные потолки</a>
+                <a href="#">Поклейка обоев</a>
+                <a href="#">Работы по сварке</a>
+                <a href="#">Сантехник, сантехнические работы</a>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-wrapper">
+            <div class="dropdown">
+              <a href="#">Виды ремонта</a>
+              <div class="dropdown-content">
+                <a href="#">Ремонт комнат и помещений</a>
+                <a href="#">Дизайнерский ремонт</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+       <p>Мы - чаcтнaя бригада специалистов, которые решили объединить
+          свои знания и опыт в единую команду. Вcе paбoты производим
+          cамoстoятeльно, без посредников. Выполняем все виды ремонта
+          Бесплатно выезжаем на замеры,согласовываем перечень и объем работ
+          составляем смету. Предложим варианты готовых работ, так же можем
+          создать проект дизайна с Вашими материалами по фотографиям, так
+          Вам будет проще выбрать материалы для отделки.</p>
+    </section>
+  </body>
 </html>
