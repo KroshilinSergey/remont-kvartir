@@ -1,0 +1,21 @@
+
+
+html {
+  scroll-behavior: smooth;
+  /*offset: 50px;*/
+}
+
+#about {
+  scroll-margin-top: 140px;
+}
+
+#servises {
+   scroll-margin-top: 140px;
+}
+
+body {
+  background-image: url('/img/фон7.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+

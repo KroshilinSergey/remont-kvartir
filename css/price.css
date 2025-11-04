@@ -1,0 +1,89 @@
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/*аккордеон*/
+.price_container {
+  width: 80%;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+
+.accordion-header {
+  background-color: #f2f2f2;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+  background-color: #ddd;
+}
+
+
+/* Стиль при раскрытом аккордеоне */
+.accordion-header.active {
+  background-color: #23a7b8; /* новый фон при раскрытии */
+  color: #154e06; /* новый цвет текста */
+}
+
+.accordion-content {
+  overflow: hidden; /* Скрывает лишнее содержимое */
+  max-height: 0; /* Изначальная высота — скрыта */
+  transition: max-height 0.3s ease-out; /* Плавное раскрытие */
+  padding: 0; /* Убираем лишние отступы */
+  margin: 0; /* Убираем внешние отступы */
+}
+
+.accordion-content.active {
+  max-height: fit-content; /* Раскрывается ровно до содержимого */
+  /* или max-height: 500px; — если известна максимальная высота */
+}
+
+.accordion-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.accordion-content th, .accordion-content td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.price {
+  font-weight: bold;
+  color: #0066cc;
+}
+

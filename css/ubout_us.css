@@ -7,21 +7,26 @@
 .about_container {
   display: flex;
   align-content: space-between;
+  margin-bottom: 20px;
 }
 
 .about_link {
   margin-right: 3%;
-  width: 30%;
+  width: 20%;
   min-height: 500px;
-  border: 1px solid gray;
+  background-color: blanchedalmond;
+  border: none; /* убираем границу */
+   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* добавляем тень */
 }
 
 .about_content {
-  width: 60%;
+  width: 80%;
+  background-color:rgb(224, 208, 184)
 }
 
 .about_text {
   margin-bottom: 20px;
+  padding: 20px;
   line-height: 1.5;
 }
 
