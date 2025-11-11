@@ -3,14 +3,15 @@
 html {
   scroll-behavior: smooth;
   /*offset: 50px;*/
+  scroll-padding-top: 150px;
 }
 
 #about {
-  scroll-margin-top: 140px;
+  scroll-margin-top: -20px;
 }
 
 #servises {
-   scroll-margin-top: 140px;
+   scroll-margin-top: -20px;
 }
 
 body {

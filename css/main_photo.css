@@ -87,17 +87,16 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-
-  /* Плавность появления */
   opacity: 0;
-  max-height: 0;
-  overflow: hidden;
+  /* Убираем max-height: 0 и overflow: hidden */
+  max-height: 200px; /* Ограничиваем максимальную высоту */
+  overflow-y: auto; /* Включаем вертикальную прокрутку */
   transition:
     opacity 0.3s ease,
-    max-height 0.3s ease,
     transform 0.3s ease;
   transform: translateY(-10px);
 }
+
 
 .dropdown:hover .dropdown-content {
   display: block;

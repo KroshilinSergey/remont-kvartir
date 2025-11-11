@@ -58,6 +58,7 @@ body {
 
 .nav_call {
   line-height: 5px;
+  text-align: center;
 }
 
 .nav-link::before {
