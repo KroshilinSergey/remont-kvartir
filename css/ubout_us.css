@@ -11,17 +11,35 @@
 }
 
 .about_link {
+  display: block;
   margin-right: 3%;
   width: 20%;
   min-height: 500px;
   background-color: blanchedalmond;
-  border: none; /* убираем границу */
-   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* добавляем тень */
+  border: none;
+  /* убираем границу */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  /* добавляем тень */
+}
+
+.about_link-one {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.about_link-one:hover {
+  color: blueviolet;
+  background-color: rgb(182, 238, 194);
+}
+
+.about_link-all {
+  display: flex;
+  flex-direction: column;
 }
 
 .about_content {
   width: 80%;
-  background-color:rgb(224, 208, 184)
+  background-color: rgb(224, 208, 184)
 }
 
 .about_text {
@@ -42,4 +60,14 @@
 .about_li::before {
   content: "✔";
   margin-right: 10px;
+}
+
+@media (max-width: 1024px) {
+  .about_link {
+    display: none;
+  }
+
+  .about_content {
+    width: 100%;
+  }
 }

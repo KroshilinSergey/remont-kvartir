@@ -1,5 +1,6 @@
 .window_plastic {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 100px 20px 0;
   margin: 0 auto;

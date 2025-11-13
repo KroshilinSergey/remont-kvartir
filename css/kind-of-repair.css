@@ -1,0 +1,68 @@
+.repair-section {
+  padding: 50px 0;
+}
+
+.rehair_cosmetic-title {
+  padding-top: 100px;
+  color: #090931;
+  font-weight: bold;
+}
+
+.card-repair {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.repair-title {
+  color: #0d284e;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.repair-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.repair-list li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.repair-list li::before {
+  content: "•";
+  color: #007bff;
+  margin-right: 8px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.comparison-table th, .comparison-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.comparison-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+
+@media (max-width: 1024px) {
+  .repaire-none{
+    display: none;
+  }
+
+  .rehair_cosmetic-title {
+  padding-top: 50px;
+}
+}

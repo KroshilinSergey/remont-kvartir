@@ -5,17 +5,14 @@
 
 .cards-container {
   display: flex;
-  margin: 0 auto;
+  flex-wrap: wrap;          /* Разрешаем перенос на новую строку */
   gap: 20px;
-  width: 90%;
-  max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-  /* разрешает перенос карточек */
+  max-width: 1200px;        /* Ограничиваем ширину контейнера */
+  margin: 0 auto;           /* Центрируем контейнер */
 }
 
 .card {
-  flex: 1;
+  flex: 1 1 300px;         /* Минимум 300 px, но может расти/сжиматься */
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -24,12 +21,11 @@
   display: flex;
   min-height: 510px;
   flex-direction: column;
-  /* Располагаем элементы карточки вертикально */
-  /* justify-content: space-between;  */
 }
 
+
 .link-page {
-  position:absolute;
+  position: absolute;
   bottom: 5px;
   width: 100%;
   text-decoration: none;
@@ -92,4 +88,40 @@
 
 .card button:hover {
   background-color: #2980b9;
+}
+
+@media (max-width: 1280px) {
+  .title {
+    padding: 50px 0px 60px;
+  }
+
+  .cards-container {
+    justify-content: center;
+    /* Центрируем ряды, если не заполняют всю ширину */
+  }
+
+  .card {
+    flex: 1 1 calc(33.333% - 20px);
+    /* 33,33% минус отступы gap */
+    max-width: calc(33.333% - 20px);
+    /* Гарантируем 3 в ряд */
+  }
+}
+
+@media (max-width: 768px) {
+ .title {
+    padding: 10px 0px 60px;
+  }
+
+  .cards-container {
+    justify-content: center;
+    /* Центрируем ряды, если не заполняют всю ширину */
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 20px);
+    /* 50% минус отступы gap */
+    max-width: calc(50% - 20px);
+    /* Гарантируем 2 в ряд */
+  }
 }

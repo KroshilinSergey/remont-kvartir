@@ -1,0 +1,24 @@
+{
+  "name": "remont-kvartir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KroshilinSergey/remont-kvartir.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KroshilinSergey/remont-kvartir/issues"
+  },
+  "homepage": "https://github.com/KroshilinSergey/remont-kvartir#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

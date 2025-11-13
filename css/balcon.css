@@ -1,10 +1,46 @@
+.balcon_service {
+  display: flex;
+  margin-bottom: 20px;
+  padding-top: 150px;
+}
+
+.balcon_title {
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  /* Ограничиваем ширину контейнера */
+  margin: 0 auto;
+  /* Центрируем контейнер */
+}
+
+.card {
+  flex: 1 1 300px;
+  /* Минимум 300 px, но может расти/сжиматься */
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  min-height: 510px;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 50px;
 }
 
 .gallery-item {
@@ -23,6 +59,24 @@
 .gallery-item:hover img {
   transform: scale(1.2);
 }
+
+.link-page {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-decoration: none;
+  padding: 14px 8px;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.link-page:hover {
+  background-color: #2980b9;
+}
+
 
 /* Лайтбокс (полноэкранный просмотр) */
 .lightbox {
