@@ -1,11 +1,15 @@
 .balcon_service {
   display: flex;
   margin-bottom: 20px;
-  padding-top: 150px;
 }
 
 .balcon_title {
   text-align: center;
+  padding-top: 160px;
+}
+
+.balcon_title2 {
+  padding-top: 40px;
 }
 
 .cards-container {
@@ -26,12 +30,49 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   display: flex;
-  min-height: 510px;
+  min-height: 540px;
   flex-direction: column;
 }
 
 .card:hover {
   transform: translateY(-5px);
+}
+
+.card {
+  flex: 1 1 calc(50% - 20px);
+  /* 50% минус отступы gap */
+  max-width: calc(50% - 20px);
+  /* Гарантируем 2 в ряд */
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  padding: 20px 15px;
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #2c3e50;
+  color: white;
+}
+
+.balcon_text {
+  padding: 15px;
+  color: #777;
+  line-height: 1.6;
+}
+
+.balcon_price {
+  font-weight: bold;
+  padding: 15px;
+  position: absolute;
+  bottom: 5%;
 }
 
 .gallery {
@@ -40,7 +81,6 @@
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 50px;
 }
 
 .gallery-item {

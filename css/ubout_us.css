@@ -35,6 +35,8 @@
 .about_link-all {
   display: flex;
   flex-direction: column;
+  padding-top: 50px;
+  line-height: 3;
 }
 
 .about_content {
