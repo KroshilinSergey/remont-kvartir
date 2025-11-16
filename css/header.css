@@ -174,7 +174,7 @@ body {
   background-color: #ffc107;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: url('/img/курсор.jpg'), pointer;
   transition: background-color 0.3s;
 }
 
