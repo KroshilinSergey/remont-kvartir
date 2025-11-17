@@ -30,7 +30,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   display: flex;
-  min-height: 540px;
+  min-height: 630px;
   flex-direction: column;
 }
 
@@ -175,4 +175,33 @@
 .close-btn:hover,
 .nav-btn:hover {
   opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .balcon_title {
+    padding-top: 80px;
+  }
+
+  .cards-container {
+    flex-wrap: wrap;
+    /* Позволяем карточкам переноситься на новую строку */
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 20px);
+    /* 50% ширины контейнера минус отступ */
+    max-width: calc(50% - 20px);
+    /* Гарантируем, что карточки не будут шире 50% */
+    margin-bottom: 20px;
+    /* Добавляем отступ снизу для разделения строк */
+    min-height: 520px;
+  }
+
+}
+
+@media (max-width: 770px) {
+
+  .card {
+    min-height: 600px;
+  }
 }

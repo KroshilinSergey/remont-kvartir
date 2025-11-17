@@ -53,3 +53,17 @@ button {
 button:hover {
   background-color: #ffaf00;
 }
+
+@media (max-width: 768px) {
+  .recording {
+    flex-direction: column;
+  }
+
+  .measure {
+    width: 90%;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+}

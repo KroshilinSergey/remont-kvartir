@@ -72,4 +72,23 @@
   .about_content {
     width: 100%;
   }
+
+}
+
+@media (max-width: 560px) {
+  .about_link {
+    display: block;
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .about_container {
+    flex-direction: column-reverse;
+  }
+
+  .about_content {
+    margin-bottom: 10px;
+  }
+
+
 }

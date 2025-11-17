@@ -171,3 +171,10 @@
     padding: 20px 0px 60px;
   }
 }
+
+@media (max-width: 560px) {
+  .menu  {
+   display: none;
+  }
+ 
+}
