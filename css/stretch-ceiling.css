@@ -19,15 +19,17 @@
 .cards-container {
   display: flex;
   gap: 20px;
-  max-width: 90%
+  max-width: 90%;
     /* Ограничиваем ширину контейнера */
     margin: 0 auto;
   /* Центрируем контейнер */
 }
 
 .card {
-  flex: 1 1 300px;
-  /* Минимум 300 px, но может расти/сжиматься */
+  flex: 1 1 calc(50% - 20px);
+  /* 50% минус отступы gap */
+  max-width: calc(50% - 20px);
+  /* Гарантируем 2 в ряд */
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -42,12 +44,6 @@
   transform: translateY(-5px);
 }
 
-.card {
-  flex: 1 1 calc(50% - 20px);
-  /* 50% минус отступы gap */
-  max-width: calc(50% - 20px);
-  /* Гарантируем 2 в ряд */
-}
 
 .card img {
   width: 100%;
@@ -210,11 +206,7 @@
   }
 }
 
-@media (max-width: 770px) {
-  .cards-container {
-    flex-wrap: wrap;
-  }
-
+ @media (max-width: 770px) {
   .card {
     min-height: 600px;
   }

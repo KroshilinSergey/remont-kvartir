@@ -19,12 +19,15 @@
     <link rel="stylesheet" href="css/recording.css">
     <link rel="stylesheet" href="css/change.css">
     <script src="js/burger.js"></script>
-    <script src="js/aссordeon.js"></script>
+    <script src="js/accordion.js"></script>
     <script src="js/footer_form.js"></script>
     <script src="js/call-back.js"></script>
+    <script src="js/accordeon-price.js"></script>
 
   </head>
+  
   <body>
+    
     <header class="header">
       <nav class="main-nav">
         <img class="logo_img" src="img/логотип.jpg"
@@ -141,54 +144,72 @@
       <div class="about_container">
         <div class="about_link">
           <div class="accordion">
-            <button class="accordion-title">Виды ремонта</button>
-            <div class="accordion-content">
-              <div class="about_link-all">
-                <a class="about_link-one"
-                  href="kind-of-repair.html#cosmetic">Косметический</a>
-                <a class="about_link-one"
-                  href="kind-of-repair.html#capital">Капитальный</a>
+            <div class="accordion-item">
+              <button class="accordion-title" aria-expanded="false">
+                <span class="icon-repair">🛠</span> Виды ремонта
+              </button>
+              <div class="accordion-content">
+                <div class="about_link-all">
+                  <a class="about_link-one"
+                    href="kind-of-repair.html#cosmetic">Косметический</a>
+                  <a class="about_link-one"
+                    href="kind-of-repair.html#capital">Капитальный</a>
+                </div>
               </div>
             </div>
-            <button class="accordion-title">Услуги ремонта</button>
-            <div class="accordion-content">
-              <div class="about_link-all">
-                <a class="about_link-one"
-                  href="price.html#accordionContent1">Демонтажные работы</a>
-                <a class="about_link-one"
-                  href="price.html">Отделочные работы</a>
-                <a class="about_link-one"
-                  href="price.html#accordionContent5">Плиточные работы</a>
-                <a class="about_link-one"
-                  href="stretch-ceiling.html">Натяжные потолки</a>
-                <a class="about_link-one"
-                  href="price.html#accordionContent3">Подготовка стен, поклейка
-                  обоев</a>
-                <a class="about_link-one"
-                  href="price.html#accordionContent6">Монтаж дверей</a>
-                <a class="about_link-one"
-                  href="price.html#accordionContent7">Сантехник, сантехнические
-                  работы</a>
+
+            <div class="accordion-item">
+              <button class="accordion-title" aria-expanded="false">
+                <span class="icon-tools">🔧</span> Услуги ремонта
+              </button>
+              <div class="accordion-content">
+                <div class="about_link-all">
+                  <a class="about_link-one"
+                    href="price.html#accordionContent1">Демонтажные работы</a>
+                  <a class="about_link-one" href="price.html">Отделочные
+                    работы</a>
+                  <a class="about_link-one"
+                    href="price.html#accordionContent5">Плиточные работы</a>
+                  <a class="about_link-one" href="stretch-ceiling.html">Натяжные
+                    потолки</a>
+                  <a class="about_link-one"
+                    href="price.html#accordionContent3">Подготовка стен,
+                    поклейка обоев</a>
+                  <a class="about_link-one"
+                    href="price.html#accordionContent6">Монтаж дверей</a>
+                  <a class="about_link-one"
+                    href="price.html#accordionContent7">Сантехник,
+                    сантехнические работы</a>
+                </div>
               </div>
             </div>
-            <button class="accordion-title">Натяжные потолки</button>
-            <div class="accordion-content">
-              <div class="about_link-all">
-                <a class="about_link-one"
-                  href="stretch-ceiling.html">Виды натяжных потолков</a>
-                <a class="about_link-one"
-                  href="price.html#accordionContent4">Стоимость работ</a>
+
+            <div class="accordion-item">
+              <button class="accordion-title" aria-expanded="false">
+                <span class="icon-ceiling">⛰</span> Натяжные потолки
+              </button>
+              <div class="accordion-content">
+                <div class="about_link-all">
+                  <a class="about_link-one" href="stretch-ceiling.html">Виды
+                    натяжных потолков</a>
+                  <a class="about_link-one"
+                    href="price.html#accordionContent4">Стоимость работ</a>
+                </div>
               </div>
             </div>
-            <button class="accordion-title">Пластиковые окна</button>
-            <div class="accordion-content">
-              <ul>
-                <li>Косметический</li>
-                <li>Капитальный</li>
-              </ul>
+
+            <div class="accordion-item">
+              <button class="accordion-title" aria-expanded="false">
+                <span class="icon-window">🪟</span> Пластиковые окна
+              </button>
+              <div class="accordion-content">
+                <div class="about_link-all">
+                  <a class="about_link-one" href="#">Установка окон</a>
+                  <a class="about_link-one" href="#">Замер и консультация</a>
+                </div>
+              </div>
             </div>
           </div>
-
         </div>
         <div class="about_content">
           <h2 class="about_title" id="about">О нас</h2>
@@ -221,6 +242,7 @@
 
         </div>
       </div>
+
       <section class="change" id="servises">
         <div class="chage_main">
           <div class="cards-container">
@@ -246,7 +268,8 @@
             <div class="card">
               <img src="img/натяжные потолки.jpg" alt="Отделочные работы">
               <h2>НАТЯЖНЫЕ ПОТОЛКИ</h2>
-              <p>Хотите обновить интерьер дома или офиса? Доверьте работу нашей
+              <p>Хотите обновить интерьер дома или офиса? Доверьте работу
+                нашей
                 команде
                 опытных мастеров — мы преобразим ваше пространство!</p>
               <a href="stretch-ceiling.html" class="link-page">ПЕРЕЙТИ НА
@@ -274,7 +297,8 @@
             <div class="card">
               <img src="img/отделка.jpg" alt="Отделочные работы">
               <h2>ОТДЕЛОЧНЫЕ РАБОТЫ</h2>
-              <p>Хотите обновить интерьер дома или офиса? Доверьте работу нашей
+              <p>Хотите обновить интерьер дома или офиса? Доверьте работу
+                нашей
                 команде
                 опытных мастеров — мы преобразим ваше пространство!</p>
               <a href="price.html" class="link-page">ПЕРЕЙТИ НА СТРАНИЦУ</a>
@@ -293,7 +317,8 @@
         <form id="contactForm">
           <input type="text" id="name" placeholder="Ваше имя*" required>
           <input type="tel" id="phone" placeholder="Телефон*" required>
-          <p><input type="checkbox" id="agree" checked> Отправляя данную форму,
+          <p><input type="checkbox" id="agree" checked> Отправляя данную
+            форму,
             вы соглашаетесь с политикой конфиденциальности и пользовательским
             соглашением</p>
           <button type="submit">Отправить</button>

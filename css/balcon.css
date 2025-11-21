@@ -23,6 +23,7 @@
 
 .card {
   flex: 1 1 300px;
+  margin: 0 auto;
   /* Минимум 300 px, но может расти/сжиматься */
   background-color: #fff;
   border-radius: 8px;
@@ -204,4 +205,12 @@
   .card {
     min-height: 600px;
   }
+}
+
+@media (max-width: 540px) {
+.card {
+   flex: 1 1 calc(90%);
+   max-width: 90%;
+   min-height: 520px;
+  } 
 }
