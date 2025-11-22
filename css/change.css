@@ -3,6 +3,11 @@
   min-height: 500px;
 }
 
+.chahge_title {
+  text-align: center;
+  font-weight: bold;
+}
+
 .cards-container {
   display: flex;
   flex-wrap: wrap;
