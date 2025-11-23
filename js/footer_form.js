@@ -1,4 +1,4 @@
-/*  // Обработка формы
+ // Обработка формы
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Отменяем стандартное поведение формы
 
@@ -36,9 +36,9 @@
                 console.error('Error:', error);
                 alert('Ошибка при отправке формы. Попробуйте позже.');
             });
-        }); */
+        });
 
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
+       /*  document.getElementById('contactForm').addEventListener('submit', function(event) {
   event.preventDefault();
 
   const name = document.getElementById('name').value;
@@ -67,3 +67,4 @@
 });
 
 
+ */

@@ -1,11 +1,16 @@
-.chage_main {
+.service {
+  margin-bottom: 20px;
+}
+
+.service_main {
   margin: 0 auto;
   min-height: 500px;
 }
 
-.chahge_title {
+.service_title {
   text-align: center;
   font-weight: bold;
+  color: white;
 }
 
 .cards-container {
