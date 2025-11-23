@@ -159,6 +159,7 @@
   .title {
     padding: 50px 0px 60px;
   }
+
   .main-photo {
     height: 500px;
   }
@@ -170,14 +171,15 @@
     padding: 8px 15px;
     /* Уменьшение отступов для маленьких экранов */
   }
-   .title {
+
+  .title {
     padding: 20px 0px 60px;
   }
 }
 
 @media (max-width: 560px) {
-  .menu  {
-   display: none;
+  .menu {
+    display: none;
   }
- 
+
 }
