@@ -23,6 +23,7 @@
     <script src="js/footer_form.js"></script>
     <script src="js/call-back.js"></script>
     <script src="js/accordeon-price.js"></script>
+    <script src="js/telegram-proxy.js"></script>
 
   </head>
 
@@ -364,21 +365,56 @@
     </section>
 
     <section id="record" class="recording">
-      <img class="measure" src="img/замер.png" alt>
-      <div class="form-container">
-        <h2>Записаться на замер</h2>
-        <p>Заполните форму, и мы свяжемся с Вами в ближайшее время</p>
-        <form id="contactForm">
-          <input type="text" id="name" placeholder="Ваше имя*" required>
-          <input type="tel" id="phone" placeholder="Телефон*" required>
-          <p><input type="checkbox" id="agree" checked> Отправляя данную
-            форму,
-            вы соглашаетесь с политикой конфиденциальности и пользовательским
-            соглашением</p>
-          <button type="submit">Отправить</button>
-        </form>
+      <div class="image-section">
+        <img class="measure"
+          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          alt="Профессиональный замер окон">
+        <div class="free-badge">
+          <h3>Выезд, замер и консультация</h3>
+          <p>БЕСПЛАТНО!</p>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-container">
+          <h2>Записаться на замер</h2>
+          <p class="subtitle">Заполните форму, и мы свяжемся с Вами в ближайшее
+            время</p>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Ваше имя*"
+                required>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" placeholder="Телефон*"
+                required>
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="agree" name="agree" required>
+              <label for="agree">
+                Отправляя данную форму, вы соглашаетесь с
+                <a href="#" target="_blank">политикой конфиденциальности</a>
+                и <a href="#" target="_blank">пользовательским соглашением</a>
+              </label>
+            </div>
+
+            <div id="successMessage" class="message success"></div>
+            <div id="errorMessage" class="message error"></div>
+
+            <button type="submit" id="submitBtn" class="submit-btn">
+              <span id="btnText">Отправить заявку</span>
+            </button>
+          </form>
+
+          <div
+            style="text-align: center; margin-top: 30px; color: #7f8c8d; font-size: 14px;">
+            Мы перезвоним вам в течение 15 минут
+          </div>
+        </div>
       </div>
     </section>
-
   </body>
 </html>
