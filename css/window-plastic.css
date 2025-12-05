@@ -20,7 +20,8 @@
 .window-title {
   font-size: 24px;
   font-weight: bold;
-  color: #ff8c00; /* Оранжевый цвет, как на изображении */
+  color: #ff8c00;
+  /* Оранжевый цвет, как на изображении */
   margin-bottom: 10px;
 }
 
@@ -53,7 +54,8 @@ img {
 }
 
 .order-btn {
-  background-color: #4CAF50; /* Зелёный цвет кнопки */
+  background-color: #4CAF50;
+  /* Зелёный цвет кнопки */
   color: white;
   padding: 10px 20px;
   border: none;
@@ -64,5 +66,171 @@ img {
 }
 
 .order-btn:hover {
-  background-color: #45a049; /* Тёмнее при наведении */
+  background-color: #45a049;
+  /* Тёмнее при наведении */
+}
+
+.about_link-one {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: blue;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.about_link-one::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: #3498db;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.about_link-one:hover {
+  background: #e3f2fd;
+  border-color: #3498db;
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+}
+
+.about_link-one:hover::before {
+  transform: scaleY(1);
+}
+
+.about_link-one:hover {
+  color: #2c3e50;
+  background: #e3f2fd;
+  padding-left: 20px;
+}
+
+
+.record {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: blue;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  justify-content: center;
+  width: 20%;
+}
+
+.record:hover {
+  background: #e3f2fd;
+  border-color: #3498db;
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+}
+
+.record:hover {
+  color: #2c3e50;
+  background: #e3f2fd;
+  padding-left: 20px;
+}
+
+/* Секция "Шаги заказа" */
+.steps-section-alt {
+  padding: 80px 20px;
+}
+
+.steps-title-alt {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.steps-vertical-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.step-vertical {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.step-circle {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.step-num {
+  font-size: 28px;
+  font-weight: 900;
+  color: #b0b0b0;
+}
+
+.step-vertical-content {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  flex: 1;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #3498db;
+}
+
+.step-vertical-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.step-vertical-desc {
+  color: #5d6d7e;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.step-connector {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  width: 2px;
+  height: calc(100% + 40px);
+  background: #e0e0e0;
+  z-index: 1;
+}
+
+.step-vertical:last-child .step-connector {
+  display: none;
+}
+
+.step-vertical:hover .step-circle {
+  border-color: #3498db;
+  background: #3498db;
+}
+
+.step-vertical:hover .step-num {
+  color: white;
 }

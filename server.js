@@ -1,64 +1,107 @@
-const express = require('express');
-const https = require('https');
+const express = require("express");
+const cors = require("cors");
+const axios = require("axios");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-const path = require('path');
-
-// Парсинг JSON из POST-запросов
+// Middleware
+app.use(cors());
 app.use(express.json());
 
-// Статические файлы (HTML, CSS, JS)
-app.use(express.static(path.join(__dirname, '')));
-app.use('/js', express.static(path.join(__dirname, 'js')));
-app.use('/css', express.static(path.join(__dirname, 'css')));
-
-// API для приёма данных формы
-app.post('/api/send-form', (req, res) => {
-  const { name, phone } = req.body;
-
-  console.log('Получены данные:', { name, phone });
-
-  // Отправка в Telegram
-  const options = {
-    hostname: 'api.telegram.org',
-    port: 443,
-    path: `/bot8443660805:AAGxVeBmRBxGsXtlNTKgvwqFdFbboOOG5_Y/sendMessage`,
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  };
-
-  const body = JSON.stringify({
-    chat_id: "596789512",
-    text: `Заявка:\nИмя: ${name}\nТелефон: ${phone}`
-  });
-
-  const reqTelegram = https.request(options, (resTelegram) => {
-    let data = '';
-    resTelegram.on('data', chunk => data += chunk);
-    resTelegram.on('end', () => {
-      console.log('Ответ Telegram:', data);
-    });
-  });
-
-  reqTelegram.on('error', error => {
-    console.error('Ошибка Telegram:', error);
-  });
-
-  reqTelegram.write(body);
-  reqTelegram.end();
-
-  res.json({ status: 'success' });
+// Логирование всех запросов
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
+  next();
 });
 
-// Главная страница
-app.get('/', (req, res) => {
-res.sendFile(path.join(__dirname, 'index.html'));
+// Маршрут для отправки данных в Telegram
+app.post("/api/send-to-telegram", async (req, res) => {
+  try {
+    console.log("Получена заявка:", req.body);
+    
+    const { name, phone } = req.body;
+
+    if (!name || !phone) {
+      console.error("Ошибка: отсутствуют обязательные поля");
+      return res.status(400).json({
+        success: false,
+        error: "Имя и телефон обязательны",
+      });
+    }
+
+    // ВСТАВЬТЕ СВОИ ДАННЫЕ TELEGRAM БОТА
+    const TELEGRAM_BOT_TOKEN = "8443660805:AAGxVeBmRBxGsXtlNTKgvwqFdFbboOOG5_Y";
+    const TELEGRAM_CHAT_ID = "596789512";
+    
+    const message = `📋 НОВАЯ ЗАЯВКА НА ЗАМЕР\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n⏰ Время: ${new Date().toLocaleString(
+      "ru-RU"
+    )}`;
+
+    console.log("Отправляю сообщение в Telegram:", message);
+
+    // Отправка сообщения в Telegram
+    const response = await axios.post(
+      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+      {
+        chat_id: TELEGRAM_CHAT_ID,
+        text: message,
+        parse_mode: "HTML",
+      }
+    );
+
+    if (response.data.ok) {
+      console.log("✅ Сообщение отправлено в Telegram");
+      res.json({ 
+        success: true, 
+        message: "Заявка успешно отправлена!",
+        telegramResponse: response.data 
+      });
+    } else {
+      console.error("❌ Ошибка Telegram API:", response.data);
+      throw new Error("Ошибка Telegram API");
+    }
+  } catch (error) {
+    console.error("❌ Ошибка при отправке в Telegram:", error.message);
+    
+    // Детальная информация об ошибке
+    if (error.response) {
+      console.error("Данные ошибки:", error.response.data);
+    }
+    
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      details: error.response?.data
+    });
+  }
+});
+
+// Проверка работы сервера
+app.get("/api/health", (req, res) => {
+  console.log("Проверка здоровья сервера");
+  res.json({ 
+    status: "ok", 
+    message: "Прокси-сервер работает",
+    timestamp: new Date().toISOString()
+  });
+});
+
+// Корневой маршрут
+app.get("/", (req, res) => {
+  res.send(`
+    <h1>Telegram Proxy Server</h1>
+    <p>Сервер работает корректно</p>
+    <p>Endpoints:</p>
+    <ul>
+      <li>POST /api/send-to-telegram - отправка заявки в Telegram</li>
+      <li>GET /api/health - проверка работы сервера</li>
+    </ul>
+  `);
 });
 
 app.listen(PORT, () => {
-  console.log(`Сервер запущен на http://localhost:${PORT}`);
+  console.log(`🚀 Прокси-сервер запущен на порту ${PORT}`);
+  console.log(`🌐 URL: http://localhost:${PORT}`);
+  console.log(`📞 Telegram endpoint: POST /api/send-to-telegram`);
 });

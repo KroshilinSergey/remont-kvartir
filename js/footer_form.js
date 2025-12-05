@@ -6,8 +6,7 @@
             const errorMessage = document.getElementById('errorMessage');
             
             // URL прокси-сервера (замените на адрес вашего сервера)
-            const PROXY_URL = 'https://https://telegram-proxy-xumy.onrender.com/api/send-to-telegram';
-            
+            const PROXY_URL = 'https://telegram-proxy-xumy.onrender.com/api/send-to-telegram'
             // Маска для телефона
             const phoneInput = document.getElementById('phone');
             phoneInput.addEventListener('input', function(e) {
