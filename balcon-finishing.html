@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Отделка балконов</title>
+		<link rel="icon" href="img/фав 2/фавикон 4.png">
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/recording.css">
+		<link rel="stylesheet" href="css/balcon.css">
+		<link rel="stylesheet" href="css/balcon-finishing.css">
+		<script src="js/burger.js"></script>
+		<script src="js/balcon.js"></script>
+		<script src="js/call-back.js"></script>
+
+	</head>
+	<body>
+		<header class="header">
+			<nav class="main-nav">
+				<img class="logo_img" src="img/логотип.jpg"
+					alt>
+
+				<!-- Основное меню -->
+				<ul class="nav-list">
+					<li><a href="index.html" class="nav-link">Главная</a></li>
+					<li><a href="index.html#record" class="nav-link">Записаться
+							на
+							замер</a></li>
+					<li><a href="index.html#servises"
+							class="nav-link">Услуги</a></li>
+					<li><a href="price.html" class="nav-link">Стоимость</a></li>
+					<li>
+						<p class="nav_call">9:00 - 18:00 </p>
+						<span class="phone">+7 909 36 29 675</span>
+					</li>
+					<li class="call_back">
+						<div class="call_back-block">Обратный звонок</div>
+						<button class="call_back-button" onclick="showPopup()">
+							<i class="fas fa-phone-alt"></i> Перезвоните мне
+						</button>
+
+						<div id="popup"
+							style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+							<div
+								style="background: #fff; padding: 20px; border-radius: 5px;">
+								<h2>Оставьте ваш номер телефона</h2>
+								<input type="text"
+									placeholder="Ваш номер телефона"
+									style="width: 100%; padding: 10px; margin-bottom: 10px;">
+								<button onclick="hidePopup()">Отправить</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<!-- Бургер меню -->
+				<div class="burger-wrapper">
+					<div class="burger" id="burger">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+				</div>
+
+				<!-- Мобильное меню -->
+				<ul class="mobile-menu" id="mobileMenu">
+					<li><a href="index.html#about" class="nav-link">О
+							нас</a></li>
+					<li><a href="index.html#price" class="nav-link">Записаться
+							на
+							замер</a></li>
+					<li><a href="index.html#servises"
+							class="nav-link">Услуги</a></li>
+					<li><a href="price.html" class="nav-link">Стоимость</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="container">
+			<header class="page-header">
+				<h1>Варианты отделки балкона и лоджии</h1>
+				<p>Предлагаем несколько вариантов внутренней обшивки стен и полов, каждый
+					из которых интересен по-своему</p>
+			</header>
+
+			<!-- Секция обшивки стен -->
+			<section class="options-section">
+				<h2 class="section-title">Варианты внутренней обшивки стен балкона или
+					лоджии</h2>
+				<p class="text-center mb-5"
+					style="font-size: 1.2rem; color: #555; max-width: 900px; margin: 0 auto;">
+					Своим клиентам мы предлагаем несколько вариантов внутренней обшивки стен,
+					каждый из которых по своему интересен.
+				</p>
+
+				<div class="options-container">
+					<!-- Вагонка -->
+					<div class="option-card">
+						<div class="image-container">
+							<img class="balcon_img" src="img/balcon-vagonka.webp" alt="вагонка">
+						</div>
+						<div class="option-header">
+							<h3>Обшивка вагонкой</h3>
+							<div class="option-price">от <span>2000</span> <span
+									class="option-unit">рублей за кв.м</span></div>
+						</div>
+						<div class="option-content">
+							<p class="option-description">
+								Экологически чистый и долговечный вариант. Обшивка вагонкой
+								обеспечивает очень хорошую тепло- и шумоизоляцию.
+							</p>
+							<ul class="option-features">
+								<li><i class="fas fa-leaf"></i> Экологически чистый материал</li>
+								<li><i class="fas fa-shield-alt"></i> Высокая долговечность</li>
+								<li><i class="fas fa-thermometer-half"></i> Отличная теплоизоляция</li>
+								<li><i class="fas fa-volume-off"></i> Эффективная шумоизоляция</li>
+							</ul>
+							<button class="option-button">Уточнить стоимость</button>
+						</div>
+					</div>
+
+					<!-- ПВХ панели -->
+					<div class="option-card">
+						<div class="image-container">
+							<img class="balcon_img" src="img/balcon-pvh.webp" alt="пвх-панели">
+						</div>
+						<div class="option-header">
+							<h3>Обшивка ПВХ панелями</h3>
+							<div class="option-price">от <span>1400</span> <span
+									class="option-unit">рублей за кв.м</span></div>
+						</div>
+						<div class="option-content">
+							<p class="option-description">
+								Еще один экологичный и долговечный материал для обшивки стен.
+								Отличается большой доступностью и цветовым разнообразием.
+							</p>
+							<ul class="option-features">
+								<li><i class="fas fa-leaf"></i> Экологичный материал</li>
+								<li><i class="fas fa-palette"></i> Большое цветовое разнообразие</li>
+								<li><i class="fas fa-wallet"></i> Доступная стоимость</li>
+								<li><i class="fas fa-tint"></i> Влагостойкость и долговечность</li>
+							</ul>
+							<button class="option-button">Уточнить стоимость</button>
+						</div>
+					</div>
+
+					<!-- ПВХ вагонка -->
+					<div class="option-card">
+						<div class="image-container">
+							<img class="balcon_img" src="img/balcon-vagonka-pvh.jpg"
+								alt="пвх-вагонка">
+						</div>
+						<div class="option-header">
+							<h3>Обшивка ПВХ вагонкой</h3>
+							<div class="option-price">от <span>1800</span> <span
+									class="option-unit">рублей за кв.м</span></div>
+						</div>
+						<div class="option-content">
+							<p class="option-description">
+								Вариант обшивки стен, сочетающий в себе внешний вид классической
+								вагонки и структуру ПВХ панелей.
+							</p>
+							<ul class="option-features">
+								<li><i class="fas fa-gem"></i> Внешний вид классической вагонки</li>
+								<li><i class="fas fa-cogs"></i> Структура ПВХ панелей</li>
+								<li><i class="fas fa-broom"></i> Легкость в уходе</li>
+								<li><i class="fas fa-ruler-combined"></i> Простота монтажа</li>
+							</ul>
+							<button class="option-button">Уточнить стоимость</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Секция полов -->
+			<section class="options-section">
+				<h2 class="section-title">Варианты полов на балконе или лоджии</h2>
+				<p class="text-center mb-5"
+					style="font-size: 1.2rem; color: #555; max-width: 900px; margin: 0 auto;">
+					Для пола используются линолеум или ламинат, а также доска, отличающиеся
+					насыщенной текстурой и высокими эксплуатационными характеристиками.
+				</p>
+
+				<div class="options-container">
+					<!-- Линолеум или ламинат -->
+					<div class="option-card">
+						<img class="balcon_img" src="img/balcon-pol-linol.jpg">
+						<div class="option-header">
+							<h3>Линолеум или ламинат</h3>
+						</div>
+						<div class="option-content">
+							<p class="option-description">
+								Наиболее популярный вариант среди потребителей, благодаря своей
+								доступности и высокому качеству. Большое разнообразие цветов и оттенков
+								позволяет удовлетворять любые стилевые потребности наших клиентов.
+							</p>
+							<ul class="option-features">
+								<li><i class="fas fa-thumbs-up"></i> Наиболее популярный вариант</li>
+								<li><i class="fas fa-wallet"></i> Доступная стоимость</li>
+								<li><i class="fas fa-palette"></i> Большое разнообразие цветов</li>
+								<li><i class="fas fa-star"></i> Высокое качество материалов</li>
+								<li><i class="fas fa-broom"></i> Простота в уходе и обслуживании</li>
+							</ul>
+							<button class="option-button">Уточнить стоимость</button>
+						</div>
+					</div>
+
+					<!-- Половая доска -->
+					<div class="option-card">
+						<img class="balcon_img" src="img/balcon-pol-doska.webp">
+						<div class="option-header">
+							<h3>Половая доска</h3>
+						</div>
+						<div class="option-content">
+							<p class="option-description">
+								Очень долговечный и привлекательный вариант, особенно в сочетании с
+								обшитыми вагонкой стенами. Отличный вариант для тех, кого привлекает не
+								только древесная текстура, но и само присутствие настоящего дерева.
+							</p>
+							<ul class="option-features">
+								<li><i class="fas fa-tree"></i> Натуральное дерево</li>
+								<li><i class="fas fa-shield-alt"></i> Высокая долговечность</li>
+								<li><i class="fas fa-heart"></i> Привлекательный внешний вид</li>
+								<li><i class="fas fa-home"></i> Создает уютную атмосферу</li>
+								<li><i class="fas fa-ruler-combined"></i> Отличное сочетание с
+									вагонкой</li>
+							</ul>
+							<button class="option-button">Уточнить стоимость</button>
+						</div>
+					</div>
+					<div class="options-container">
+						<!-- керамическая плитка -->
+						<div class="option-card">
+							<img class="balcon_img" src="img/balkon-pol-plitka.jpg">
+							<div class="option-header">
+								<h3>Керамическая плитка</h3>
+							</div>
+							<div class="option-content">
+								<p class="option-description">
+									хххххххххххххх популярный ххххххххх среди ххххххххх, благодаря своей
+									доступности и высокому качеству. Большое разнообразие цветов и оттенков
+									позволяет удовлетворять любые стилевые потребности наших клиентов.
+								</p>
+								<ul class="option-features">
+									<li><i class="fas fa-thumbs-up"></i> Наиболее популярный вариант</li>
+									<li><i class="fas fa-wallet"></i> Доступная стоимость</li>
+									<li><i class="fas fa-palette"></i> Большое разнообразие цветов</li>
+									<li><i class="fas fa-star"></i> Высокое качество материалов</li>
+									<li><i class="fas fa-broom"></i> Простота в уходе и обслуживании</li>
+								</ul>
+								<button class="option-button">Уточнить стоимость</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+			<!-- Футер с контактами -->
+			<footer class="footer-info">
+				<h3>Нужна консультация или точный расчет?</h3>
+				<p style="max-width: 700px; margin: 0 auto 30px; font-size: 1.1rem;">
+					Наши специалисты бесплатно проконсультируют вас, помогут выбрать
+					оптимальный вариант отделки и рассчитают точную стоимость работ
+				</p>
+				<a href="tel:+79093629675" class="contact-button">
+					<i class="fas fa-phone-alt me-2"></i>+7 909 36 29 675
+				</a>
+				<p style="margin-top: 25px; opacity: 0.9;">
+					Работаем ежедневно с 9:00 до 18:00
+				</p>
+			</footer>
+		</div>
+
+	</body>
+</html>

@@ -17,27 +17,25 @@
 		<script src="js/burger.js"></script>
 		<script src="js/balcon.js"></script>
 		<script src="js/call-back.js"></script>
+		<script src="js/kind-of-repair.js"></script>
 
 	</head>
 	<body>
 		<header class="header">
+			<!-- Ваш существующий header -->
 			<nav class="main-nav">
-				<img class="logo_img" src="img/логотип.jpg"
-					alt>
+				<img class="logo_img" src="img/логотип.jpg" alt="Логотип">
 
 				<!-- Основное меню -->
 				<ul class="nav-list">
 					<li><a href="index.html" class="nav-link">Главная</a></li>
-					<li><a href="index.html#about" class="nav-link">О
-							нас</a></li>
-					<li><a href="index.html#record" class="nav-link">Записаться
-							на
+					<li><a href="index.html#about" class="nav-link">О нас</a></li>
+					<li><a href="index.html#record" class="nav-link">Записаться на
 							замер</a></li>
-					<li><a href="index.html#servises"
-							class="nav-link">Услуги</a></li>
+					<li><a href="index.html#servises" class="nav-link">Услуги</a></li>
 					<li><a href="price.html" class="nav-link">Стоимость</a></li>
 					<li>
-						<p class="nav_call">9:00 - 18:00 </p>
+						<p class="nav_call">9:00 - 18:00</p>
 						<span class="phone">+7 909 36 29 675</span>
 					</li>
 					<li class="call_back">
@@ -48,11 +46,9 @@
 
 						<div id="popup"
 							style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
-							<div
-								style="background: #fff; padding: 20px; border-radius: 5px;">
+							<div style="background: #fff; padding: 20px; border-radius: 5px;">
 								<h2>Оставьте ваш номер телефона</h2>
-								<input type="text"
-									placeholder="Ваш номер телефона"
+								<input type="text" placeholder="Ваш номер телефона"
 									style="width: 100%; padding: 10px; margin-bottom: 10px;">
 								<button onclick="hidePopup()">Отправить</button>
 							</div>
@@ -72,281 +68,281 @@
 				<!-- Мобильное меню -->
 				<ul class="mobile-menu" id="mobileMenu">
 					<li><a href="index.html" class="nav-link">Главная</a></li>
-					<li><a href="index.html#about" class="nav-link">О
-							нас</a></li>
-					<li><a href="index.html#price" class="nav-link">Записаться
-							на
+					<li><a href="index.html#about" class="nav-link">О нас</a></li>
+					<li><a href="index.html#price" class="nav-link">Записаться на
 							замер</a></li>
-					<li><a href="index.html#servises"
-							class="nav-link">Услуги</a></li>
+					<li><a href="index.html#servises" class="nav-link">Услуги</a></li>
 					<li><a href="price.html" class="nav-link">Стоимость</a></li>
 				</ul>
 			</nav>
 		</header>
 
-		<section class="repair repair-section">
+		<div class="repair-hero">
 			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-10">
-						<h1 class="rehair_cosmetic-title text-center mb-5" id="cosmetic">
-							Косметический ремонт квартир
-						</h1>
+				<h1>Виды ремонта квартир</h1>
+				<p>Выберите подходящий вариант ремонта для вашего жилья. Мы детально
+					расскажем о каждом типе, его преимуществах и особенностях.</p>
 
-						<div class="card-repair">
-							<h2 class="repair-title">Что такое косметический ремонт?</h2>
-							<p>
-								Косметический ремонт — это комплекс работ по обновлению отделки жилых
-								помещений без изменения планировки и инженерных коммуникаций. Его цель —
-								освежить интерьер и улучшить эстетическое восприятие пространства с
-								минимальными затратами.
-							</p>
-						</div>
+				<div class="nav-tabs-container">
+					<button class="repair-tab active" onclick="scrollToSection('cosmetic')">
+						<i class="fas fa-paint-roller me-2"></i>Косметический ремонт
+					</button>
+					<button class="repair-tab" onclick="scrollToSection('capital')">
+						<i class="fas fa-tools me-2"></i>Капитальный ремонт
+					</button>
+				</div>
+			</div>
+		</div>
 
-						<div class="card-repair">
-							<h2 class="repair-title">Что входит в косметический ремонт?</h2>
-							<ul class="repair-list">
-								<li>Обновление потолочных покрытий (покраска, монтаж натяжных
-									систем).</li>
-								<li>Отделка стен (обои, покраска, декоративные штукатурки).</li>
-								<li>Замена напольных покрытий (ламинат, паркет, плитка).</li>
-								<li>Установка новых розеток и выключателей.</li>
-								<li>Монтаж декоративных элементов (молдинги, карнизы).</li>
-								<li>Финальная уборка и удаление строительной пыли.</li>
-							</ul>
-						</div>
-
-						<div class="card-repair">
-							<h2 class="repair-title">Типы косметического ремонта</h2>
-							<ul class="repair-list">
-								<li><strong>Эконом-вариант:</strong> поклейка обоев, покраска потолков,
-									укладка недорогих напольных покрытий.</li>
-								<li><strong>Стандартный:</strong> полная подготовка поверхностей,
-									использование качественных материалов.</li>
-								<li><strong>Премиум-отделка:</strong> использование элитных материалов,
-									сложные декоративные элементы.</li>
-							</ul>
-						</div>
-
-						<div class="card-repair">
-							<h2 class="repair-title">Этапы косметического ремонта</h2>
-							<ol class="repair-list">
-								<li>Анализ состояния помещений и составление ТЗ.</li>
-								<li>Демонтаж старых покрытий и вывоз мусора.</li>
-								<li>Подготовка поверхностей (выравнивание, грунтование).</li>
-								<li>Отделочные работы (покраска, поклейка обоев, укладка покрытий).</li>
-								<li>Электромонтажные работы.</li>
-								<li>Финальные штрихи (установка плинтусов, карнизов).</li>
-							</ol>
-						</div>
-
-						<div class="card-repair">
-							<h2 class="repair-title">Отличия от других видов ремонта</h2>
-							<table class="comparison-table">
-								<thead>
-									<tr>
-										<th>Критерий</th>
-										<th>Косметический ремонт</th>
-										<th>Капитальный ремонт</th>
-										<th <td class="repaire-none"> Евроремонт</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Затрагиваемые системы</td>
-										<td>Только декоративные элементы</td>
-										<td>Несущие конструкции, коммуникации</td>
-										<td <td class="repaire-none"> Все системы с применением премиум-материалов</td>
-									</tr>
-									<tr>
-										<td>Планировка</td>
-										<td>Без изменений</td>
-										<td>Возможна перепланировка</td>
-										<td <td class="repaire-none"> Кардинальная перепланировка</td>
-									</tr>
-									<tr>
-										<td>Сроки выполнения</td>
-										<td>1–3 недели</td>
-										<td>2–6 месяцев</td>
-										<td <td class="repaire-none"> 3–8 месяцев</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-
-						<div class="card-repair">
-							<h2 class="repair-title">Когда нужен косметический ремонт?</h2>
-							<ul class="repair-list">
-								<li>Интерьер морально устарел.</li>
-								<li>Незначительные повреждения отделки.</li>
-								<li>Желание обновить жильё без больших затрат.</li>
-								<li>Подготовка квартиры к сдаче в аренду или продаже.</li>
-							</ul>
-						</div>
-
-						<div class="card-repair">
-							<h2 class="repair-title">Преимущества и недостатки</h2>
-							<p><strong>Преимущества:</strong> экономия, сжатые сроки, минимальные
-								неудобства, возможность поэтапного выполнения.</p>
-							<p><strong>Недостатки:</strong> не решает серьёзные конструктивные
-								проблемы, временный эффект (5–7 лет).</p>
-						</div>
+		<div class="container repair-section">
+			<!-- Косметический ремонт -->
+			<div class="section-anchor" id="cosmetic"></div>
+			<div class="repair-type-card animate-card">
+				<div class="repair-type-header">
+					<div class="repair-icon">
+						<i class="fas fa-paint-roller"></i>
+					</div>
+					<div>
+						<h1 class="repair-title">Косметический ремонт</h1>
+						<p class="repair-subtitle">Обновление интерьера без изменения
+							планировки</p>
 					</div>
 				</div>
-				<div class="row justify-content-center">
-					<div class="col-md-10">
-						<h1 class="rehair_cosmetic-title text-center mb-5" id="capital">
-							Капитальный ремонт квартир
-						</h1>
 
-						<div class="card-repair">
-							<h2 class="repair-title">Что такое капитальный ремонт?</h2>
-							<p>
-								Капитальный ремонт — это комплексное обновление жилого помещения,
-								включающее:
-							</p>
-							<ul class="repair-list">
-								<li>замену всех инженерных систем (электрика, водопровод,
-									отопление);</li>
-								<li>перепланировку пространства;</li>
-								<li>полную черновую и чистовую отделку;</li>
-								<li>усиление или замену несущих конструкций (при необходимости).</li>
-							</ul>
-							<p class="mt-3">
-								Это наиболее трудоёмкий и затратный вид ремонта, но он обеспечивает
-								долгосрочный результат и максимальную функциональность жилья.
-							</p>
-						</div>
+				<div class="feature-card mb-4">
+					<h3><i class="fas fa-info-circle"></i> Что такое косметический ремонт?</h3>
+					<p>Косметический ремонт — это обновление отделки жилых помещений без
+						изменения планировки и инженерных коммуникаций. Идеальное решение для
+						быстрого преображения интерьера с минимальными затратами.</p>
+				</div>
 
-						<div class="card-repair">
-							<h2 class="repair-title">Основные этапы работ</h2>
-							<ol class="repair-list">
-								<li><strong>Подготовительный этап:</strong> замеры, проект, согласование
-									перепланировки, закупка материалов.</li>
-								<li><strong>Демонтаж:</strong> снос старых перегородок, удаление
-									покрытий, демонтаж коммуникаций.</li>
-								<li><strong>Инженерные работы:</strong> разводка электрики, труб,
-									вентиляции, установка счётчиков.</li>
-								<li><strong>Черновая отделка:</strong> стяжка пола, штукатурка стен,
-									выравнивание потолков, гидроизоляция.</li>
-								<li><strong>Чистовая отделка:</strong> укладка плитки, покраска, обои,
-									напольные покрытия.</li>
-								<li><strong>Монтаж оборудования:</strong> установка дверей, окон,
-									сантехники, светильников, розеток.</li>
-								<li><strong>Финальная уборка и приёмка:</strong> вывоз мусора, контроль
-									качества, устранение дефектов.</li>
-							</ol>
-						</div>
+				<h3><i class="fas fa-tasks me-2"></i>Что входит в косметический ремонт?</h3>
+				<div class="feature-grid">
+					<div class="feature-card">
+						<h3><i class="fas fa-palette"></i>Отделка стен</h3>
+						<p>Оклейка обоями, покраска, декоративные штукатурки</p>
+					</div>
+					<div class="feature-card">
+						<h3><i class="fas fa-layer-group"></i>Потолочные работы</h3>
+						<p>Покраска, натяжные потолки, гипсокартонные конструкции</p>
+					</div>
+					<div class="feature-card">
+						<h3><i class="fas fa-border-style"></i>Напольные покрытия</h3>
+						<p>Ламинат, паркет, плитка, линолеум</p>
+					</div>
+					<div class="feature-card">
+						<h3><i class="fas fa-lightbulb"></i>Электрика</h3>
+						<p>Замена розеток, выключателей, светильников</p>
+					</div>
+				</div>
 
-						<div class="card-repair">
-							<h2 class="repair-title">Когда необходим капитальный ремонт?</h2>
-							<ul class="repair-list">
-								<li>Квартира в старом доме с изношенными коммуникациями.</li>
-								<li>Требуется серьёзная перепланировка (объединение комнат, перенос
-									кухни).</li>
-								<li>Наличие структурных дефектов (трещины в стенах, протечки,
-									плесень).</li>
-								<li>Покупка квартиры в «убитом» состоянии (вторичное жильё).</li>
-								<li>Планируется долгосрочное проживание с максимальным комфортом.</li>
-								<li>Необходимость повышения энергоэффективности жилья.</li>
-							</ul>
-						</div>
+				<h3><i class="fas fa-list-ol me-2"></i>Типы косметического ремонта</h3>
+				<div class="step-container">
+					<div class="step-card">
+						<div class="step-number">1</div>
+						<h4>Эконом-вариант</h4>
+						<p>Базовые отделочные работы с бюджетными материалами</p>
+					</div>
+					<div class="step-card">
+						<div class="step-number">2</div>
+						<h4>Стандартный</h4>
+						<p>Качественные материалы с полной подготовкой поверхностей</p>
+					</div>
+					<div class="step-card">
+						<div class="step-number">3</div>
+						<h4>Премиум-отделка</h4>
+						<p>Элитные материалы и сложные декоративные элементы</p>
+					</div>
+				</div>
 
-						<div class="card-repair">
-							<h2 class="repair-title">Отличия от других видов ремонта</h2>
-							<table class="comparison-table">
-								<thead>
-									<tr>
-										<th>Критерий</th>
-										<th>Капитальный ремонт</th>
-										<th>Косметический ремонт</th>
-										<th class="repaire-none">Евроремонт</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><strong>Затрагиваемые системы</strong></td>
-										<td>Несущие конструкции, все коммуникации</td>
-										<td>Только отделка</td>
-										<td class="repaire-none"> Все системы с премиум-материалами</td>
-									</tr>
-									<tr>
-										<td><strong>Планировка</strong></td>
-										<td>Возможна перепланировка</td>
-										<td>Без изменений</td>
-										<td class="repaire-none"> Кардинальная перепланировка</td>
-									</tr>
-									<tr>
-										<td><strong>Замена коммуникаций</strong></td>
-										<td>Полная замена</td>
-										<td>Не производится</td>
-										<td class="repaire-none"> Частичная/полная замена</td>
-									</tr>
-									<tr>
-										<td><strong>Сроки выполнения</strong></td>
-										<td>2–6 месяцев</td>
-										<td>1–3 недели</td>
-									<td class="repaire-none"> 3–8 месяцев</td>
-									</tr>
-									<tr>
-										<td><strong>Бюджет</strong></td>
-										<td>Высокий</td>
-										<td>Низкий</td>
-										<td class="repaire-none"> Очень высокий</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+				<h3><i class="fas fa-chart-bar me-2"></i>Сравнение с другими видами
+					ремонта</h3>
+				<table class="comparison-table">
+					<thead>
+						<tr>
+							<th>Критерий</th>
+							<th>Косметический ремонт</th>
+							<th>Капитальный ремонт</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><strong>Затрагиваемые системы</strong></td>
+							<td class="highlight">Только декоративные элементы</td>
+							<td>Несущие конструкции, коммуникации</td>
+						</tr>
+						<tr>
+							<td><strong>Планировка</strong></td>
+							<td class="highlight">Без изменений</td>
+							<td>Возможна перепланировка</td>
+						</tr>
+						<tr>
+							<td><strong>Сроки выполнения</strong></td>
+							<td class="highlight">1–3 недели</td>
+							<td>2–6 месяцев</td>
+						</tr>
+						<tr>
+							<td><strong>Бюджет</strong></td>
+							<td class="highlight">Низкий</td>
+							<td>Высокий</td>
+						</tr>
+					</tbody>
+				</table>
 
-						<div class="card-repair">
-							<h2 class="repair-title">Преимущества капитального ремонта</h2>
-							<div class="advantages-list">
-								<div class="advantage-item">
-									Полное обновление жилья с устранением всех дефектов.
-								</div>
-								<div class="advantage-item">
-									Повышение энергоэффективности и комфорта проживания.
-								</div>
-								<div class="advantage-item">
-									Возможность реализовать любую планировку.
-								</div>
-								<div class="advantage-item">
-									Долговечность результата (10–15 лет без ремонта).
-								</div>
-							</div>
-						</div>
-
-						<div class="card-repair">
-							<h2 class="repair-title">Недостатки капитального ремонта</h2>
-							<div class="disadvantages-list">
-								<div class="disadvantage-item">
-									Высокие финансовые затраты.
-								</div>
-								<div class="disadvantage-item">
-									Длительные сроки выполнения (от 2 месяцев).
-								</div>
-								<div class="disadvantage-item">
-									Необходимость временного переезда.
-								</div>
-								<div class="disadvantage-item">
-									Шум и грязь в процессе работ.
-								</div>
-							</div>
-						</div>
-
-						<div class="card-repair">
-							<h2 class="repair-title">Рекомендации по организации</h2>
-							<ul class="repair-list">
-								<li>Заранее составьте подробный проект и смету.</li>
-								<li>Закупайте материалы с запасом (на 10–15% больше расчётного).</li>
-								<li>Продумайте временное жильё на период работ.</li>
-								<li>Контролируйте этапы выполнения через регулярные фотоотчёты.</li>
-								<li>Заключайте договор с чёткими сроками и гарантиями.</li>
-							</ul>
-						</div>
+				<div class="pros-cons-container">
+					<div class="pros-box">
+						<h3><i class="fas fa-thumbs-up"></i>Преимущества</h3>
+						<ul>
+							<li>Быстрые сроки выполнения</li>
+							<li>Минимальные финансовые затраты</li>
+							<li>Возможность поэтапного выполнения</li>
+							<li>Не требует переезда</li>
+							<li>Идеально для подготовки к продаже</li>
+						</ul>
+					</div>
+					<div class="cons-box">
+						<h3><i class="fas fa-thumbs-down"></i>Ограничения</h3>
+						<ul>
+							<li>Не решает конструктивные проблемы</li>
+							<li>Временный эффект (5–7 лет)</li>
+							<li>Не включает замену коммуникаций</li>
+							<li>Нельзя изменить планировку</li>
+						</ul>
 					</div>
 				</div>
 			</div>
-		</section>
+
+			<!-- Капитальный ремонт -->
+			<div class="section-anchor" id="capital"></div>
+			<div class="repair-type-card animate-card delay-1">
+				<div class="repair-type-header">
+					<div class="repair-icon">
+						<i class="fas fa-tools"></i>
+					</div>
+					<div>
+						<h1 class="repair-title">Капитальный ремонт</h1>
+						<p class="repair-subtitle">Полное обновление жилья с заменой всех
+							систем</p>
+					</div>
+				</div>
+
+				<div class="feature-card mb-4">
+					<h3><i class="fas fa-info-circle"></i> Что такое капитальный ремонт?</h3>
+					<p>Капитальный ремонт — это комплексное обновление жилья, включающее полную
+						замену инженерных систем, перепланировку, черновую и чистовую отделку.
+						Гарантирует долгосрочный результат и максимальный комфорт.</p>
+				</div>
+
+				<h3><i class="fas fa-sitemap me-2"></i>Основные этапы работ</h3>
+				<div class="step-container">
+					<div class="step-card">
+						<div class="step-number">1</div>
+						<h4>Проектирование</h4>
+						<p>Замеры, планировка, согласование перепланировки</p>
+					</div>
+					<div class="step-card">
+						<div class="step-number">2</div>
+						<h4>Демонтаж</h4>
+						<p>Снос старых конструкций, удаление покрытий</p>
+					</div>
+					<div class="step-card">
+						<div class="step-number">3</div>
+						<h4>Инженерные работы</h4>
+						<p>Разводка электрики, труб, установка систем</p>
+					</div>
+					<div class="step-card">
+						<div class="step-number">4</div>
+						<h4>Черновая отделка</h4>
+						<p>Стяжка пола, штукатурка, выравнивание</p>
+					</div>
+					<div class="step-card">
+						<div class="step-number">5</div>
+						<h4>Чистовая отделка</h4>
+						<p>Плитка, покраска, обои, напольные покрытия</p>
+					</div>
+					<div class="step-card">
+						<div class="step-number">6</div>
+						<h4>Монтаж</h4>
+						<p>Установка дверей, окон, сантехники</p>
+					</div>
+				</div>
+
+				<h3><i class="fas fa-check-circle me-2"></i>Когда необходим капитальный
+					ремонт?</h3>
+				<div class="feature-grid">
+					<div class="feature-card">
+						<h3><i class="fas fa-home"></i>Старый жилой фонд</h3>
+						<p>Квартиры в домах с изношенными коммуникациями</p>
+					</div>
+					<div class="feature-card">
+						<h3><i class="fas fa-arrows-alt-h"></i>Перепланировка</h3>
+						<p>Объединение комнат, перенос кухни или санузла</p>
+					</div>
+					<div class="feature-card">
+						<h3><i class="fas fa-exclamation-triangle"></i>Конструктивные дефекты</h3>
+						<p>Трещины, протечки, плесень, грибок</p>
+					</div>
+					<div class="feature-card">
+						<h3><i class="fas fa-bolt"></i>Повышение комфорта</h3>
+						<p>Современные системы, энергоэффективность</p>
+					</div>
+				</div>
+
+				<div class="pros-cons-container">
+					<div class="pros-box">
+						<h3><i class="fas fa-star"></i>Преимущества капитального ремонта</h3>
+						<ul>
+							<li>Полное обновление всех систем жилья</li>
+							<li>Возможность реализовать любую планировку</li>
+							<li>Повышение энергоэффективности</li>
+							<li>Долговечность результата (10–15 лет)</li>
+							<li>Устранение всех конструктивных проблем</li>
+						</ul>
+					</div>
+					<div class="cons-box">
+						<h3><i class="fas fa-exclamation-circle"></i>Особенности и сложности</h3>
+						<ul>
+							<li>Высокие финансовые затраты</li>
+							<li>Длительные сроки (от 2 месяцев)</li>
+							<li>Необходимость временного переезда</li>
+							<li>Требуется тщательное планирование</li>
+							<li>Нужны разрешения на перепланировку</li>
+						</ul>
+					</div>
+				</div>
+
+				<h3><i class="fas fa-clipboard-check me-2"></i>Рекомендации по
+					организации</h3>
+				<div class="feature-grid">
+					<div class="feature-card">
+						<h3><i class="fas fa-file-contract"></i>Детальный проект</h3>
+						<p>Составьте подробный план и смету до начала работ</p>
+					</div>
+					<div class="feature-card">
+						<h3><i class="fas fa-boxes"></i>Закупка материалов</h3>
+						<p>Покупайте с запасом 10–15% от расчётного количества</p>
+					</div>
+					<div class="feature-card">
+						<h3><i class="fas fa-calendar-alt"></i>Планирование сроков</h3>
+						<p>Продумайте временное жильё на период ремонта</p>
+					</div>
+					<div class="feature-card">
+						<h3><i class="fas fa-camera"></i>Контроль качества</h3>
+						<p>Регулярные фотоотчёты о ходе выполнения работ</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- CTA секция -->
+			<div class="cta-section">
+				<h2>Не знаете, какой ремонт вам нужен?</h2>
+				<p>Наши специалисты бесплатно проконсультируют вас, помогут выбрать
+					оптимальный вариант и составят детальную смету</p>
+				<a href="index.html#record" class="cta-button">
+					<i class="fas fa-ruler-combined me-2"></i>Записаться на бесплатный замер
+				</a>
+			</div>
+		</div>
 
 	</body>
 </html>

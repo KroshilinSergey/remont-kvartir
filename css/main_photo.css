@@ -3,7 +3,7 @@
   background-image: url('../img/main-foto.jpg');
   background-size: cover;
   background-position: center;
-  height: 700px;
+  height: 800px;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -136,6 +136,7 @@
   text-decoration: none;
   padding: 10px 20px;
   display: block;
+  font-size: larger;
   transition: background-color 0.3s ease;
   /* Плавная анимация при наведении */
 }

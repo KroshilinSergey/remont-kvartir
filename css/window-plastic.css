@@ -2,9 +2,21 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 100px 20px 0;
+  padding: 10px 20px 0;
   margin: 0 auto;
   max-width: 1200px;
+}
+
+.windows-price {
+  text-align: center;
+}
+
+
+.window_plastic-title {
+  padding-top: 150px;
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: bold;
 }
 
 .window-item {
@@ -233,4 +245,109 @@ img {
 
 .step-vertical:hover .step-num {
   color: white;
+}
+
+/* Стили для новой секции с тарифами */
+.pricing-section {
+  padding: 60px 0;
+}
+
+.pricing-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pricing-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.tariff-plan {
+  margin: 25px 0;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.tariff-plan:hover {
+  background-color: #f0f8ff;
+}
+
+.tariff-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.tariff-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #007bff;
+  margin: 15px 0;
+}
+
+.tariff-description {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+  min-height: 60px;
+}
+
+.free-call {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .pricing-title {
+    font-size: 2rem;
+  }
+
+  .pricing-card {
+    max-width: 100%;
+  }
+
+  .product-title {
+    font-size: 1.5rem;
+  }
 }

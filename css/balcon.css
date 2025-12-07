@@ -6,10 +6,16 @@
 .balcon_title {
   text-align: center;
   padding-top: 160px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
 }
 
 .balcon_title2 {
   padding-top: 40px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 40px;
 }
 
 .cards-container {

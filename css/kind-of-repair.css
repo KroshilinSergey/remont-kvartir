@@ -1,68 +1,431 @@
-.repair-section {
-  padding: 50px 0;
-}
+:root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --text-dark: #2c3e50;
+            --gradient-1: linear-gradient(135deg, #3498db, #8e44ad);
+            --gradient-2: linear-gradient(135deg, #e74c3c, #f39c12);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
 
-.rehair_cosmetic-title {
-  padding-top: 100px;
-  color: white;
-  font-weight: bold;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #f9f9f9;
+        }
 
-.card-repair {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: white;
-}
+        .repair-hero {
+            background: var(--gradient-1);
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
 
-.repair-title {
-  color: white;
-  font-size: 24px;
-  margin-bottom: 15px;
-}
+        .repair-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
 
-.repair-list {
-  list-style-type: none;
-  padding: 0;
-}
+        .repair-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
 
-.repair-list li {
-  margin-bottom: 8px;
-  padding-left: 20px;
-  position: relative;
-}
+        .repair-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 2;
+            opacity: 0.9;
+        }
 
-.repair-list li::before {
-  content: "•";
-  color: #007bff;
-  margin-right: 8px;
-}
+        .nav-tabs-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
 
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
+        .repair-tab {
+            padding: 15px 40px;
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 30px;
+            margin: 0 10px;
+            backdrop-filter: blur(10px);
+        }
 
-.comparison-table th, .comparison-table td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
+        .repair-tab:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
 
-.comparison-table th {
-  background-color: #007bff;
-  color: white;
-}
+        .repair-tab.active {
+            background: white;
+            color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
+        .repair-section {
+            padding: 30px 0 80px;
+        }
 
-@media (max-width: 1024px) {
-  .repaire-none{
-    display: none;
-  }
+        .section-anchor {
+            position: relative;
+            top: -80px;
+        }
 
-  .rehair_cosmetic-title {
-  padding-top: 50px;
-}
-}
+        .repair-type-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .repair-type-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .repair-type-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--gradient-2);
+        }
+
+        .repair-type-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .repair-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 25px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .repair-title {
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .repair-subtitle {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: var(--light-color);
+            border-radius: 15px;
+            padding: 25px;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .feature-card:hover {
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transform: translateX(5px);
+        }
+
+        .feature-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-card h3 i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 40px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .comparison-table th {
+            background: var(--gradient-1);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .comparison-table td {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            transition: var(--transition);
+        }
+
+        .comparison-table tbody tr:hover td {
+            background: rgba(52, 152, 219, 0.05);
+        }
+
+        .comparison-table .highlight {
+            background: rgba(231, 76, 60, 0.1);
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .pros-cons-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .pros-box, .cons-box {
+            padding: 30px;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .pros-box {
+            background: rgba(46, 204, 113, 0.1);
+            border-left: 5px solid #2ecc71;
+        }
+
+        .cons-box {
+            background: rgba(231, 76, 60, 0.1);
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .pros-box h3, .cons-box h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .pros-box h3 i {
+            color: #2ecc71;
+            margin-right: 10px;
+        }
+
+        .cons-box h3 i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        .step-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .step-card {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-1);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .cta-section {
+            background: var(--gradient-2);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-top: 60px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--accent-color);
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .repair-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .repair-tab {
+                padding: 12px 25px;
+                font-size: 1rem;
+                margin: 0 5px 10px;
+            }
+            
+            .nav-tabs-container {
+                flex-wrap: wrap;
+            }
+            
+            .repair-title {
+                font-size: 2rem;
+            }
+            
+            .repair-type-card {
+                padding: 25px;
+            }
+            
+            .cta-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .repair-hero {
+                padding: 80px 0 60px;
+            }
+            
+            .repair-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Анимации */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
