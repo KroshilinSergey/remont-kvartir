@@ -77,6 +77,11 @@ body {
     background-clip: text;
 }
 
+.options-section p {
+   color: var(--light-color);
+   text-align: center;
+}
+
 .page-header p {
     font-size: 1.3rem;
     max-width: 800px;
@@ -90,7 +95,7 @@ body {
 
 /* Заголовки секций */
 .section-title {
-    color: var(--primary-color);
+    color: var(--light-color);
     font-size: 2.5rem;
     font-weight: 800;
     text-align: center;
