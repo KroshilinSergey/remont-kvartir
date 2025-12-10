@@ -21,7 +21,7 @@
 .cards-container {
   display: flex;
   gap: 20px;
-  max-width: 1200px;
+  max-width: 1680px;
   /* Ограничиваем ширину контейнера */
   margin: 0 auto;
   /* Центрируем контейнер */
