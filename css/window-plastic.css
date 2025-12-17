@@ -1,3 +1,21 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --light-color: #f8f9fa;
+    --text-dark: #333;
+    --border-color: #dee2e6;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    --gradient-main: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-wood: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-pvc: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --gradient-floor: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
 .window_plastic {
   display: flex;
   flex-wrap: wrap;
@@ -84,6 +102,7 @@ img {
 
 .about_link-one {
   display: flex;
+  width: 100%;
   align-items: center;
   padding: 15px;
   background: blue;
@@ -157,16 +176,13 @@ img {
 }
 
 /* Секция "Шаги заказа" */
-.steps-section-alt {
-  padding: 80px 20px;
-}
 
 .steps-title-alt {
   text-align: center;
   font-size: 36px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .steps-vertical-container {
@@ -337,6 +353,54 @@ img {
   font-size: 1.1rem;
 }
 
+.record-mesure {
+  display: flex;
+  justify-content: center;
+}
+
+/* Футер */
+.footer-info {
+  text-align: center;
+  padding: 50px 30px;
+  background: var(--gradient-main);
+  color: white;
+  border-radius: 20px;
+  margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-info::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.1"><circle cx="50" cy="50" r="40" fill="white"/></svg>');
+  background-size: 300px;
+}
+
+.footer-info h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer-info p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.95;
+  position: relative;
+  z-index: 2;
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
   .pricing-title {
@@ -350,4 +414,13 @@ img {
   .product-title {
     font-size: 1.5rem;
   }
+
+  .footer-info {
+        padding: 40px 20px;
+        margin-top: 50px;
+    }
+    
+    .footer-info h3 {
+        font-size: 1.9rem;
+    }
 }

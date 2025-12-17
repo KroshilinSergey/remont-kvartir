@@ -13,8 +13,10 @@
 		<link rel="stylesheet" href="css/common.css">
 		<link rel="stylesheet" href="css/header.css">
 		<link rel="stylesheet" href="css/window-plastic.css">
+		<link rel="stylesheet" href="css/windows-modal.css">
 		<script src="js/burger.js"></script>
 		<script src="js/call-back.js"></script>
+		<script src="js/windows-modal.js"></script>
 
 	</head>
 
@@ -86,32 +88,95 @@
 						Длина: 140 см<br>
 						Ширина: 130 см
 					</div>
-					<div class="window-price">ЦЕНА ОТ 6 900 РУБ</div>
-					<a class="about_link-one" href="index.html#record">Запись на замер</a>
+					<div class="window-price">ЦЕНА ОТ 10 650 РУБ</div>
+					<button class="about_link-one"
+						onclick="openProfileModal()">Подробнее</button>
 				</div>
 				<div class="window-item">
 					<div class="window-title">ТРЁХСТВОРЧАТОЕ ОКНО</div>
 					<img src="img/3 ств.окно рис.jpg" alt="Трёхстворчатое окно">
 					<div class="window-dimensions">1400 мм</div>
 					<div class="window-specs">
-						Длина: 180 см<br>
+						Длина: 203 см<br>
 						Ширина: 140 см
 					</div>
-					<div class="window-price">ЦЕНА ОТ 9 350 РУБ</div>
-					<a class="about_link-one" href="#record">Запись на замер</a>
+					<div class="window-price">ЦЕНА ОТ 17 450 РУБ</div>
+					<button class="about_link-one"
+						onclick="openProfileModal()">Подробнее</button>
 				</div>
 				<div class="window-item">
 					<div class="window-title">БАЛКОННЫЙ БЛОК</div>
 					<img src="img/балк блок рис2.jfif" alt="Балконный блок">
-					<div class="window-dimensions">2100 мм</div>
+					<div class="window-dimensions">2010 мм</div>
 					<div class="window-specs">
 						<!-- Здесь можно добавить размеры, если они есть -->
 					</div>
-					<div class="window-price">ЦЕНА ОТ 9 960 РУБ</div>
-					<a class="about_link-one" href="#record">Запись на замер</a>
+					<div class="window-price">ЦЕНА ОТ 13850 РУБ</div>
+					<button class="about_link-one"
+						onclick="openProfileModal()">Подробнее</button>
 				</div>
 			</div>
 		</section>
+
+		<!-- Модальное окно для профилей окон -->
+		<div id="profileModal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title">Профиль КВЕ</h2>
+					<span class="modal-close">&times;</span>
+				</div>
+				<div class="modal-body">
+					<!-- Верхняя часть с логотипами -->
+					<div class="brands-comparison">
+						<div class="brands-header">
+							<div class="brand-column active" data-brand="kve">КВЕ</div>
+							<div class="brand-column" data-brand="rehau">REHAU</div>
+							<div class="brand-column" data-brand="schmitz">SCHMITZ</div>
+						</div>
+
+						<!-- Основная информация о профиле -->
+						<div class="profile-info">
+							<h3 id="profile-name">КВЕ</h3>
+							<p id="profile-description">Профиль КВЕ экологичен, безопасен для
+								здоровья и окружающей среды. Устойчив к перепадам температур, влаге,
+								химическим и механическим воздействиям. Долговечен, сохраняет свойства в
+								любых условиях, обеспечивая надёжность и комфорт.</p>
+
+							<!-- Показатели эффективности -->
+							<div class="performance-metrics">
+								<img class="profil-img" src="img/KBE.jpg" alt="kbe" id="profile-image">
+								<div class="profile-metrics-section">
+									<div class="metric-item">
+										<div class="metric-icon">🔥</div>
+										<div class="metric-label">Сохранение тепла</div>
+										<div class="metric-value" id="metric-heat">123%</div>
+									</div>
+									<div class="metric-item">
+										<div class="metric-icon">☀️</div>
+										<div class="metric-label">Количество света</div>
+										<div class="metric-value" id="metric-light">135%</div>
+									</div>
+									<div class="metric-item">
+										<div class="metric-icon">🔇</div>
+										<div class="metric-label">Шумоизоляция</div>
+										<div class="metric-value" id="metric-noise">105%</div>
+
+									</div>
+									<div class="metric-note">Относительно ГОСТа</div>
+								</div>
+							</div>
+
+							<!-- Цена и кнопка -->
+							<div class="modal-price-section">
+								<div class="modal-price" id="profile-price">4 510 ₽/м</div>
+								<a href="index.html#record" class="modal-calculate-btn">записаться на
+									замер</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Новая секция с тарифами -->
 		<section class="pricing-section" id="windows-fully">
@@ -123,26 +188,11 @@
 					<div class="product-title">"Окно 2 створки"</div>
 
 					<div class="tariff-plan">
-						<div class="tariff-name">Эконом</div>
-						<div class="tariff-price">23 750 руб</div>
+						<img src="img/2 ств.окно рис.jpg" alt="okno">
+						<div class="tariff-price">25 000 руб</div>
 						<div class="tariff-description">Качественные окна по доступной цене.
 							Базовые характеристики, надежная конструкция.</div>
 					</div>
-
-					<div class="tariff-plan">
-						<div class="tariff-name">Стандарт</div>
-						<div class="tariff-price">27 800 руб</div>
-						<div class="tariff-description">Оптимальное соотношение цены и качества.
-							Улучшенные характеристики и долговечность.</div>
-					</div>
-
-					<div class="tariff-plan">
-						<div class="tariff-name">VIP</div>
-						<div class="tariff-price">35 700 руб</div>
-						<div class="tariff-description">Премиум качество, максимальная
-							энергоэффективность и дизайн. Лучшие материалы и технологии.</div>
-					</div>
-
 					<div class="free-call">
 						Бесплатный звонок
 					</div>
@@ -153,26 +203,11 @@
 					<div class="product-title">"Окно 3 створки"</div>
 
 					<div class="tariff-plan">
-						<div class="tariff-name">Эконом</div>
-						<div class="tariff-price">28 850 руб</div>
+						<img src="img/3-ст.окно.png" alt="okno">
+						<div class="tariff-price">35 000 руб</div>
 						<div class="tariff-description">Трехстворчатое окно по доступной цене.
 							Надежная конструкция для больших проемов.</div>
 					</div>
-
-					<div class="tariff-plan">
-						<div class="tariff-name">Стандарт</div>
-						<div class="tariff-price">33 650 руб</div>
-						<div class="tariff-description">Трехстворчатое окно с улучшенными
-							характеристиками. Идеальное решение для больших помещений.</div>
-					</div>
-
-					<div class="tariff-plan">
-						<div class="tariff-name">VIP</div>
-						<div class="tariff-price">45 600 руб</div>
-						<div class="tariff-description">Премиум трехстворчатое окно. Максимальная
-							светопропускаемость и энергоэффективность.</div>
-					</div>
-
 					<div class="free-call">
 						Бесплатный звонок
 					</div>
@@ -182,26 +217,11 @@
 					<div class="product-title">"Балконный блок"</div>
 
 					<div class="tariff-plan">
-						<div class="tariff-name">Эконом</div>
-						<div class="tariff-price">31 650 руб</div>
+						<img src="img/балк блок рис2.jfif" alt="okno">
+						<div class="tariff-price">40 000 руб</div>
 						<div class="tariff-description">Базовый балконный блок по доступной цене.
 							Надежная конструкция для вашего балкона.</div>
 					</div>
-
-					<div class="tariff-plan">
-						<div class="tariff-name">Стандарт</div>
-						<div class="tariff-price">37 400 руб</div>
-						<div class="tariff-description">Оптимальный балконный блок с улучшенными
-							характеристиками. Отличное качество по разумной цене.</div>
-					</div>
-
-					<div class="tariff-plan">
-						<div class="tariff-name">VIP</div>
-						<div class="tariff-price">48 900 руб</div>
-						<div class="tariff-description">Премиум балконный блок с максимальной
-							изоляцией и эстетикой. Лучшие материалы и технологии.</div>
-					</div>
-
 					<div class="free-call">
 						Бесплатный звонок
 					</div>
@@ -288,10 +308,22 @@
 					</div>
 				</div>
 			</div>
+		</section>
+		
+		<!-- Футер с контактами -->
+		<footer class="footer-info">
+			<h3>Нужна консультация или точный расчет?</h3>
+			<p style="max-width: 700px; margin: 0 auto 30px; font-size: 1.1rem;">
+				Наши специалисты бесплатно проконсультируют вас, помогут выбрать
+				оптимальный вариант отделки и рассчитают точную стоимость работ
+			</p>
+			<p style="margin-top: 20px; font-size: 1.1rem; opacity: 0.9;">
+				Работаем ежедневно с 9:00 до 18:00
+			</p>
 			<div class="record-mesure">
 				<a class="record" href="index.html#record"> записаться на замер</a>
 			</div>
-		</section>
+		</footer>
 
 	</body>
 </html>

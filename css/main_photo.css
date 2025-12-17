@@ -1,6 +1,6 @@
 /* Основные стили для страницы */
 .main-photo {
-  background-image: url('../img/main-foto.jpg');
+  background-image: url('../img/main-foto.webp');
   background-size: cover;
   background-position: center;
   height: 800px;
