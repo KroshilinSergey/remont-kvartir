@@ -348,6 +348,7 @@ img {
   color: white;
   padding: 15px;
   border-radius: 8px;
+  border: none;
   margin-top: 30px;
   font-weight: 600;
   font-size: 1.1rem;
