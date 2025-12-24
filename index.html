@@ -400,6 +400,42 @@
                 required>
             </div>
 
+            <!-- Чекбоксы услуг -->
+            <div class="services-checkbox-group">
+              <p class="services-title">Выберите услугу:</p>
+              <div class="services-options">
+                <label class="service-option">
+                  <input type="checkbox" name="service"
+                    value="Заявка на замер окон">
+                  <span class="checkmark"></span>
+                  <span class="service-text">Заявка на замер окон</span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="service"
+                    value="Заявка на замер потолка">
+                  <span class="checkmark"></span>
+                  <span class="service-text">Заявка на замер потолка</span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="service"
+                    value="Заявка на плиточные работы">
+                  <span class="checkmark"></span>
+                  <span class="service-text">Заявка на плиточные работы</span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="service" value="Другое">
+                  <span class="checkmark"></span>
+                  <span class="service-text">Другое</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Поле для дополнительной информации -->
+            <div class="form-group" id="otherField" style="display: none;">
+              <input type="text" id="otherInfo" name="otherInfo"
+                placeholder="Уточните, что именно Вас интересует">
+            </div>
+
             <div class="checkbox-group">
               <input type="checkbox" id="agree" name="agree" required>
               <label for="agree">
