@@ -14,9 +14,11 @@
 		<link rel="stylesheet" href="css/header.css">
 		<link rel="stylesheet" href="css/recording.css">
 		<link rel="stylesheet" href="css/stretch-ceiling.css">
+		<link rel="stylesheet" href="css/ceiling-calculator.css">
 		<script src="js/burger.js"></script>
 		<script src="js/call-back.js"></script>
 		<script src="js/ceiling.js"></script>
+		<script src="js/ceiling-calculator.js"></script>
 
 	</head>
 	<body>
@@ -90,7 +92,7 @@
 								вписывается в классические интерьеры, но благодаря своей нейтральности и
 								способности идеально рассеивать свет подходит для любой комнаты.
 							</p>
-							<a href="#" class="link-page">подробнее</a>
+							<a href="stretch-ceiling-matte.html" class="link-page">подробнее</a>
 						</div>
 					</div>
 
@@ -102,7 +104,7 @@
 								роскоши и визуального простора. Их безупречная зеркальная поверхность не
 								только добавляет интерьеру блеска, но и эффективно расширяет границы
 								помещения, наполняя его дополнительным светом.</p>
-							<a href="#" class="link-page">подробнее</a>
+							<a href="stretch-ceiling-matte.html#gloss" class="link-page">подробнее</a>
 						</div>
 					</div>
 
@@ -115,7 +117,7 @@
 								Их главная особенность — способность преображаться в зависимости от
 								освещения: днем это мягкая матовая фактура, а вечером — утонченный,
 								переливающийся блеск, создающий уютную атмосферу. </p>
-							<a href="#" class="link-page">подробнее</a>
+							<a href="stretch-ceiling-matte.html#satin" class="link-page">подробнее</a>
 						</div>
 					</div>
 
@@ -131,11 +133,277 @@
 								их привлекательный
 								внешний вид порадует самого требовательного эстета и украсит любой
 								интерьер. </p>
-							<a href="#" class="link-page">подробнее</a>
+							<a href="stretch-ceiling-matte.html#fabric" class="link-page">подробнее</a>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- Калькулятор натяжных потолков -->
+			<section class="calculator-section" id="calculator">
+				<div class="container">
+					<h2 class="calculator-title">Рассчитайте стоимость натяжного потолка
+						онлайн</h2>
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="calculator-card">
+								<div class="calculator-header">
+									<h3>Калькулятор стоимости</h3>
+									<p>Укажите параметры вашего помещения и дополнительные опции</p>
+								</div>
+
+								<div class="calculator-body">
+									<div class="row mb-4">
+										<div class="col-md-6">
+											<div class="calc-input-group">
+												<label for="area">Площадь помещения (м²)</label>
+												<input type="number" id="area" min="1" max="500" value="14"
+													step="0.1">
+												<div class="calc-range">
+													<input type="range" id="area-range" min="1" max="500" value="14"
+														step="0.1">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="calc-input-group">
+												<label for="corners">Количество углов</label>
+												<input type="number" id="corners" min="3" max="20" value="4">
+												<div class="calc-range">
+													<input type="range" id="corners-range" min="3" max="20" value="4">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row mb-4">
+										<div class="col-md-6">
+											<div class="calc-input-group">
+												<label>Фактура потолка</label>
+												<div class="texture-buttons">
+													<button class="texture-btn active"
+														data-texture="matte">Матовый</button>
+													<button class="texture-btn" data-texture="satin">Сатиновый</button>
+													<button class="texture-btn"
+														data-texture="glossy">Глянцевый</button>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="calc-input-group">
+												<label>Цвет потолка</label>
+												<div class="color-buttons">
+													<button class="color-btn active" data-color="white">Белый</button>
+													<button class="color-btn" data-color="colored">Цветной</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="additional-section">
+										<h4>Дополнительные опции</h4>
+										<div class="additional-options">
+											<div class="add-option">
+												<div class="add-option-info">
+													<span class="add-name">Обход трубы</span>
+													<span class="add-price">1 000 руб./шт.</span>
+												</div>
+												<div class="add-controls">
+													<button class="add-minus">-</button>
+													<input type="number" class="add-quantity" value="0" min="0"
+														data-price="1000">
+													<button class="add-plus">+</button>
+												</div>
+											</div>
+
+											<div class="add-option">
+												<div class="add-option-info">
+													<span class="add-name">Профиль стеновой ПВХ по периметру</span>
+													<span class="add-price">1 000 руб./м.п.</span>
+												</div>
+												<div class="add-controls">
+													<button class="add-minus">-</button>
+													<input type="number" class="add-quantity" value="0" min="0"
+														data-price="1000">
+													<button class="add-plus">+</button>
+												</div>
+											</div>
+
+											<div class="add-option">
+												<div class="add-option-info">
+													<span class="add-name">Лента-плингус (вставка) белая с
+														установкой</span>
+													<span class="add-price">1 000 руб./м.п.</span>
+												</div>
+												<div class="add-controls">
+													<button class="add-minus">-</button>
+													<input type="number" class="add-quantity" value="0" min="0"
+														data-price="1000">
+													<button class="add-plus">+</button>
+												</div>
+											</div>
+
+											<div class="add-option">
+												<div class="add-option-info">
+													<span class="add-name">Установка закладной под люстру</span>
+													<span class="add-price">700 руб./шт.</span>
+												</div>
+												<div class="add-controls">
+													<button class="add-minus">-</button>
+													<input type="number" class="add-quantity" value="0" min="0"
+														data-price="1000">
+													<button class="add-plus">+</button>
+												</div>
+											</div>
+
+											<div class="add-option">
+												<div class="add-option-info">
+													<span class="add-name">Установка встроительного светильника</span>
+													<span class="add-price">1 000 руб./шт.</span>
+												</div>
+												<div class="add-controls">
+													<button class="add-minus">-</button>
+													<input type="number" class="add-quantity" value="0" min="0"
+														data-price="1000">
+													<button class="add-plus">+</button>
+												</div>
+											</div>
+
+											<div class="add-option">
+												<div class="add-option-info">
+													<span class="add-name">Установка светодиодной ленты</span>
+													<span class="add-price">650 руб./шт.</span>
+												</div>
+												<div class="add-controls">
+													<button class="add-minus">-</button>
+													<input type="number" class="add-quantity" value="0" min="0"
+														data-price="1000">
+													<button class="add-plus">+</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4">
+							<div class="calculator-result">
+								<div class="result-header">
+									<h4>Итоговая стоимость</h4>
+									<div class="result-price">13 440 <span>руб.</span></div>
+								</div>
+
+								<div class="result-breakdown">
+									<div class="breakdown-item">
+										<span>Площадь помещения (14 м²)</span>
+										<span class="breakdown-value">8 960 руб.</span>
+									</div>
+									<div class="breakdown-item">
+										<span>Количество углов (4 шт.)</span>
+										<span class="breakdown-value">0 руб.</span>
+									</div>
+									<div class="breakdown-item">
+										<span>Фактура: Матовый</span>
+										<span class="breakdown-value">0 руб.</span>
+									</div>
+									<div class="breakdown-item">
+										<span>Цвет: Белый</span>
+										<span class="breakdown-value">0 руб.</span>
+									</div>
+									<div class="breakdown-item">
+										<span>Дополнительные опции</span>
+										<span class="breakdown-value">0 руб.</span>
+									</div>
+								</div>
+
+								<div class="result-total">
+									<div class="total-item">
+										<span>Итого:</span>
+										<span class="total-value">8 960 руб.</span>
+									</div>
+								</div>
+
+								<a href="index.html#record" class="option-button">Записаться на
+									замер</a>
+								<p class="result-note">Расчет является предварительным. Точную стоимость
+									уточнит специалист после замера.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Таблица с ценами -->
+			<section class="price-table-section">
+				<div class="container">
+					<h2 class="section-title">Стоимость услуг (Тольятти)</h2>
+					<div class="table-responsive">
+						<table class="price-table">
+							<thead>
+								<tr>
+									<th>Наименование услуги</th>
+									<th>Ед. изм.</th>
+									<th>Цена, руб.</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td>Сатиновые натяжные потолки</td><td>м²</td><td
+										class="price">640</td></tr>
+								<tr><td>Освещение натяжных потолков</td><td>точка</td><td
+										class="price">510</td></tr>
+								<tr><td>Натяжные потолки с фотопечатью</td><td>м²</td><td
+										class="price">2140</td></tr>
+								<tr><td>Матовые натяжные потолки</td><td>м²</td><td
+										class="price">640</td></tr>
+								<tr><td>Двухуровневые натяжные потолки</td><td>шт</td><td
+										class="price">1650</td></tr>
+								<tr><td>Глянцевые натяжные потолки</td><td>м²</td><td
+										class="price">640</td></tr>
+								<tr><td>Центровка шва</td><td>%</td><td class="price">15</td></tr>
+								<tr><td>Установка точечного светильника</td><td>шт</td><td
+										class="price">420</td></tr>
+								<tr><td>Установка светодиодной ленты</td><td>пог. м</td><td
+										class="price">650</td></tr>
+								<tr><td>Установка по керам. плитке/керамограниту</td><td>пог. м</td><td
+										class="price">430</td></tr>
+								<tr><td>Установка микроплинтуса (белый/цветной)</td><td>пог. м</td><td
+										class="price">100</td></tr>
+								<tr><td>Установка люстры на закладную</td><td>шт</td><td
+										class="price">750</td></tr>
+								<tr><td>Установка закладной под люстру</td><td>шт</td><td
+										class="price">700</td></tr>
+								<tr><td>Установка гардины на закладную</td><td>шт</td><td
+										class="price">910</td></tr>
+								<tr><td>Установка вентиляционной решетки</td><td>шт</td><td
+										class="price">48</td></tr>
+								<tr><td>Установка бруса для потолочного багета</td><td>пог. м</td><td
+										class="price">375</td></tr>
+								<tr><td>Слив воды</td><td>шт</td><td class="price">2100</td></tr>
+								<tr><td>Обработка доп. угла (более 4-х)</td><td>шт</td><td
+										class="price">375</td></tr>
+								<tr><td>Криволинейный участок</td><td>пог. м</td><td
+										class="price">700</td></tr>
+								<tr><td>Комбинация цветов</td><td>%</td><td class="price">20</td></tr>
+								<tr><td>Защитная пленка (с монтажом)</td><td>шт</td><td
+										class="price">700</td></tr>
+								<tr><td>Дополнительное отверстие до 50 мм</td><td>шт</td><td
+										class="price">428</td></tr>
+								<tr><td>Демонтаж потолка</td><td>шт</td><td class="price">1400</td></tr>
+								<tr><td>Высота потолка от 3 до 3,5 м</td><td>%</td><td
+										class="price">20</td></tr>
+								<tr><td>Внутренний вырез</td><td>пог. м</td><td
+										class="price">800</td></tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="table-note">
+						<p>* Цены указаны в рублях за единицу измерения. Окончательная стоимость
+							может отличаться в зависимости от сложности работ и выбранных
+							материалов.</p>
+					</div>
+				</div>
+			</section>
 
 			<!-- Футер с контактами -->
 			<footer class="footer-info">

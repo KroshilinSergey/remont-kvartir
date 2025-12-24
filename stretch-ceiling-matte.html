@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Натяжные потолки - Матовые и глянцевые</title>
+		<link rel="icon" href="img/натяжные потолки 1.jfif">
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/recording.css">
+		<link rel="stylesheet" href="css/stretch-ceiling.css">
+		<link rel="stylesheet" href="css/ceiling-calculator.css">
+		<link rel="stylesheet" href="css/matte-ceilings.css">
+		<script src="js/burger.js"></script>
+		<script src="js/call-back.js"></script>
+		<script src="js/ceiling.js"></script>
+		<script src="js/ceiling-calculator.js"></script>
+
+	</head>
+	<body>
+		<header class="header">
+			<nav class="main-nav">
+				<img class="logo_img" src="img/логотип.jpg" alt="Логотип">
+
+				<!-- Основное меню -->
+				<ul class="nav-list">
+					<li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>
+							Главная</a></li>
+					<li><a href="index.html#record" class="nav-link"><i
+								class="fas fa-ruler-combined"></i> Запись на замер</a></li>
+					<li><a href="price.html" class="nav-link"><i class="fas fa-tags"></i>
+							Стоимость</a></li>
+					<li>
+						<p class="nav_call"><i class="far fa-clock"></i> 9:00 - 18:00</p>
+						<span class="phone"><i class="fas fa-phone"></i> +7 909 36 29 675</span>
+					</li>
+					<li class="call_back">
+						<div class="call_back-block">Обратный звонок</div>
+						<button class="call_back-button" onclick="showPopup()">
+							<i class="fas fa-phone-alt"></i> Перезвоните мне
+						</button>
+
+						<div id="popup"
+							style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+							<div
+								style="background: #fff; padding: 20px; border-radius: 5px;">
+								<h2>Оставьте ваш номер телефона</h2>
+								<input type="text"
+									placeholder="Ваш номер телефона"
+									style="width: 100%; padding: 10px; margin-bottom: 10px;">
+								<button onclick="hidePopup()">Отправить</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<!-- Бургер меню -->
+				<div class="burger-wrapper">
+					<div class="burger" id="burger">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+				</div>
+
+				<!-- Мобильное меню -->
+				<ul class="mobile-menu" id="mobileMenu">
+					<li><a href="index.html" class="nav-link">Главная</a></li>
+					<li><a href="index.html#about" class="nav-link">О нас</a></li>
+					<li><a href="index.html#price" class="nav-link">Записаться на
+							замер</a></li>
+					<li><a href="index.html#servises" class="nav-link">Услуги</a></li>
+					<li><a href="price.html" class="nav-link">Стоимость</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Главный баннер -->
+		<div class="main-banner">
+			<div class="container">
+				<div class="banner-content">
+					<h1><i class="fas fa-paint-roller"></i> Натяжные потолки в Тольятти</h1>
+					<p class="banner-subtitle">Профессиональная установка матовых и глянцевых
+						потолков от 640 ₽/м²</p>
+					<div class="banner-features">
+						<div class="feature-item">
+							<i class="fas fa-calendar-check"></i>
+							<span>Монтаж за 1 день</span>
+						</div>
+						<div class="feature-item">
+							<i class="fas fa-shield-alt"></i>
+							<span>Гарантия 10 лет</span>
+						</div>
+						<div class="feature-item">
+							<i class="fas fa-home"></i>
+							<span>Бесплатный замер</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Секция матовых потолков -->
+		<section class="matte-ceilings-section">
+			<div class="container">
+				<div class="section-header">
+					<i class="fas fa-square section-icon matte-icon"></i>
+					<h1 class="section-title">Матовые натяжные потолки</h1>
+					<p class="section-subtitle">Элегантная классика для идеального
+						интерьера</p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="info-card">
+							<div class="card-icon">
+								<i class="fas fa-paint-roller"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-eye"></i> Внешний вид и особенности</h3>
+								<p>Зрительно такие потолки напоминают традиционную побелку или финишную
+									штукатурку, только без единого изъяна. Фактура – слегка шероховатая.
+									Бесшовная поверхность лишена неровностей, стыков, прочих дефектов.</p>
+								<p>Отличие таких полотен от других видов материалов – в практическом
+									отсутствии отражательной способности. Пленка мягко рассеивает свет, не
+									поглощая его, создавая атмосферу комфорта и уюта.</p>
+							</div>
+						</div>
+
+						<div class="info-card">
+							<div class="card-icon">
+								<i class="fas fa-industry"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-cogs"></i> Производство и материалы</h3>
+								<p>Изготавливаются из поливинилхлоридной пленки, по текстуре схожи с
+									полиэтиленовой пленкой. Они отличаются приятной фактурой и гладкой
+									поверхностью.</p>
+								<p><strong>Что мы предлагаем:</strong> Матовый потолок белого цвета –
+									неувядающая классика. На выбор покупателей предложен большой
+									ассортимент оттенков. Цветовая гамма насчитывает 100+ различных
+									оттенков. Ширина рулонов: 150/200/270/320/500 сантиметров.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6">
+						<div class="benefits-card">
+							<div class="card-icon">
+								<i class="fas fa-star"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-check-circle"></i> Преимущества матовых
+									потолков</h3>
+								<div class="benefits-grid">
+									<div class="benefit-item">
+										<i class="fas fa-leaf benefit-icon"></i>
+										<span>Экологическая безопасность</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-fire benefit-icon"></i>
+										<span>Огнеупорность</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-history benefit-icon"></i>
+										<span>Долговечность и износостойкость</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-sun benefit-icon"></i>
+										<span>Устойчивость к ультрафиолету</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-print benefit-icon"></i>
+										<span>Универсальность для фотопечати</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-broom benefit-icon"></i>
+										<span>Простота ухода</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-ruler-combined benefit-icon"></i>
+										<span>Идеально ровная поверхность</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-weight-hanging benefit-icon"></i>
+										<span>Выдерживает 100 кг/м²</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-tint benefit-icon"></i>
+										<span>Водонепроницаемость</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					<div class="col-12">
+						<div class="info-card">
+							<div class="card-icon">
+								<i class="fas fa-home"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-couch"></i> Внешний вид в интерьере</h3>
+								<p>Просто идеальна для печати рисунков. Отпечаток на матовой пленке
+									получается сочным и чётким, а цвета сохраняют первоначальное состояние
+									десятками лет. Хорошо комбинируются с другими видами потолков
+									(например, гипсокартонными) и с различными технологиями (например,
+									двухуровневыми).</p>
+								<p>Такая фактура хорошо смотрится в любом помещении: гостиной, офисе,
+									холле, спальне, кухне, детской. Такая конструкция обеспечит ровную
+									поверхность, при этом расставить акценты на внутреннем оформлении
+									комнаты. Имеет некричащую внешность, но эффектно подчеркивает уютную и
+									комфортную атмосферу.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Секция глянцевых потолков -->
+		<section class="glossy-ceilings-section" id="gloss">
+			<div class="container">
+				<div class="section-header">
+					<i class="fas fa-square section-icon glossy-icon"></i>
+					<h1 class="section-title">Глянцевые натяжные потолки</h1>
+					<p class="section-subtitle">Зеркальный блеск для визуального простора</p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="info-card glossy">
+							<div class="card-icon">
+								<i class="fas fa-expand-arrows-alt"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-arrows-alt"></i> Визуальный эффект</h3>
+								<p>После установки, комната становится визуально больше, весь свет от
+									светильников или люстры будет отражаться от потолка, и тем самым делать
+									пространство еще светлее.</p>
+								<p>Изготавливаются из специальной поливинилхлоридной плёнки, имеющей
+									идеально гладкую поверхность. Она зеркально отражает все предметы,
+									находящиеся в помещении.</p>
+							</div>
+						</div>
+
+						<div class="info-card glossy">
+							<div class="card-icon">
+								<i class="fas fa-globe"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-box-open"></i> Что мы предлагаем</h3>
+								<p>Реализуем полотна (глянец) брендов из России, Германии, Китая,
+									Франции, Италии (MSD, TEQTUM, CLIPSO, DESCOR, PONGS и другие). В
+									каталоге – 100+ цветов на ваш выбор.</p>
+								<p><strong>Гарантия на материал – 15 лет. Ширина до 5.5
+										метров.</strong></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6">
+						<div class="benefits-card glossy">
+							<div class="card-icon">
+								<i class="fas fa-trophy"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-award"></i> Преимущества глянцевых потолков</h3>
+								<div class="benefits-grid">
+									<div class="benefit-item">
+										<i class="fas fa-broom benefit-icon"></i>
+										<span>Простота в уходе</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-bolt benefit-icon"></i>
+										<span>Быстрый монтаж (2-3 часа)</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-shield-alt benefit-icon"></i>
+										<span>Безопасность и огнестойкость</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-tint-slash benefit-icon"></i>
+										<span>Водонепроницаемость</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-leaf benefit-icon"></i>
+										<span>Экологическая безопасность</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-palette benefit-icon"></i>
+										<span>Широкие дизайнерские возможности</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-expand benefit-icon"></i>
+										<span>Визуальное расширение пространства</span>
+									</div>
+									<div class="benefit-item">
+										<i class="fas fa-gem benefit-icon"></i>
+										<span>Зеркальный блеск</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					<div class="col-12">
+						<div class="info-card glossy">
+							<div class="card-icon">
+								<i class="fas fa-palette"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-fill-drip"></i> Цвета и свойства</h3>
+								<p>Цветовая палитра неограниченная: белые, бежевые, сиреневые,
+									бледно-розовые, голубые и многие другие натяжные потолки есть в нашем
+									каталоге. Потолки с глянцевой фактурой универсальны – хорошо сочетаются
+									как с классическим, так и с современным дизайном интерьера.</p>
+								<p><strong>Белые глянцевые потолки – это верный выбор в сторону
+										современного дизайна.</strong> Используется на кухне, в зале, в
+									спальне и в любых других помещениях для создания эффекта простора и
+									дополнительного освещения.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="satin-ceilings-section" id="satin">
+			<div class="container">
+				<div class="section-header">
+					<i class="fas fa-square section-icon satin-icon"></i>
+					<h1 class="section-title">Сатиновые натяжные потолки</h1>
+					<p class="section-subtitle">Перламутровый блеск для роскошного
+						интерьера</p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="info-card satin">
+							<div class="card-icon satin">
+								<i class="fas fa-gem"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-star"></i> Внешний вид и особенности</h3>
+								<p>Сатиновые натяжные потолки не отражают свет так ярко, как глянцевые
+									модели, но обладают ненавязчивым перламутровым блеском, что придает им
+									более роскошный внешний вид по сравнению с матовой фактурой.</p>
+								<p>Поверхность эффектно смотрится в любых помещениях: спальне, гостиной,
+									детской, холле, офисе, и прекрасно сочетается со всеми стилями
+									интерьера. Покрытие имеет изысканную текстуру, которая четко передает
+									рисунок, что делает его идеальной основой для фотопечати.</p>
+							</div>
+						</div>
+
+						<div class="info-card satin">
+							<div class="card-icon satin">
+								<i class="fas fa-lightbulb"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-sun"></i> Освещение и визуальный эффект</h3>
+								<p>Сатиновые потолки красиво смотрятся с различными системами
+									освещения:</p>
+								<div class="lighting-grid">
+									<div class="lighting-item">
+										<i class="fas fa-lightbulb lighting-icon"></i>
+										<span>Люстры</span>
+									</div>
+									<div class="lighting-item">
+										<i class="fas fa-lightbulb lighting-icon"></i>
+										<span>Светодиодные ленты</span>
+									</div>
+									<div class="lighting-item">
+										<i class="fas fa-lightbulb lighting-icon"></i>
+										<span>Точечные светильники</span>
+									</div>
+								</div>
+								<p class="mt-3">Правильная подсветка подчеркивает перламутровый эффект —
+									полотно меняет оттенки и красиво переливается при разном освещении.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6">
+						<div class="benefits-card satin">
+							<div class="card-icon satin">
+								<i class="fas fa-crown"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-check-double"></i> Преимущества сатиновых
+									потолков</h3>
+								<div class="satin-benefits-grid">
+									<div class="satin-benefit-item">
+										<i class="fas fa-tint satin-benefit-icon"></i>
+										<span>Водонепроницаемость и защита от протечек</span>
+									</div>
+									<div class="satin-benefit-item">
+										<i class="fas fa-shield-alt satin-benefit-icon"></i>
+										<span>Выдерживает до 100 л воды на 1 м²</span>
+									</div>
+									<div class="satin-benefit-item">
+										<i class="fas fa-leaf satin-benefit-icon"></i>
+										<span>Экологическая безопасность и нетоксичность</span>
+									</div>
+									<div class="satin-benefit-item">
+										<i class="fas fa-wind satin-benefit-icon"></i>
+										<span>Не впитывает запахи и не притягивает пыль</span>
+									</div>
+									<div class="satin-benefit-item">
+										<i class="fas fa-sun satin-benefit-icon"></i>
+										<span>Устойчивость к ультрафиолету и выгоранию</span>
+									</div>
+									<div class="satin-benefit-item">
+										<i class="fas fa-broom satin-benefit-icon"></i>
+										<span>Простой уход и долговечность</span>
+									</div>
+									<div class="satin-benefit-item">
+										<i class="fas fa-palette satin-benefit-icon"></i>
+										<span>Идеальная основа для фотопечати</span>
+									</div>
+									<div class="satin-benefit-item">
+										<i class="fas fa-expand-arrows-alt satin-benefit-icon"></i>
+										<span>Визуальное расширение пространства</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					<div class="col-12">
+						<div class="info-card satin">
+							<div class="card-icon satin">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-boxes"></i> Что мы предлагаем</h3>
+								<p><strong>Широкий выбор:</strong> Цветовая гамма включает 100+
+									вариантов оттенков с перламутровым эффектом. Вы можете выбрать любой
+									оттенок, который гармонично впишется в ваш интерьер.</p>
+								<p><strong>Гибкие цены:</strong> Стоимость установки зависит от
+									производителя материала, размеров помещения и сложности конструкции
+									(одноуровневые, многоуровневые, комбинированные потолки).</p>
+								<p><strong>Качество материалов:</strong> Мы работаем с проверенными
+									производителями из Китая, Германии и Италии, предлагая оптимальное
+									соотношение цены и качества. Самые доступные варианты — от китайских
+									фабрик, премиум-класс — от европейских брендов.</p>
+								<p><strong>Консультация и замер:</strong> Для уточнения деталей и
+									расчета точной стоимости звоните нам по телефону: <strong>+7 (909)
+										36 29 675</strong>.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="fabric-ceilings-section" id="fabric">
+			<div class="container">
+				<div class="section-header">
+					<i class="fas fa-square section-icon fabric-icon"></i>
+					<h1 class="section-title">Тканевые натяжные потолки</h1>
+					<p class="section-subtitle">Экологичность и долговечность в каждой
+						детали</p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="info-card fabric">
+							<div class="card-icon fabric">
+								<i class="fas fa-leaf"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-heart"></i> Экологичность и комфорт</h3>
+								<p>Тканевые потолки — это современная альтернатива ПВХ-пленкам,
+									созданная из высококачественного полиэстера с полиуретановой пропиткой.
+									Главное преимущество — абсолютная экологичность и безопасность для
+									здоровья.</p>
+								<p><strong>Безопасность для аллергиков:</strong> Материал не выделяет
+									вредных веществ и не имеет запаха, что делает его идеальным выбором для
+									детских комнат, спален и медицинских учреждений.</p>
+							</div>
+						</div>
+
+						<div class="info-card fabric">
+							<div class="card-icon fabric">
+								<i class="fas fa-cogs"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-rocket"></i> Особенности монтажа</h3>
+								<p>В отличие от ПВХ-пленок, тканевые потолки не требуют использования
+									тепловой пушки для установки. Это делает монтаж:</p>
+								<div class="installation-grid mt-3">
+									<div class="install-item">
+										<i class="fas fa-bolt"></i>
+										<div>
+											<strong>Быстрым</strong>
+											<p>2-3 часа на стандартную комнату</p>
+										</div>
+									</div>
+									<div class="install-item">
+										<i class="fas fa-home"></i>
+										<div>
+											<strong>Чистым</strong>
+											<p>Не нужно выносить мебель и делать уборку</p>
+										</div>
+									</div>
+									<div class="install-item">
+										<i class="fas fa-user-clock"></i>
+										<div>
+											<strong>Удобным</strong>
+											<p>Работаем в удобное для вас время</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-5">
+						<div class="benefits-card fabric special-card">
+							<div class="card-icon fabric">
+								<i class="fas fa-crown"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-gem"></i> Премиум-качество</h3>
+								<div class="premium-features">
+									<div class="premium-item">
+										<i class="fas fa-ruler-combined"></i>
+										<div>
+											<strong>Ширина до 5,2 метра</strong>
+											<p>Бесшовная натяжка в большинстве помещений</p>
+										</div>
+									</div>
+									<div class="premium-item">
+										<i class="fas fa-calendar-alt"></i>
+										<div>
+											<strong>Срок службы 30+ лет</strong>
+											<p>Забудьте о ремонте на десятилетия</p>
+										</div>
+									</div>
+									<div class="premium-item">
+										<i class="fas fa-shield-alt"></i>
+										<div>
+											<strong>Пожизненная гарантия</strong>
+											<p>Надежность, проверенная временем</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					<div class="col-lg-8">
+						<div class="info-card fabric">
+							<div class="card-icon fabric">
+								<i class="fas fa-star"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-check-double"></i> Преимущества тканевых
+									потолков</h3>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="advantage-list">
+											<div class="advantage-item">
+												<div class="advantage-icon">
+													<i class="fas fa-temperature-low"></i>
+												</div>
+												<div class="advantage-text">
+													<h5>Устойчивость к перепадам</h5>
+													<p>Не расширяется и не сжимается при изменении температуры</p>
+												</div>
+											</div>
+											<div class="advantage-item">
+												<div class="advantage-icon">
+													<i class="fas fa-fan"></i>
+												</div>
+												<div class="advantage-text">
+													<h5>Антистатическое покрытие</h5>
+													<p>Не притягивает пыль и долго остается чистым</p>
+												</div>
+											</div>
+											<div class="advantage-item">
+												<div class="advantage-icon">
+													<i class="fas fa-wine-bottle"></i>
+												</div>
+												<div class="advantage-text">
+													<h5>Прочность</h5>
+													<p>Выдерживает пробку шампанского и механические воздействия</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="advantage-list">
+											<div class="advantage-item">
+												<div class="advantage-icon">
+													<i class="fas fa-paint-roller"></i>
+												</div>
+												<div class="advantage-text">
+													<h5>Возможность окрашивания</h5>
+													<p>Можно перекрасить в любой цвет без замены полотна</p>
+												</div>
+											</div>
+											<div class="advantage-item">
+												<div class="advantage-icon">
+													<i class="fas fa-sun"></i>
+												</div>
+												<div class="advantage-text">
+													<h5>Устойчивость к ультрафиолету</h5>
+													<p>Не выцветает и не желтеет со временем</p>
+												</div>
+											</div>
+											<div class="advantage-item">
+												<div class="advantage-icon">
+													<i class="fas fa-wind"></i>
+												</div>
+												<div class="advantage-text">
+													<h5>Дышащая поверхность</h5>
+													<p>Естественная циркуляция воздуха в помещении</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4">
+						<div class="order-card fabric">
+							<div class="card-icon fabric">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-shipping-fast"></i> Как заказать</h3>
+								<div class="order-steps">
+									<div class="step-item">
+										<div class="step-number">1</div>
+										<div class="step-content">
+											<strong>Звонок или заявка</strong>
+											<p>Оставляете заявку на сайте или звоните</p>
+										</div>
+									</div>
+									<div class="step-item">
+										<div class="step-number">2</div>
+										<div class="step-content">
+											<strong>Бесплатный замер</strong>
+											<p>Замерщик приезжает в удобное время</p>
+										</div>
+									</div>
+									<div class="step-item">
+										<div class="step-number">3</div>
+										<div class="step-content">
+											<strong>Подписание договора</strong>
+											<p>Фиксируем цену и сроки в договоре</p>
+										</div>
+									</div>
+									<div class="step-item">
+										<div class="step-number">4</div>
+										<div class="step-content">
+											<strong>Установка</strong>
+											<p>Монтаж за 1 день без грязи и пыли</p>
+										</div>
+									</div>
+								</div>
+								<button class="call_back-button call-satin" onclick="showPopup()">
+									<i class="fas fa-phone-alt"></i> Перезвоните мне
+								</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					<div class="col-12">
+						<div class="info-card fabric">
+							<div class="card-icon fabric">
+								<i class="fas fa-globe"></i>
+							</div>
+							<div class="card-content">
+								<h3><i class="fas fa-award"></i> Мировые бренды и гарантия</h3>
+								<p>Мы работаем с ведущими мировыми производителями тканевых потолков,
+									такими как <strong>Descor, Clipso, Cerutti</strong>, что гарантирует
+									высочайшее качество материалов и долговечность конструкции.</p>
+								<div class="brand-features mt-3">
+									<div class="brand-item">
+										<i class="fas fa-check-circle"></i>
+										<span>Сертифицированные материалы</span>
+									</div>
+									<div class="brand-item">
+										<i class="fas fa-check-circle"></i>
+										<span>Гарантия до 15 лет</span>
+									</div>
+									<div class="brand-item">
+										<i class="fas fa-check-circle"></i>
+										<span>Бесплатная консультация</span>
+									</div>
+									<div class="brand-item">
+										<i class="fas fa-check-circle"></i>
+										<span>Скидки при заказе от 50 м²</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Футер с контактами -->
+		<footer class="footer-info">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-icon">
+						<i class="fas fa-headset"></i>
+					</div>
+					<h3>Нужна консультация или точный расчет?</h3>
+					<p class="footer-text">
+						Наши специалисты бесплатно проконсультируют вас, помогут выбрать
+						оптимальный вариант отделки и рассчитают точную стоимость работ
+					</p>
+					<div class="footer-contacts">
+						<div class="contact-item">
+							<i class="far fa-clock"></i>
+							<span>Работаем ежедневно с 9:00 до 18:00</span>
+						</div>
+						<div class="contact-item">
+							<i class="fas fa-phone"></i>
+							<span>+7 909 36 29 675</span>
+						</div>
+						<div class="contact-item">
+							<i class="fas fa-map-marker-alt"></i>
+							<span>г. Тольятти</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Фиксированная кнопка калькулятора -->
+		<div class="fixed-calculator-btn">
+			<a href="stretch-ceiling.html#calculator" class="calc-btn">
+				<i class="fas fa-calculator"></i>
+				<span>Калькулятор</span>
+			</a>
+		</div>
+
+	</body>
+</html>
