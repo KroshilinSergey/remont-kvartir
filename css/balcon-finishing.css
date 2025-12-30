@@ -78,7 +78,7 @@ body {
 }
 
 .options-section p {
-   color: var(--light-color);
+   color: var(--primary-color);
    text-align: center;
 }
 
@@ -263,11 +263,12 @@ body {
 }
 
 .option-header:not(.has-price) h3 {
-    color: white;
+    color: var(--secondary-color);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     font-size: 2rem;
     margin-bottom: 5px;
 }
+
 
 .option-header h3::after {
     content: '';
