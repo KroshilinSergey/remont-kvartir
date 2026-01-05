@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Отделка балконов</title>
+		<link rel="icon" href="img/фав 2/фавикон 4.png">
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/recording.css">
+		<link rel="stylesheet" href="css/balcon.css">
+		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/balcon-finishing.css">
+		<link rel="stylesheet" href="css/balcon-insulation.css">
+		<script src="js/burger.js"></script>
+		<script src="js/balcon.js"></script>
+		<script src="js/call-back.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="main-nav">
+				<img class="logo_img" src="img/логотип.jpg" alt="Логотип">
+
+				<!-- Основное меню -->
+				<ul class="nav-list">
+					<li><a href="index.html" class="nav-link">Главная</a></li>
+					<li><a href="index.html#record" class="nav-link">Записаться на
+							замер</a></li>
+					<li><a href="index.html#servises" class="nav-link">Услуги</a></li>
+					<li><a href="price.html" class="nav-link">Стоимость</a></li>
+					<li>
+						<p class="nav_call">9:00 - 18:00 </p>
+						<span class="phone">+7 909 36 29 675</span>
+					</li>
+					<li class="call_back">
+						<div class="call_back-block">Обратный звонок</div>
+						<button class="call_back-button" onclick="showPopup()">
+							<i class="fas fa-phone-alt"></i> Перезвоните мне
+						</button>
+
+						<div id="popup"
+							style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+							<div style="background: #fff; padding: 20px; border-radius: 5px;">
+								<h2>Оставьте ваш номер телефона</h2>
+								<input type="text" id="phoneInput"
+									placeholder="Ваш номер телефона"
+									style="width: 100%; padding: 10px; margin-bottom: 10px;">
+								<button onclick="hidePopup()">Отправить</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<!-- Бургер меню -->
+				<div class="burger-wrapper">
+					<div class="burger" id="burger">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+				</div>
+
+				<!-- Мобильное меню -->
+				<ul class="mobile-menu" id="mobileMenu">
+					<li><a href="index.html#about" class="nav-link">О нас</a></li>
+					<li><a href="index.html#price" class="nav-link">Записаться на
+							замер</a></li>
+					<li><a href="index.html#servises" class="nav-link">Услуги</a></li>
+					<li><a href="price.html" class="nav-link">Стоимость</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="container">
+			<header class="page-header page-header_insulation">
+				<h1>Варианты утепления балкона и лоджии</h1>
+				<p>Мы создаём тепло и уют, предлагая широкий спектр решений для утепления
+					стен и полов. Каждый материал — это гармония надёжности, эффективности и
+					безупречной эстетики.</p>
+			</header>
+
+			<section class="description">
+				<div class="description-overlay"></div>
+				<div class="description-container">
+					<h2 class="description_title">Главное в утеплителе — баланс свойств</h2>
+					<p class="description_subtitle">Ориентируйтесь на ключевые показатели:</p>
+
+					<div class="features-grid">
+						<div class="feature-card">
+							<div class="feature-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path
+										d="M23 6L17 1 15 3 9 3 7 1 1 6 1 18 7 23 9 21 15 21 17 23 23 18 23 6zM3 8.5L7 5 9 7 15 7 17 5 21 8.5 21 15.5 17 19 15 17 9 17 7 19 3 15.5 3 8.5z" />
+									<path d="M0 0h24v24H0z" fill="none" />
+									<text x="8" y="16" font-size="8" font-weight="bold">λ</text>
+								</svg>
+							</div>
+							<h3 class="feature-title">Эффективная теплоизоляция</h3>
+							<p class="feature-text">Чтобы слой был тоньше — ищите материал с низким
+								коэффициентом теплопроводности (как у пенополистирола — 0.04).</p>
+						</div>
+
+						<div class="feature-card">
+							<div class="feature-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path d="M0 0h24v24H0z" fill="none" />
+									<path
+										d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z" />
+								</svg>
+							</div>
+							<h3 class="feature-title">Паропроницаемость</h3>
+							<p class="feature-text">Чтобы стены «дышали» — нужна высокая
+								паропроницаемость (как у минваты, которая в 10 раз лучше
+								пенопласта).</p>
+						</div>
+
+						<div class="feature-card">
+							<div class="feature-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path d="M0 0h24v24H0z" fill="none" />
+									<path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+								</svg>
+							</div>
+							<h3 class="feature-title">Влагостойкость</h3>
+							<p class="feature-text">Для долговечности — критически важна
+								влагостойкость и устойчивость к грибку.</p>
+						</div>
+
+						<div class="feature-card">
+							<div class="feature-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path d="M0 0h24v24H0z" fill="none" />
+									<path
+										d="M13 3.87v.02c0 .67.45 1.23 1.08 1.43C16.93 6.21 19 8.86 19 12c0 .52-.06 1.01-.17 1.49l1.9.6c.16-.57.27-1.17.27-1.79 0-4.5-3-8.31-7.1-9.5v2.16c1.16.41 2 1.53 2 2.83 0 1.31-.84 2.42-2 2.83v2.17c2.42-.48 4-2.5 4-5 0-2.8-2.2-5-5-5zM6.67 6.67H6v.01C5.4 6.67 5 7.07 5 7.67v10c0 .6.4 1 1 1h.01v.01h.66c.6 0 1-.4 1-1V7.67c0-.6-.4-1-1-1zM12.5 16.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+								</svg>
+							</div>
+							<h3 class="feature-title">Безопасность и тишина</h3>
+							<p class="feature-text">Для спокойствия — выбирайте негорючие, безопасные
+								материалы с шумопоглощением.</p>
+						</div>
+					</div>
+
+					<div class="conclusion">
+						<p>Исходя из этого, проанализируем плюсы и минусы популярных утеплителей
+							для балкона.</p>
+						<p class="highlight">Выбирайте вариант, который лучше всего подходит под
+							ваш формат.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Секция материалы утепления  стен -->
+			<section class="options-section">
+
+				<div class="options-container">
+					<!-- Полистирол -->
+					<div class="option-card">
+						<div class="image-container">
+							<img class="balcon_img" src="img/Балкон, лоджия/Пенополистирол.png"
+								alt="Пенополистирол">
+						</div>
+						<div class="option-header has-price">
+							<h3>Пенополистирол</h3>
+							<div class="option-price">от <span>2000</span> <span
+									class="option-unit">рублей за кв.м</span></div>
+						</div>
+						<div class="option-content">
+							<p class="option-description">
+								Самый распространенный утеплитель в виде плит из застывшей пены.
+								Воздух, изолированный в порах, обеспечивает эффективную теплоизоляцию.
+								Для умеренного климата используют толщину 2-5 см, для холодного — от 10
+								см.
+								Разновидность — экструдированный пенополистирол с однородной структурой
+								закрытых ячеек.
+							</p>
+
+							<div class="advantages-section">
+								<h4><i class="fas fa-star"></i> Основные преимущества:</h4>
+								<ul class="advantages-list">
+									<li>
+										<i class="fas fa-check-circle"></i>
+										<strong>Легкий монтаж:</strong> легко режется и крепится к поверхности
+									</li>
+									<li>
+										<i class="fas fa-check-circle"></i>
+										<strong>Отличная теплоизоляция:</strong> низкий коэффициент
+										теплопроводности (0.04 Вт/м·°C)
+									</li>
+									<li>
+										<i class="fas fa-check-circle"></i>
+										<strong>Широкий выбор:</strong> плиты разной толщины (2-10+ см) и
+										плотности (35-40 кг/м³)
+									</li>
+									<li>
+										<i class="fas fa-check-circle"></i>
+										<strong>Доступность:</strong> самый распространенный и бюджетный
+										вариант
+									</li>
+								</ul>
+							</div>
+
+							<div class="features-warning">
+								<h4><i class="fas fa-exclamation-triangle"></i> Важно учесть:</h4>
+								<ul class="warning-list">
+									<li>
+										<i class="fas fa-fire"></i>
+										<strong>Высокая горючесть:</strong> требует соблюдения мер пожарной
+										безопасности
+									</li>
+									<li>
+										<i class="fas fa-search"></i>
+										<strong>При выборе:</strong> проверяйте структуру ячеек (должны быть
+										многоугольными, не шариками)
+									</li>
+								</ul>
+							</div>
+
+							<a href="index.html#record" class="option-button">Записаться на замер</a>
+						</div>
+					</div>
+
+					<div class="option-card">
+						<div class="image-container">
+							<img class="balcon_img" src="img/Балкон, лоджия/базальт-вата.png"
+								alt="Минеральная вата">
+						</div>
+						<div class="option-header has-price">
+							<h3>Базальтовая минеральная вата</h3>
+							<div class="option-price">от <span>3200</span> <span
+									class="option-unit">рублей за кв.м</span></div>
+						</div>
+						<div class="option-content">
+							<p class="option-description">
+								Спрессованные плиты из волокон горных пород или металлургических шлаков.
+								Плотность материала — 150-175 кг/м³. Для балконов часто используют
+								фольгированные
+								варианты, которые отражают тепло обратно в помещение.
+							</p>
+
+							<div class="advantages-section">
+								<h4><i class="fas fa-star"></i> Основные преимущества:</h4>
+								<ul class="advantages-list">
+									<li>
+										<i class="fas fa-check-circle"></i>
+										<strong>Высокая огнестойкость:</strong> температура плавления 1100°C,
+										останавливает распространение огня
+									</li>
+									<li>
+										<i class="fas fa-check-circle"></i>
+										<strong>Прочность и универсальность:</strong> выдерживает фиксацию
+										любых отделочных материалов
+									</li>
+									<li>
+										<i class="fas fa-check-circle"></i>
+										<strong>Отличная теплоизоляция:</strong> коэффициент теплопроводности
+										0.036-0.042 Вт/м·°C
+									</li>
+									<li>
+										<i class="fas fa-check-circle"></i>
+										<strong>Дополнительные варианты:</strong> фольгированные плиты для
+										усиленной теплоизоляции
+									</li>
+								</ul>
+							</div>
+
+							<div class="features-warning">
+								<h4><i class="fas fa-exclamation-triangle"></i> Важно учесть:</h4>
+								<ul class="warning-list">
+									<li>
+										<i class="fas fa-money-bill-wave"></i>
+										<strong>Высокая стоимость:</strong> дороже пенополистирола, но
+										окупается характеристиками
+									</li>
+									<li>
+										<i class="fas fa-user-shield"></i>
+										<strong>Требуется защита при монтаже:</strong> частицы волокон могут
+										вызывать раздражение — используйте маску и перчатки
+									</li>
+									<li>
+										<i class="fas fa-tint"></i>
+										<strong>Гидрофобность:</strong> требует защиты от влаги, особенно при
+										использовании на балконах
+									</li>
+								</ul>
+							</div>
+
+							<a href="index.html#record" class="option-button">Записаться на замер</a>
+						</div>
+					</div>
+
+					<div class="option-card">
+						<div class="image-container">
+							<img class="balcon_img" src="img/Балкон, лоджия/пенофол.png"
+								alt="Пенофол">
+						</div>
+						<div class="option-header has-price">
+							<h3>Пенофол</h3>
+							<div class="option-price">от <span>850</span> <span
+									class="option-unit">рублей за кв.м</span></div>
+						</div>
+						<div class="option-content">
+							<p class="option-description">
+								Современный комбинированный материал из вспененного полиэтилена и фольги
+								(20 мк).
+								Используется как дополнительный отражающий сель. Выпускается в плитах и
+								рулонах
+								толщиной 2-10 мм — 4 мм заменяют 3 см пенопласта или 8 см минваты.
+							</p>
+
+							<div class="advantages-section">
+								<h4><i class="fas fa-star"></i> Основные преимущества:</h4>
+								<ul class="advantages-list">
+									<li>
+										<i class="fas fa-check-circle"></i>
+										<strong>Тонкий и эффективный:</strong> 4 мм заменяют 3 см пенопласта —
+										экономия пространства
+									</li>
+									<li>
+										<i class="fas fa-check-circle"></i>
+										<strong>Простой монтаж:</strong> не крошится, не требует
+										профессиональных навыков и инструментов
+									</li>
+									<li>
+										<i class="fas fa-check-circle"></i>
+										<strong>Универсальные варианты:</strong> 3 типа для разных задач с
+										самоклеящейся основой
+									</li>
+									<li>
+										<i class="fas fa-check-circle"></i>
+										<strong>Экономичность:</strong> невысокая стоимость при отличных
+										теплоизоляционных свойствах
+									</li>
+								</ul>
+							</div>
+
+							<div class="type-specs">
+								<h4><i class="fas fa-layer-group"></i> Типы материала и применение:</h4>
+								<div class="specs-grid">
+									<div class="spec-item">
+										<div class="spec-icon">
+											<i class="fas fa-home"></i>
+										</div>
+										<div class="spec-content">
+											<h5>Тип «А»</h5>
+											<p>Дополнительное утепление балкона изнутри</p>
+										</div>
+									</div>
+									<div class="spec-item">
+										<div class="spec-icon">
+											<i class="fas fa-thermometer-three-quarters"></i>
+										</div>
+										<div class="spec-content">
+											<h5>Тип «В»</h5>
+											<p>Подложка под теплый пол или бетонную стяжку</p>
+										</div>
+									</div>
+									<div class="spec-item">
+										<div class="spec-icon">
+											<i class="fas fa-sticky-note"></i>
+										</div>
+										<div class="spec-content">
+											<h5>Тип «С»</h5>
+											<p>Самоклеящийся — монтаж без предварительной подготовки</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="features-warning">
+								<h4><i class="fas fa-exclamation-triangle"></i> Важно учесть:</h4>
+								<ul class="warning-list">
+									<li>
+										<i class="fas fa-layer-group"></i>
+										<strong>Требует перекрытия:</strong> мягкая структура не позволяет
+										наносить штукатурку, краску или обои сразу
+									</li>
+									<li>
+										<i class="fas fa-glue"></i>
+										<strong>Специальный монтаж:</strong> из-за плохой адгезии требуется
+										специальный клей для улучшения сцепления
+									</li>
+									<li>
+										<i class="fas fa-gem"></i>
+										<strong>Вспомогательный материал:</strong> используется только
+										совместно с другими утеплителями
+									</li>
+								</ul>
+							</div>
+
+							<a href="index.html#record" class="option-button">Записаться на замер</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="installation-section">
+				<div class="container">
+					<div class="section-header">
+						<h2 class="section-title">Алгоритм монтажа утеплителя</h2>
+						<p class="section-subtitle">После выбора подходящего материала можно
+							переходить к его установке. На рисунке ниже вы можете увидеть слои
+							будущей отделки.</p>
+					</div>
+
+					<div class="installation-process">
+						<img src="img/Балкон, лоджия/монтаж.png" alt="монтаж теплоизоляции">
+						
+		
+						<!-- Шаги монтажа -->
+						<div class="steps-timeline">
+							<div class="step">
+								<div class="step-icon">
+									<i class="fas fa-search"></i>
+								</div>
+								<div class="step-content">
+									<h3 class="step-title">Подготовительные работы</h3>
+									<p class="step-description">Осмотр стен, парапета, потолка и пола. Щели
+										и трещины заполняются монтажной пеной, поверхности покрываются
+										грунтовкой.</p>
+								</div>
+							</div>
+
+							<div class="step">
+								<div class="step-icon">
+									<i class="fas fa-tint"></i>
+								</div>
+								<div class="step-content">
+									<h3 class="step-title">Гидроизоляция</h3>
+									<p class="step-description">Защита утеплителя от проникновения влаги
+										извне. Используются обмазывающие или проникающие составы, а также
+										специальная мембранная пленка.</p>
+								</div>
+							</div>
+
+							<div class="step">
+								<div class="step-icon">
+									<i class="fas fa-th"></i>
+								</div>
+								<div class="step-content">
+									<h3 class="step-title">Обрешетка</h3>
+									<p class="step-description">Деревянные брусья монтируются до утеплителя
+										(для пенополистирола или минваты) или после (для пенофола). Каркас
+										фиксируется саморезами с дюбелями, затем обрабатывается
+										антисептиком.</p>
+									<div class="step-tip">
+										<i class="fas fa-lightbulb"></i>
+										<span>Сечение брусьев должно соответствовать толщине утеплителя</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="step">
+								<div class="step-icon">
+									<i class="fas fa-layer-group"></i>
+								</div>
+								<div class="step-content">
+									<h3 class="step-title">Утепление и пароизоляция</h3>
+									<p class="step-description">Теплоизолятор разрезается на части и
+										раскладывается между брусьями. Крепится клеем или дюбелями. Вся
+										конструкция закрывается пароизоляционной пленкой.</p>
+								</div>
+							</div>
+
+							<div class="step">
+								<div class="step-icon">
+									<i class="fas fa-paint-roller"></i>
+								</div>
+								<div class="step-content">
+									<h3 class="step-title">Отделочные работы</h3>
+									<p class="step-description">Утеплитель зашивается гипсокартоном или
+										ПВХ-панелями. Пол покрывается ДСП или фанерой. Далее стены
+										штукатурятся, красятся или оклеиваются обоями, а пол покрывается
+										линолеумом, плиткой или ламинатом.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="installation-conclusion">
+						<div class="conclusion-icon">
+							<i class="fas fa-home"></i>
+						</div>
+						<div class="conclusion-content">
+							<h3>Утепление балкона – отличная идея по расширению жилой площади</h3>
+							<p>Чтобы качественно ее реализовать, важно ответственно выбрать и уложить
+								теплоизоляционный материал. Тогда вам гарантирована комфортная
+								температура в помещении, а значит, и приятное времяпрепровождение в
+								новой комнате.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Футер с контактами -->
+			<footer class="footer-info footer-info_ins">
+				<h3>Нужна консультация или точный расчет?</h3>
+				<p style="max-width: 700px; margin: 0 auto 30px; font-size: 1.1rem;">
+					Наши специалисты бесплатно проконсультируют вас, помогут выбрать
+					оптимальный вариант отделки и рассчитают точную стоимость работ
+				</p>
+				<p style="margin-top: 20px; font-size: 1.1rem; opacity: 0.9;">
+					Работаем ежедневно с 9:00 до 18:00
+				</p>
+			</footer>
+		</div>
+
+	</body>
+</html>
