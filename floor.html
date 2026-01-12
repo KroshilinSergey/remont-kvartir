@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Напольные покрытия - выбор и характеристики</title>
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/recording.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/floor.css">
+		<link rel="icon" href="img/floor-icon.png">
+		<link rel="stylesheet" href="css/floor-calculator.css">
+		<script src="js/burger.js"></script>
+		<script src="js/call-back.js"></script>
+		 <script src="js/footer_form.js"></script>
+		  <script src="js/telegram-proxy.js"></script>
+				<script src="js/ceiling-calculator.js"></script>
+		 
+	</head>
+	<body>
+		<header class="header">
+			<nav class="main-nav">
+				<img class="logo_img" src="img/логотип.jpg"
+					alt="Логотип">
+
+				<!-- Основное меню -->
+				<ul class="nav-list">
+					<li><a href="index.html" class="nav-link active">Главная</a></li>
+					<li><a href="#types" class="nav-link">Виды покрытий</a></li>
+					<li><a href="#guide" class="nav-link">Гид по выбору</a></li>
+					<li><a href="#comparison" class="nav-link">Сравнение</a></li>
+					<li><a href="#contactForm" class="nav-link">Консультация</a></li>
+					<li>
+						<p class="nav_call">9:00 - 18:00</p>
+						<span class="phone">+7 909 36 29 675</span>
+					</li>
+					<li class="call_back">
+						<div class="call_back-block">Обратный звонок</div>
+						<button class="call_back-button" onclick="showPopup()">
+							<i class="fas fa-phone-alt"></i> Перезвоните мне
+						</button>
+
+						<div id="popup"
+							style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+							<div style="background: #fff; padding: 20px; border-radius: 5px;">
+								<h2>Оставьте ваш номер телефона</h2>
+								<input type="text" id="phoneInput"
+									placeholder="Ваш номер телефона"
+									style="width: 100%; padding: 10px; margin-bottom: 10px;"
+									maxlength="15">
+								<button onclick="hidePopup()">Отправить</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<!-- Бургер меню -->
+				<div class="burger-wrapper">
+					<div class="burger" id="burger">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+				</div>
+
+				<!-- Мобильное меню -->
+				<ul class="mobile-menu" id="mobileMenu">
+					<li><a href="index.html" class="nav-link active">Главная</a></li>
+					<li><a href="#types" class="nav-link">Виды покрытий</a></li>
+					<li><a href="#guide" class="nav-link">Гид по выбору</a></li>
+					<li><a href="#comparison" class="nav-link">Сравнение</a></li>
+					<li><a href="#consult" class="nav-link">Консультация</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<!-- Герой секция -->
+			<section class="hero-section">
+				<div class="container">
+					<div class="hero-content">
+						<h1>Напольные покрытия: <span class="highlight">идеальный пол</span> для
+							вашего дома</h1>
+					</div>
+				</div>
+			</section>
+
+			<!-- Секция 1: Общее описание -->
+			<section class="description-section" id="guide">
+				<div class="container">
+					<div class="section-header">
+						<h2>Виды напольных покрытий</h2>
+					</div>
+
+					<div class="description-content">
+						<div class="description-image">
+							<img
+								src="img/floor/Ламинат3.jpg"
+								alt="Напольные покрытия">
+						</div>
+						<div class="description-text">
+							<p class="lead">Любой интерьер «начинается» с выбора правильного
+								красивого и практичного напольного покрытия. Разнообразие материалов,
+								которые могут монтироваться на пол, на современном строительном рынке
+								поражает, что часто вызывает затруднение покупателя в выборе
+								оптимального варианта.</p>
+
+							<div class="key-points">
+								<div class="key-point">
+									<i class="fas fa-search"></i>
+									<h4>Изучение свойств</h4>
+									<p>Правильный пол начинается с изучения его свойств. Вся информация о
+										самых распространенных материалах для обустролйства пола на нашем
+										сайте.</p>
+								</div>
+								<div class="key-point">
+									<i class="fas fa-balance-scale"></i>
+									<h4>Преимущества и недостатки</h4>
+									<p>Перед принятием решения рекомендуем заранее ознакомиться со всеми
+										особенностями выбранного покрытия — как с его плюсами, так и с
+										ограничениями.</p>
+								</div>
+								<div class="key-point">
+									<i class="fas fa-home"></i>
+									<h4>Тип помещения</h4>
+									<p>Обязательно учитывать тип помещения, в котором предполагается
+										укладка выбранного покрытия</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Критерии выбора -->
+					<div class="criteria-section">
+						<h3>Какое напольное покрытие выбрать: 3 основных критерия</h3>
+						<p class="criteria-intro">Чтобы сориентироваться при выборе напольных
+							покрытий для дома или квартиры, учитывайте, где и как вы будете их
+							монтировать.</p>
+
+						<div class="criteria-grid">
+							<div class="criterion">
+								<div class="criterion-icon">
+									<i class="fas fa-ruler-combined"></i>
+								</div>
+								<h4>Особенности места укладки</h4>
+								<p>Некоторые виды полов требуют хорошо выровненной поверхности.
+									Учитывайте геометрию помещения, наличие яркого естественного света и
+									нагрузку в помещении.</p>
+							</div>
+							<div class="criterion">
+								<div class="criterion-icon">
+									<i class="fas fa-door-open"></i>
+								</div>
+								<h4>Подбор для разных комнат</h4>
+								<p>Для каждой комнаты - свой материал. Спальня, гостиная, кухня, ванная
+									- все имеют разные требования к напольному покрытию.</p>
+							</div>
+							<div class="criterion">
+								<div class="criterion-icon">
+									<i class="fas fa-clipboard-check"></i>
+								</div>
+								<h4>Совместимость с теплым полом</h4>
+								<p>Важно учитывать, планируется ли система подогрева пола. Не все
+									материалы совместимы с теплыми полами.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Секция 2: Виды покрытий -->
+			<section class="types-section" id="types">
+				<div class="container">
+					<div class="section-header">
+						<h2>Виды напольных покрытий для дома: выбираем лучшее</h2>
+						<p class="section-subtitle">Основные характеристики: эстетика, качество и
+							цена</p>
+					</div>
+
+					<div class="materials-grid">
+						<!-- Паркет -->
+						<div class="material-card" id="parquet">
+							<div class="material-header">
+								<div class="material-icon">
+									<i class="fas fa-tree"></i>
+								</div>
+								<h3>Паркет и деревянные покрытия</h3>
+								<span class="material-badge natural">Натуральный</span>
+							</div>
+							<div class="material-image">
+								<img
+									src="../img/floor/паркет.jpg"
+									alt="Паркет">
+							</div>
+							<div class="material-content">
+								<p class="material-description">Напольные покрытия из натуральной
+									древесины – это классика жанра, веками доказывающая свою практичность,
+									экологичность и эстетическую безупречность.</p>
+
+								<div class="features">
+									<h4>Виды:</h4>
+									<ul>
+										<li>Штучный паркет</li>
+										<li>Модульный паркет</li>
+										<li>Паркетная доска</li>
+										<li>Массивная доска</li>
+										<li>Инженерная доска</li>
+									</ul>
+								</div>
+
+								<div class="pros-cons">
+									<div class="pros">
+										<h5><i class="fas fa-plus-circle"></i> Преимущества:</h5>
+										<ul>
+											<li>Экологичность и безопасность</li>
+											<li>Великолепная эстетика</li>
+											<li>Долговечность (десятки лет)</li>
+											<li>Возможность реставрации</li>
+											<li>Приятная тактильная фактура</li>
+										</ul>
+									</div>
+									<div class="cons">
+										<h5><i class="fas fa-minus-circle"></i> Особенности:</h5>
+										<ul>
+											<li>Требует поддержания влажности 40-60%</li>
+											<li>Относительно высокая цена</li>
+											<li>Чувствительность к перепадам температур</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="material-suitability">
+									<h5>Подходит для:</h5>
+									<div class="suitability-tags">
+										<span class="tag suitable">Спальня</span>
+										<span class="tag suitable">Гостиная</span>
+										<span class="tag suitable">Кабинет</span>
+										<span class="tag not-suitable">Ванная</span>
+										<span class="tag limited">Кухня</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Кварцвинил -->
+						<div class="material-card" id="quartzvinyl">
+							<div class="material-header">
+								<div class="material-icon">
+									<i class="fas fa-gem"></i>
+								</div>
+								<h3>Кварцвинил</h3>
+								<span class="material-badge popular">Популярный</span>
+							</div>
+							<div class="material-image">
+								<img
+									src="../img/floor/кварцвинил.png"
+									alt="Кварцвинил">
+							</div>
+							<div class="material-content">
+								<p class="material-description">Самый востребованный тип напольного
+									покрытия. Сочетает лучшие качества керамики и ламината. Многослойный
+									материал с кварцевым песком и полимерами.</p>
+
+								<div class="features">
+									<h4>Структура:</h4>
+									<ol>
+										<li>Нижний стабилизирующий слой ПВХ</li>
+										<li>Армированный слой для жесткости</li>
+										<li>Основной слой с добавлением кварца</li>
+										<li>Декоративный слой с рисунком</li>
+										<li>Защитный слой с противоскользящими свойствами</li>
+									</ol>
+								</div>
+
+								<div class="pros-cons">
+									<div class="pros">
+										<h5><i class="fas fa-plus-circle"></i> Преимущества:</h5>
+										<ul>
+											<li>Высокая износостойкость</li>
+											<li>Влагостойкость</li>
+											<li>Простота укладки</li>
+											<li>Легкий уход</li>
+											<li>Имитация любых текстур</li>
+										</ul>
+									</div>
+									<div class="cons">
+										<h5><i class="fas fa-minus-circle"></i> Особенности:</h5>
+										<ul>
+											<li>Требует идеально ровного основания</li>
+											<li>Выше цены чем у ламината</li>
+											<li>Хрупкость при минусовых температурах</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="material-suitability">
+									<h5>Подходит для:</h5>
+									<div class="suitability-tags">
+										<span class="tag suitable">Вся квартира</span>
+										<span class="tag suitable">Кухня</span>
+										<span class="tag suitable">Ванная</span>
+										<span class="tag suitable">Прихожая</span>
+										<span class="tag suitable">Гостиная</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Ламинат -->
+						<div class="material-card" id="laminate">
+							<div class="material-header">
+								<div class="material-icon">
+									<i class="fas fa-layer-group"></i>
+								</div>
+								<h3>Ламинат</h3>
+								<span class="material-badge popular">Популярный</span>
+							</div>
+							<div class="material-image">
+								<img
+									src="../img/floor/лам.укл.jpg"
+									alt="Ламинат">
+							</div>
+							<div class="material-content">
+								<p class="material-description">Популярное напольное покрытие с
+									многослойной структурой, имитирующее натуральные материалы по доступной
+									цене.</p>
+
+								<div class="features">
+									<h4>Классы износостойкости:</h4>
+									<ul>
+										<li><strong>31 класс</strong> - для жилых комнат с небольшой
+											нагрузкой</li>
+										<li><strong>32 класс</strong> - для прихожей, кухни-гостиной</li>
+										<li><strong>33-34 класс</strong> - для интенсивной эксплуатации</li>
+									</ul>
+								</div>
+
+								<div class="pros-cons">
+									<div class="pros">
+										<h5><i class="fas fa-plus-circle"></i> Преимущества:</h5>
+										<ul>
+											<li>Срок службы от 10 лет</li>
+											<li>Доступная цена</li>
+											<li>Большой выбор фактур</li>
+											<li>Простота монтажа</li>
+											<li>Влагостойкие модели</li>
+										</ul>
+									</div>
+									<div class="cons">
+										<h5><i class="fas fa-minus-circle"></i> Особенности:</h5>
+										<ul>
+											<li>Требует звукоизоляции</li>
+											<li>Возможны царапины</li>
+											<li>Боится длительного контакта с водой</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="material-suitability">
+									<h5>Подходит для:</h5>
+									<div class="suitability-tags">
+										<span class="tag suitable">Спальня</span>
+										<span class="tag suitable">Гостиная</span>
+										<span class="tag suitable">Детская</span>
+										<span class="tag limited">Кухня</span>
+										<span class="tag not-suitable">Ванная</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Линолеум -->
+						<div class="material-card" id="linoleum">
+							<div class="material-header">
+								<div class="material-icon">
+									<i class="fas fa-roll"></i>
+								</div>
+								<h3>Линолеум</h3>
+								<span class="material-badge budget">Бюджетный</span>
+							</div>
+							<div class="material-image">
+								<img
+									src="../img/floor/линолеум.jfif"
+									alt="Линолеум">
+							</div>
+							<div class="material-content">
+								<p class="material-description">Бюджетное и практичное решение с легким
+									монтажом. Выпускается в рулонах, бывает натуральным и
+									синтетическим.</p>
+
+								<div class="features">
+									<h4>Виды по составу:</h4>
+									<ul>
+										<li><strong>Натуральный</strong> - из льняного масла, древесной муки,
+											джута</li>
+										<li><strong>Синтетический (ПВХ)</strong> - на основе
+											поливинилхлорида</li>
+									</ul>
+								</div>
+
+								<div class="pros-cons">
+									<div class="pros">
+										<h5><i class="fas fa-plus-circle"></i> Преимущества:</h5>
+										<ul>
+											<li>Самое бюджетное решение</li>
+											<li>Подходит для любых помещений</li>
+											<li>Совместим с теплым полом</li>
+											<li>Простой монтаж</li>
+											<li>Хорошая тепло- и шумоизоляция</li>
+										</ul>
+									</div>
+									<div class="cons">
+										<h5><i class="fas fa-minus-circle"></i> Особенности:</h5>
+										<ul>
+											<li>Чувствителен к перепадам температур</li>
+											<li>Легко повреждается</li>
+											<li>Не скрывает неровности основания</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="material-suitability">
+									<h5>Подходит для:</h5>
+									<div class="suitability-tags">
+										<span class="tag suitable">Кухня</span>
+										<span class="tag suitable">Прихожая</span>
+										<span class="tag suitable">Коридор</span>
+										<span class="tag suitable">Детская</span>
+										<span class="tag limited">Гостиная</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Паркетная доска -->
+						<div class="material-card" id="parquet-board">
+							<div class="material-header">
+								<div class="material-icon">
+									<i class="fas fa-th-large"></i>
+								</div>
+								<h3>Паркетная доска</h3>
+								<span class="material-badge premium">Премиум</span>
+							</div>
+							<div class="material-image">
+								<img
+									src="../img/floor/паркетукладка.jpg"
+									alt="Паркетная доска">
+							</div>
+							<div class="material-content">
+								<p class="material-description">Гибрид паркета и ламината - трехслойные
+									планки с верхним слоем из ценных пород древесины.</p>
+
+								<div class="features">
+									<h4>Структура:</h4>
+									<ol>
+										<li>Нижний слой - хвойные породы</li>
+										<li>Средний слой - хвойные породы (уложен крест-накрест)</li>
+										<li>Верхний слой - ценные породы (венге, дуб)</li>
+									</ol>
+								</div>
+
+								<div class="pros-cons">
+									<div class="pros">
+										<h5><i class="fas fa-plus-circle"></i> Преимущества:</h5>
+										<ul>
+											<li>Дорогой и красивый внешний вид</li>
+											<li>Проще в укладке чем паркет</li>
+											<li>Стабильность за счет многослойности</li>
+											<li>Отличная шумоизоляция</li>
+											<li>Возможность реставрации</li>
+										</ul>
+									</div>
+									<div class="cons">
+										<h5><i class="fas fa-minus-circle"></i> Особенности:</h5>
+										<ul>
+											<li>Высокая стоимость</li>
+											<li>Боится влажности</li>
+											<li>Требует бережного ухода</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="material-suitability">
+									<h5>Подходит для:</h5>
+									<div class="suitability-tags">
+										<span class="tag suitable">Спальня</span>
+										<span class="tag suitable">Гостиная</span>
+										<span class="tag suitable">Кабинет</span>
+										<span class="tag suitable">Детская</span>
+										<span class="tag not-suitable">Кухня</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Ковровые покрытия -->
+						<div class="material-card" id="carpet">
+							<div class="material-header">
+								<div class="material-icon">
+									<i class="fas fa-couch"></i>
+								</div>
+								<h3>Ковровые покрытия</h3>
+								<span class="material-badge cozy">Уютный</span>
+							</div>
+							<div class="material-image">
+								<img
+									src="../img/floor/ковровые.jpg"
+									alt="Ковровые покрытия">
+							</div>
+							<div class="material-content">
+								<p class="material-description">Теплые, мягкие и уютные покрытия для
+									создания комфортной атмосферы в доме.</p>
+
+								<div class="features">
+									<h4>Виды по составу:</h4>
+									<ul>
+										<li><strong>Натуральные</strong> - шерсть, хлопок, джут</li>
+										<li><strong>Синтетические</strong> - полиамид, полиэстер</li>
+										<li><strong>Смесовые</strong> - комбинация натуральных и синтетических
+											волокон</li>
+									</ul>
+								</div>
+
+								<div class="pros-cons">
+									<div class="pros">
+										<h5><i class="fas fa-plus-circle"></i> Преимущества:</h5>
+										<ul>
+											<li>Мягкая и теплая поверхность</li>
+											<li>Отличная шумоизоляция</li>
+											<li>Большой выбор текстур и цветов</li>
+											<li>Нескользящая поверхность</li>
+											<li>Простой монтаж</li>
+										</ul>
+									</div>
+									<div class="cons">
+										<h5><i class="fas fa-minus-circle"></i> Особенности:</h5>
+										<ul>
+											<li>Собирает пыль</li>
+											<li>Боится влаги</li>
+											<li>Требует частой чистки</li>
+											<li>Быстрый износ в проходных зонах</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="material-suitability">
+									<h5>Подходит для:</h5>
+									<div class="suitability-tags">
+										<span class="tag suitable">Спальня</span>
+										<span class="tag suitable">Детская</span>
+										<span class="tag suitable">Гостиная</span>
+										<span class="tag limited">Кабинет</span>
+										<span class="tag not-suitable">Кухня</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Секция сравнения -->
+			<section class="comparison-section" id="comparison">
+				<div class="container">
+					<div class="section-header">
+						<h2>Сравнение напольных покрытий</h2>
+						<p class="section-subtitle">Быстрый гид по выбору идеального пола</p>
+					</div>
+
+					<div class="comparison-table-wrapper">
+						<div class="comparison-table">
+							<table>
+								<thead>
+									<tr>
+										<th>Материал</th>
+										<th>Долговечность</th>
+										<th>Влагостойкость</th>
+										<th>Сложность укладки</th>
+										<th>Уход</th>
+										<th>Ценовой диапазон</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td data-label="Материал"><strong>Паркет</strong></td>
+										<td data-label="Долговечность">
+											<div class="rating-container">
+												<span class="rating-text">Отличная</span>
+												<div class="rating-bar excellent"></div>
+											</div>
+										</td>
+										<td data-label="Влагостойкость">
+											<div class="rating-container">
+												<span class="rating-text">Низкая</span>
+												<div class="rating-bar poor"></div>
+											</div>
+										</td>
+										<td data-label="Сложность укладки">
+											<div class="rating-container">
+												<span class="rating-text">Высокая</span>
+												<div class="rating-bar high"></div>
+											</div>
+										</td>
+										<td data-label="Уход">
+											<div class="rating-container">
+												<span class="rating-text">Средний</span>
+												<div class="rating-bar medium"></div>
+											</div>
+										</td>
+										<td data-label="Ценовой диапазон"><span
+												class="price-high">Высокая</span></td>
+									</tr>
+									<tr>
+										<td data-label="Материал"><strong>Кварцвинил</strong></td>
+										<td data-label="Долговечность">
+											<div class="rating-container">
+												<span class="rating-text">Отличная</span>
+												<div class="rating-bar excellent"></div>
+											</div>
+										</td>
+										<td data-label="Влагостойкость">
+											<div class="rating-container">
+												<span class="rating-text">Отличная</span>
+												<div class="rating-bar excellent"></div>
+											</div>
+										</td>
+										<td data-label="Сложность укладки">
+											<div class="rating-container">
+												<span class="rating-text">Низкая</span>
+												<div class="rating-bar low"></div>
+											</div>
+										</td>
+										<td data-label="Уход">
+											<div class="rating-container">
+												<span class="rating-text">Легкий</span>
+												<div class="rating-bar low"></div>
+											</div>
+										</td>
+										<td data-label="Ценовой диапазон"><span
+												class="price-medium">Средняя</span></td>
+									</tr>
+									<tr>
+										<td data-label="Материал"><strong>Ламинат</strong></td>
+										<td data-label="Долговечность">
+											<div class="rating-container">
+												<span class="rating-text">Хорошая</span>
+												<div class="rating-bar good"></div>
+											</div>
+										</td>
+										<td data-label="Влагостойкость">
+											<div class="rating-container">
+												<span class="rating-text">Средняя</span>
+												<div class="rating-bar medium"></div>
+											</div>
+										</td>
+										<td data-label="Сложность укладки">
+											<div class="rating-container">
+												<span class="rating-text">Низкая</span>
+												<div class="rating-bar low"></div>
+											</div>
+										</td>
+										<td data-label="Уход">
+											<div class="rating-container">
+												<span class="rating-text">Легкий</span>
+												<div class="rating-bar low"></div>
+											</div>
+										</td>
+										<td data-label="Ценовой диапазон"><span
+												class="price-medium">Средняя</span></td>
+									</tr>
+									<tr>
+										<td data-label="Материал"><strong>Линолеум</strong></td>
+										<td data-label="Долговечность">
+											<div class="rating-container">
+												<span class="rating-text">Средняя</span>
+												<div class="rating-bar medium"></div>
+											</div>
+										</td>
+										<td data-label="Влагостойкость">
+											<div class="rating-container">
+												<span class="rating-text">Хорошая</span>
+												<div class="rating-bar good"></div>
+											</div>
+										</td>
+										<td data-label="Сложность укладки">
+											<div class="rating-container">
+												<span class="rating-text">Низкая</span>
+												<div class="rating-bar low"></div>
+											</div>
+										</td>
+										<td data-label="Уход">
+											<div class="rating-container">
+												<span class="rating-text">Легкий</span>
+												<div class="rating-bar low"></div>
+											</div>
+										</td>
+										<td data-label="Ценовой диапазон"><span
+												class="price-low">Низкая</span></td>
+									</tr>
+									<tr>
+										<td data-label="Материал"><strong>Паркетная доска</strong></td>
+										<td data-label="Долговечность">
+											<div class="rating-container">
+												<span class="rating-text">Хорошая</span>
+												<div class="rating-bar good"></div>
+											</div>
+										</td>
+										<td data-label="Влагостойкость">
+											<div class="rating-container">
+												<span class="rating-text">Низкая</span>
+												<div class="rating-bar poor"></div>
+											</div>
+										</td>
+										<td data-label="Сложность укладки">
+											<div class="rating-container">
+												<span class="rating-text">Средняя</span>
+												<div class="rating-bar medium"></div>
+											</div>
+										</td>
+										<td data-label="Уход">
+											<div class="rating-container">
+												<span class="rating-text">Средний</span>
+												<div class="rating-bar medium"></div>
+											</div>
+										</td>
+										<td data-label="Ценовой диапазон"><span
+												class="price-high">Высокая</span></td>
+									</tr>
+									<tr>
+										<td data-label="Материал"><strong>Ковровые</strong></td>
+										<td data-label="Долговечность">
+											<div class="rating-container">
+												<span class="rating-text">Средняя</span>
+												<div class="rating-bar medium"></div>
+											</div>
+										</td>
+										<td data-label="Влагостойкость">
+											<div class="rating-container">
+												<span class="rating-text">Низкая</span>
+												<div class="rating-bar poor"></div>
+											</div>
+										</td>
+										<td data-label="Сложность укладки">
+											<div class="rating-container">
+												<span class="rating-text">Низкая</span>
+												<div class="rating-bar low"></div>
+											</div>
+										</td>
+										<td data-label="Уход">
+											<div class="rating-container">
+												<span class="rating-text">Сложный</span>
+												<div class="rating-bar high"></div>
+											</div>
+										</td>
+										<td data-label="Ценовой диапазон"><span
+												class="price-medium">Средняя</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Секция консультации -->
+			<section id="record" class="recording">
+				<div class="image-section">
+					<img class="measure"
+						src="img/замеры.jpg"
+						alt="Профессиональные замеры">
+					<div class="free-badge">
+						<h3>Выезд, замер и консультация</h3>
+						<p>БЕСПЛАТНО!</p>
+					</div>
+				</div>
+
+				<div class="form-section">
+					<div class="form-container">
+						<h2>Записаться на замер</h2>
+						<p class="subtitle">Заполните форму, и мы свяжемся с Вами в ближайшее
+							время</p>
+
+						<form id="contactForm">
+							<div class="form-group">
+								<input type="text" id="name" name="name" placeholder="Ваше имя*"
+									required>
+							</div>
+
+							<div class="form-group">
+								<input type="tel" id="phone" name="phone" placeholder="Телефон*"
+									required>
+							</div>
+
+							<!-- Чекбоксы услуг -->
+							<div class="services-checkbox-group">
+								<p class="services-title">Выберите услугу:</p>
+								<div class="services-options">
+									<label class="service-option">
+										<input type="checkbox" name="service"
+											value="Заявка ремонт пола">
+										<span class="checkmark"></span>
+										<span class="service-text">Заявка ремонт пола</span>
+									</label>
+									<label class="service-option">
+										<input type="checkbox" name="service"
+											value="Заявка на замер потолка">
+										<span class="checkmark"></span>
+										<span class="service-text">Заявка на замер потолка</span>
+									</label>
+									<label class="service-option">
+										<input type="checkbox" name="service"
+											value="Заявка на плиточные работы">
+										<span class="checkmark"></span>
+										<span class="service-text">Заявка на плиточные работы</span>
+									</label>
+									<label class="service-option">
+										<input type="checkbox" name="service" value="Другое">
+										<span class="checkmark"></span>
+										<span class="service-text">Другое</span>
+									</label>
+								</div>
+							</div>
+
+							<!-- Поле для дополнительной информации -->
+							<div class="form-group" id="otherField" style="display: none;">
+								<input type="text" id="otherInfo" name="otherInfo"
+									placeholder="Уточните, что именно Вас интересует">
+							</div>
+
+							<div class="checkbox-group">
+								<input type="checkbox" id="agree" name="agree" required>
+								<label for="agree">
+									Отправляя данную форму, вы соглашаетесь с
+									<a href="#" target="_blank">политикой конфиденциальности</a>
+									и <a href="#" target="_blank">пользовательским соглашением</a>
+								</label>
+							</div>
+
+							<div id="successMessage" class="message success"></div>
+							<div id="errorMessage" class="message error"></div>
+
+							<button type="submit" id="submitBtn" class="submit-btn">
+								<span id="btnText">Отправить заявку</span>
+							</button>
+						</form>
+
+						<div
+							style="text-align: center; margin-top: 30px; color: #7f8c8d; font-size: 14px;">
+							Мы перезвоним вам в течение 15 минут
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Футер -->
+		<footer class="footer-info">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-section">
+						<h3>Напольные покрытия</h3>
+						<p>Профессиональный подбор и монтаж напольных покрытий любой сложности.
+							Работаем с материалами от ведущих производителей.</p>
+					</div>
+					<div class="footer-section">
+						<h3>Контакты</h3>
+						<p><i class="fas fa-clock"></i> Работаем: 9:00 - 18:00 Пн-Пт</p>
+						<p><i class="fas fa-phone"></i> Телефон: +7 909 36 29 675</p>
+						<p><i class="fas fa-envelope"></i> Email: rabota350882@gmail.com</p>
+					</div>
+					<div class="footer-section">
+						<h3>Быстрые ссылки</h3>
+						<ul>
+							<li><a href="#types">Виды покрытий</a></li>
+							<li><a href="#guide">Гид по выбору</a></li>
+							<li><a href="#comparison">Сравнение материалов</a></li>
+							<li><a href="#contactForm">Консультация</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<div class="social-links">
+						<a href="#"><i class="fab fa-vk"></i></a>
+						<a href="#"><i class="fab fa-telegram"></i></a>
+						<a href="#"><i class="fab fa-whatsapp"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+					</div>
+					<p class="copyright">© 2024 Напольные покрытия. Все права защищены.</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Фиксированная кнопка калькулятора -->
+		<div class="fixed-calculator-btn">
+			<a href="floor-calculator.html" class="calc-btn">
+				<i class="fas fa-calculator"></i>
+				<span>Калькулятор ремонта пола</span>
+			</a>
+		</div>
+
+	</body>
+</html>
