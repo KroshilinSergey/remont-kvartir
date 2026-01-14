@@ -16,7 +16,6 @@
     <script src="js/call-back.js"></script>
     <script src="js/footer_form.js"></script>
     <script src="js/telegram-proxy.js"></script>
-    <script src="js/ceiling-calculator.js"></script>
 
   </head>
   <body>
@@ -28,10 +27,12 @@
         <!-- Основное меню -->
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link active">Главная</a></li>
-          <li><a href="#types" class="nav-link">Виды покрытий</a></li>
-          <li><a href="#guide" class="nav-link">Гид по выбору</a></li>
-          <li><a href="#comparison" class="nav-link">Сравнение</a></li>
-          <li><a href="#contactForm" class="nav-link">Консультация</a></li>
+          <li><a href="floor.html#types" class="nav-link">Виды покрытий</a></li>
+          <li><a href="floor.html#guide" class="nav-link">Гид по выбору</a></li>
+          <li><a href="floor.html#comparison"
+              class="nav-link">Сравнение</a></li>
+          <li><a href="floor.html#contactForm"
+              class="nav-link">Консультация</a></li>
           <li>
             <p class="nav_call">9:00 - 18:00</p>
             <span class="phone">+7 909 36 29 675</span>
@@ -68,18 +69,20 @@
         <!-- Мобильное меню -->
         <ul class="mobile-menu" id="mobileMenu">
           <li><a href="index.html" class="nav-link active">Главная</a></li>
-          <li><a href="#types" class="nav-link">Виды покрытий</a></li>
-          <li><a href="#guide" class="nav-link">Гид по выбору</a></li>
-          <li><a href="#comparison" class="nav-link">Сравнение</a></li>
-          <li><a href="#consult" class="nav-link">Консультация</a></li>
+          <li><a href="floor.html#types" class="nav-link">Виды покрытий</a></li>
+          <li><a href="floor.html#guide" class="nav-link">Гид по выбору</a></li>
+          <li><a href="floor.html#comparison"
+              class="nav-link">Сравнение</a></li>
+          <li><a href="floor.html#consult"
+              class="nav-link">Консультация</a></li>
         </ul>
       </nav>
     </header>
-    <section class="calculator-section" id="calculator">
+    <section class="floor-section" id="calculator">
       <div class="container">
         <h2 class="calculator-title">Рассчитайте стоимость ремонта пола
           онлайн</h2>
-        <div class="row">
+        <div class="row calculator-row">
           <div class="col-lg-8">
             <div class="calculator-card">
               <div class="calculator-header">
@@ -103,130 +106,102 @@
                 </div>
 
                 <div class="additional-section">
-                  <h4>Выберите работы</h4>
-                  <div class="additional-options">
-                    <!-- Демонтажные работы -->
-                    <div class="floor-option-category">
-                      <h5>Демонтажные работы</h5>
-                      <div class="add-option">
-                        <div class="add-option-info">
-                          <span class="add-name">Демонтаж
-                            линолеума/ковролина</span>
-                          <span class="add-price" data-price="100">100
-                            руб./м²</span>
-                        </div>
-                        <div class="add-controls">
-                          <button class="add-minus">-</button>
-                          <input type="number" class="add-quantity" value="0"
-                            min="0" data-price="100">
-                          <button class="add-plus">+</button>
-                        </div>
+                  <div class="floor-option-category">
+                    <h5>Выберите покрытие</h5>
+                    <div class="coating-options">
+                      <div class="coating-option">
+                        <label class="coating-checkbox">
+                          <input type="radio" name="coating" value="laminate"
+                            data-price="380">
+                          <span class="checkmark"></span>
+                          <span class="coating-name">Ламинат</span>
+                        </label>
+                        <span class="coating-price">380 руб./м²</span>
                       </div>
 
-                      <div class="add-option">
-                        <div class="add-option-info">
-                          <span class="add-name">Демонтаж плинтусов</span>
-                          <span class="add-price" data-price="100">100
-                            руб./пог.м</span>
-                        </div>
-                        <div class="add-controls">
-                          <button class="add-minus">-</button>
-                          <input type="number" class="add-quantity" value="0"
-                            min="0" data-price="100">
-                          <button class="add-plus">+</button>
-                        </div>
+                      <div class="coating-option">
+                        <label class="coating-checkbox">
+                          <input type="radio" name="coating" value="parquet"
+                            data-price="450">
+                          <span class="checkmark"></span>
+                          <span class="coating-name">Паркетная доска</span>
+                        </label>
+                        <span class="coating-price">450 руб./м²</span>
+                      </div>
+
+                      <div class="coating-option">
+                        <label class="coating-checkbox">
+                          <input type="radio" name="coating" value="linoleum"
+                            data-price="200">
+                          <span class="checkmark"></span>
+                          <span class="coating-name">Линолеум</span>
+                        </label>
+                        <span class="coating-price">200 руб./м²</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Демонтажные работы -->
+                  <div class="floor-option-category">
+                    <h5>Демонтажные работы</h5>
+                    <div class="add-option">
+                      <div class="add-option-info">
+                        <span class="add-name">Демонтаж
+                          линолеума/ламината/паркета</span>
+                        <span class="add-price" data-price="100">100
+                          руб./м²</span>
+                      </div>
+                      <div class="add-controls">
+                        <button class="add-minus">-</button>
+                        <input type="number" class="add-quantity" value="0"
+                          min="0" data-price="100">
+                        <button class="add-plus">+</button>
                       </div>
                     </div>
 
-                    <!-- Укладка покрытия -->
-                    <div class="floor-option-category">
-                      <h5>Укладка покрытия</h5>
-                      <div class="add-option">
-                        <div class="add-option-info">
-                          <span class="add-name">Настил линолеума</span>
-                          <span class="add-price" data-price="260">260
-                            руб./м²</span>
-                        </div>
-                        <div class="add-controls">
-                          <button class="add-minus">-</button>
-                          <input type="number" class="add-quantity" value="0"
-                            min="0" data-price="260">
-                          <button class="add-plus">+</button>
-                        </div>
+                    <div class="add-option">
+                      <div class="add-option-info">
+                        <span class="add-name">Демонтаж плинтусов</span>
+                        <span class="add-price" data-price="100">100
+                          руб./пог.м</span>
                       </div>
-
-                      <div class="add-option">
-                        <div class="add-option-info">
-                          <span class="add-name">Настил ковролина</span>
-                          <span class="add-price" data-price="100">100
-                            руб./м²</span>
-                        </div>
-                        <div class="add-controls">
-                          <button class="add-minus">-</button>
-                          <input type="number" class="add-quantity" value="0"
-                            min="0" data-price="100">
-                          <button class="add-plus">+</button>
-                        </div>
+                      <div class="add-controls">
+                        <button class="add-minus">-</button>
+                        <input type="number" class="add-quantity" value="0"
+                          min="0" data-price="100">
+                        <button class="add-plus">+</button>
                       </div>
+                    </div>
+                  </div>
 
-                      <div class="add-option">
-                        <div class="add-option-info">
-                          <span class="add-name">Укладка ламината</span>
-                          <span class="add-price" data-price="100">100
-                            руб./м²</span>
-                        </div>
-                        <div class="add-controls">
-                          <button class="add-minus">-</button>
-                          <input type="number" class="add-quantity" value="0"
-                            min="0" data-price="100">
-                          <button class="add-plus">+</button>
-                        </div>
+                  <!-- Монтажные работы -->
+                  <div class="floor-option-category">
+                    <h5>Монтажные работы</h5>
+                    <div class="add-option">
+                      <div class="add-option-info">
+                        <span class="add-name">Монтаж плинтусов</span>
+                        <span class="add-price" data-price="100">100
+                          руб./пог.м</span>
                       </div>
-
-                      <div class="add-option">
-                        <div class="add-option-info">
-                          <span class="add-name">Укладка паркета</span>
-                          <span class="add-price" data-price="100">100
-                            руб./м²</span>
-                        </div>
-                        <div class="add-controls">
-                          <button class="add-minus">-</button>
-                          <input type="number" class="add-quantity" value="0"
-                            min="0" data-price="100">
-                          <button class="add-plus">+</button>
-                        </div>
+                      <div class="add-controls">
+                        <button class="add-minus">-</button>
+                        <input type="number" class="add-quantity" value="0"
+                          min="0" data-price="100">
+                        <button class="add-plus">+</button>
                       </div>
                     </div>
 
-                    <!-- Монтажные работы -->
-                    <div class="floor-option-category">
-                      <h5>Монтажные работы</h5>
-                      <div class="add-option">
-                        <div class="add-option-info">
-                          <span class="add-name">Монтаж плинтусов</span>
-                          <span class="add-price" data-price="100">100
-                            руб./пог.м</span>
-                        </div>
-                        <div class="add-controls">
-                          <button class="add-minus">-</button>
-                          <input type="number" class="add-quantity" value="0"
-                            min="0" data-price="100">
-                          <button class="add-plus">+</button>
-                        </div>
+                    <div class="add-option">
+                      <div class="add-option-info">
+                        <span class="add-name">Монтаж порожка</span>
+                        <span class="add-price" data-price="100">100
+                          руб./шт</span>
                       </div>
-
-                      <div class="add-option">
-                        <div class="add-option-info">
-                          <span class="add-name">Монтаж порожка</span>
-                          <span class="add-price" data-price="100">100
-                            руб./шт</span>
-                        </div>
-                        <div class="add-controls">
-                          <button class="add-minus">-</button>
-                          <input type="number" class="add-quantity" value="0"
-                            min="0" data-price="100">
-                          <button class="add-plus">+</button>
-                        </div>
+                      <div class="add-controls">
+                        <button class="add-minus">-</button>
+                        <input type="number" class="add-quantity" value="0"
+                          min="0" data-price="100">
+                        <button class="add-plus">+</button>
                       </div>
                     </div>
                   </div>
@@ -247,7 +222,21 @@
                   <span>Площадь пола (<span id="area-value">14</span> м²)</span>
                   <span class="breakdown-value">0 руб.</span>
                 </div>
-                <!-- Здесь будут добавляться выбранные опции -->
+                <div class="breakdown-item breakdown-coating"
+                  style="display: none;">
+                  <span>Укладка покрытия</span>
+                  <span class="breakdown-value">0 руб.</span>
+                </div>
+                <div class="breakdown-item breakdown-demolition"
+                  style="display: none;">
+                  <span>Демонтажные работы</span>
+                  <span class="breakdown-value">0 руб.</span>
+                </div>
+                <div class="breakdown-item breakdown-mounting"
+                  style="display: none;">
+                  <span>Монтажные работы</span>
+                  <span class="breakdown-value">0 руб.</span>
+                </div>
               </div>
 
               <div class="result-total">
@@ -266,218 +255,462 @@
         </div>
       </div>
     </section>
-    <section class="floor-price">
+    <section class="floor-price" id="floor-price">
       <div class="container">
         <h2>Прайс-лист на работы по полу</h2>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Наименование работы</th>
-              <th>Ед. изм.</th>
-              <th>Цена</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-category="стяжка">
-              <td>Армирование стяжки</td>
-              <td>м²</td>
-              <td>320</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Бетонная сухая стяжка пола с керамзитом</td>
-              <td>м²</td>
-              <td>420</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Выравнивание пола</td>
-              <td>м²</td>
-              <td>480</td>
-            </tr>
-            <tr data-category="демонтаж">
-              <td>Демпферная лента</td>
-              <td>м²</td>
-              <td>100</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Демпферная лента (сухая стяжка)</td>
-              <td>м²</td>
-              <td>210</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Заливка стяжки на тёплый пол</td>
-              <td>м²</td>
-              <td>420</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Механизированная стяжка полов</td>
-              <td>м²</td>
-              <td>640</td>
-            </tr>
-            <tr data-category="монтаж">
-              <td>Монтаж жидкой пробки</td>
-              <td>пог. м</td>
-              <td>250</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Мокрая стяжка 10 см с армированием арматурой</td>
-              <td>м²</td>
-              <td>1860</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Мокрая стяжка 10 см с армированием фиброй</td>
-              <td>м²</td>
-              <td>1550</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Мокрая стяжка 5 см с армированием сеткой</td>
-              <td>м²</td>
-              <td>1280</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Мокрая стяжка 5 см с армированием фиброй</td>
-              <td>м²</td>
-              <td>1280</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Мокрая стяжка пола</td>
-              <td>м²</td>
-              <td>420</td>
-            </tr>
-            <tr data-category="укладка">
-              <td>Настил коммерческого линолеума</td>
-              <td>м²</td>
-              <td>290</td>
-            </tr>
-            <tr data-category="укладка">
-              <td>Настил линолеума</td>
-              <td>м²</td>
-              <td>260</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Обеспылевание поверхности пола (сухая стяжка)</td>
-              <td>м²</td>
-              <td>210</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Полиэтиленовая пленка (сухая стяжка)</td>
-              <td>м²</td>
-              <td>210</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Полусухая стяжка пола</td>
-              <td>м²</td>
-              <td>420</td>
-            </tr>
-            <tr data-category="укладка">
-              <td>Проварка швов линолеума</td>
-              <td>пог. м</td>
-              <td>110</td>
-            </tr>
-            <tr data-category="укладка">
-              <td>Продольная распиловка ламината</td>
-              <td>м²</td>
-              <td>210</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Просыпка керамзитом+проливка цементным молочком</td>
-              <td>пог. м</td>
-              <td>300</td>
-            </tr>
-            <tr data-category="ремонт">
-              <td>Ремонт стяжки пола</td>
-              <td>м²</td>
-              <td>1438</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Стяжка пола с керамзитом</td>
-              <td>м²</td>
-              <td>320</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Сухая керамзитовая засыпка по маякам (сухая стяжка)</td>
-              <td>м²</td>
-              <td>700</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Сухая стяжка полов</td>
-              <td>м²</td>
-              <td>640</td>
-            </tr>
-            <tr data-category="укладка">
-              <td>Укладка ламината (с подложкой)</td>
-              <td>м²</td>
-              <td>400</td>
-            </tr>
-            <tr data-category="укладка">
-              <td>Укладка ламината (с подложкой) по диагонали</td>
-              <td>м²</td>
-              <td>480</td>
-            </tr>
-            <tr data-category="укладка">
-              <td>Укладка паркетной доски (в замок) с подложкой</td>
-              <td>м²</td>
-              <td>480</td>
-            </tr>
-            <tr data-category="укладка">
-              <td>Укладка паркетной доски (массива) на клей</td>
-              <td>м²</td>
-              <td>960</td>
-            </tr>
-            <tr data-category="укладка">
-              <td>Укладка паркетной доски (массива) на клей по диагонали</td>
-              <td>м²</td>
-              <td>1100</td>
-            </tr>
-            <tr data-category="монтаж">
-              <td>Установка пеноплекса</td>
-              <td>пог. м</td>
-              <td>420</td>
-            </tr>
-            <tr data-category="монтаж">
-              <td>Установка плинтусов</td>
-              <td>пог. м</td>
-              <td>240</td>
-            </tr>
-            <tr data-category="монтаж">
-              <td>Установка порожка</td>
-              <td>пог. м</td>
-              <td>370</td>
-            </tr>
-            <tr data-category="стяжка">
-              <td>Устройство наливных полов</td>
-              <td>м²</td>
-              <td>480</td>
-            </tr>
-            <tr data-category="теплый пол">
-              <td>Устройство теплого пола (вод)</td>
-              <td>м²</td>
-              <td>1000</td>
-            </tr>
-            <tr data-category="теплый пол">
-              <td>Устройство теплого пола (электрического)</td>
-              <td>м²</td>
-              <td>1300</td>
-            </tr>
-            <tr data-category="утепление">
-              <td>Утепление пола</td>
-              <td>м²</td>
-              <td>530</td>
-            </tr>
-            <tr data-category="укладка">
-              <td>Фигурная резка ламината, паркетной доски</td>
-              <td>пог. м</td>
-              <td>530</td>
-            </tr>
-          </tbody>
-        </table>
+        <!-- Укладка ламината -->
+        <div class="price-category">
+          <h3>Укладка ламината</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Услуги</th>
+                <th>Ед. изм.</th>
+                <th>Цена от, руб.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Укладка ламината (с подложкой)</td>
+                <td>м²</td>
+                <td>380</td>
+              </tr>
+              <tr>
+                <td>Укладка ламината (с подложкой) по диагонали</td>
+                <td>м²</td>
+                <td>450</td>
+              </tr>
+              <tr>
+                <td>Фигурная резка ламината, паркетной доски</td>
+                <td>пог. м</td>
+                <td>450</td>
+              </tr>
+              <tr>
+                <td>Установка порожка</td>
+                <td>пог. м</td>
+                <td>350</td>
+              </tr>
+              <tr>
+                <td>Установка плинтусов</td>
+                <td>пог. м</td>
+                <td>250</td>
+              </tr>
+              <tr>
+                <td>Продольная распиловка ламината</td>
+                <td>пог. м</td>
+                <td>200</td>
+              </tr>
+              <tr>
+                <td>Демпферная лента</td>
+                <td>пог. м</td>
+                <td>200</td>
+              </tr>
+              <tr>
+                <td>Демонтаж ламината</td>
+                <td>м²</td>
+                <td>100</td>
+              </tr>
 
-        <!-- Необязательная кнопка для скачивания прайса -->
-        <button class="download-price-btn">
-          <i>📥</i> Скачать полный прайс-лист
-        </button>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="price-category">
+          <h3>Устройство теплого пола</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Услуги</th>
+                <th>Ед. изм.</th>
+                <th>Цена от, руб.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Устройство теплого пола (электрического)</td>
+                <td>м²</td>
+                <td>1250</td>
+              </tr>
+              <tr>
+                <td>Устройство теплого пола (вод)</td>
+                <td>м²</td>
+                <td>100</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Укладка паркета -->
+        <div class="price-category">
+          <h3>Укладка паркета</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Услуги</th>
+                <th>Ед. изм.</th>
+                <th>Цена от, руб.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Укладка паркетной доски (в "замок") с подложкой</td>
+                <td>м²</td>
+                <td>450</td>
+              </tr>
+              <tr>
+                <td>Укладка паркетной доски (в "замок") по диагонали</td>
+                <td>м²</td>
+                <td>500</td>
+              </tr>
+              <tr>
+                <td>Укладка паркетной доски (массива) на клей</td>
+                <td>м²</td>
+                <td>900</td>
+              </tr>
+              <tr>
+                <td>Укладка паркетной доски (массива) на клей по диагонали</td>
+                <td>м²</td>
+                <td>1000</td>
+              </tr>
+              <tr>
+                <td>Укладка штучного паркета (комплекс работ)</td>
+                <td>м²</td>
+                <td>1900</td>
+              </tr>
+              <tr>
+                <td>Фигурная резка ламината, паркетной доски</td>
+                <td>пог. м</td>
+                <td>490</td>
+              </tr>
+              <tr>
+                <td>Установка порожка</td>
+                <td>пог. м</td>
+                <td>350</td>
+              </tr>
+              <tr>
+                <td>Установка плинтусов</td>
+                <td>пог. м</td>
+                <td>200</td>
+              </tr>
+              <tr>
+                <td>Демонтаж паркета</td>
+                <td>м²</td>
+                <td>200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Укладка линолеума -->
+        <div class="price-category">
+          <h3>Укладка линолеума</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Услуги</th>
+                <th>Ед. изм.</th>
+                <th>Цена от, руб.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Настил линолеума</td>
+                <td>м²</td>
+                <td>200</td>
+              </tr>
+              <tr>
+                <td>Настил коммерческого линолеума</td>
+                <td>м²</td>
+                <td>250</td>
+              </tr>
+              <tr>
+                <td>Проварка швов линолеума</td>
+                <td>пог. м</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Установка порожка</td>
+                <td>пог. м</td>
+                <td>350</td>
+              </tr>
+              <tr>
+                <td>Установка плинтусов</td>
+                <td>пог. м</td>
+                <td>200</td>
+              </tr>
+              <tr>
+                <td>Демонтаж линолеума</td>
+                <td>м²</td>
+                <td>100</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Наливной пол -->
+        <div class="price-category">
+          <h3>Наливной пол</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Услуги</th>
+                <th>Ед. изм.</th>
+                <th>Цена от, руб.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Выравнивание наливными полами</td>
+                <td>м²</td>
+                <td>600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Полусухая стяжка пола -->
+        <div class="price-category">
+          <h3>Полусухая стяжка пола</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Услуги</th>
+                <th>Ед. изм.</th>
+                <th>Цена от, руб.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Работа с материалом</td>
+                <td>кв.м.</td>
+                <td>2500</td>
+              </tr>
+              <tr>
+                <td>Работа без материала</td>
+                <td>кв.м.</td>
+                <td>900</td>
+              </tr>
+              <tr>
+                <td>Укладка звукоизоляции</td>
+                <td>кв.м.</td>
+                <td>250</td>
+              </tr>
+              <tr>
+                <td>Демонтаж стяжки</td>
+                <td>кв.м.</td>
+                <td>400</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Демонтаж полов -->
+        <div class="price-category">
+          <h3>Демонтаж полов</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Услуги</th>
+                <th>Ед. изм.</th>
+                <th>Цена от, руб.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Снятие полов из досок (с лагами)</td>
+                <td>м²</td>
+                <td>200</td>
+              </tr>
+              <tr>
+                <td>Снятие полов из щитового паркета (с лагами)</td>
+                <td>м²</td>
+                <td>358</td>
+              </tr>
+              <tr>
+                <td>Снятие паркетных полов (на клею, мастике)</td>
+                <td>м²</td>
+                <td>250</td>
+              </tr>
+              <tr>
+                <td>Снятие ламината, паркетной доски</td>
+                <td>м²</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Снятие фанеры 1 слой</td>
+                <td>м²</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Снятие оргалита (на мастике)</td>
+                <td>м²</td>
+                <td>460</td>
+              </tr>
+              <tr>
+                <td>Снятие линолеума</td>
+                <td>м²</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Снятие ковролина</td>
+                <td>м²</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Демонтаж бетонных полов (до 50 мм) армиров.</td>
+                <td>м²</td>
+                <td>550</td>
+              </tr>
+              <tr>
+                <td>Демонтаж бетонных полов (до 100 мм) армиров.</td>
+                <td>м²</td>
+                <td>1200</td>
+              </tr>
+              <tr>
+                <td>Снятие цементно-песч. стяжки (до 50 мм)</td>
+                <td>м²</td>
+                <td>250</td>
+              </tr>
+              <tr>
+                <td>Снятие цементно-песч. стяжки (до 100 мм)</td>
+                <td>м²</td>
+                <td>400</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
+
+    <!-- Секция консультации -->
+    <section id="record" class="recording">
+      <div class="image-section">
+        <img class="measure"
+          src="img/замеры.jpg"
+          alt="Профессиональные замеры">
+        <div class="free-badge">
+          <h3>Выезд, замер и консультация</h3>
+          <p>БЕСПЛАТНО!</p>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-container">
+          <h2>Записаться на замер</h2>
+          <p class="subtitle">Заполните форму, и мы свяжемся с Вами в ближайшее
+            время</p>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Ваше имя*"
+                required>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" placeholder="Телефон*"
+                required>
+            </div>
+
+            <!-- Чекбоксы услуг -->
+            <div class="services-checkbox-group">
+              <p class="services-title">Выберите услугу:</p>
+              <div class="services-options">
+                <label class="service-option">
+                  <input type="checkbox" name="service"
+                    value="Заявка ремонт пола">
+                  <span class="checkmark"></span>
+                  <span class="service-text">Заявка ремонт пола</span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="service"
+                    value="Заявка на замер потолка">
+                  <span class="checkmark"></span>
+                  <span class="service-text">Заявка на замер потолка</span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="service"
+                    value="Заявка на плиточные работы">
+                  <span class="checkmark"></span>
+                  <span class="service-text">Заявка на плиточные работы</span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="service" value="Другое">
+                  <span class="checkmark"></span>
+                  <span class="service-text">Другое</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Поле для дополнительной информации -->
+            <div class="form-group" id="otherField" style="display: none;">
+              <input type="text" id="otherInfo" name="otherInfo"
+                placeholder="Уточните, что именно Вас интересует">
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="agree" name="agree" required>
+              <label for="agree">
+                Отправляя данную форму, вы соглашаетесь с
+                <a href="#" target="_blank">политикой конфиденциальности</a>
+                и <a href="#" target="_blank">пользовательским соглашением</a>
+              </label>
+            </div>
+
+            <div id="successMessage" class="message success"></div>
+            <div id="errorMessage" class="message error"></div>
+
+            <button type="submit" id="submitBtn" class="submit-btn">
+              <span id="btnText">Отправить заявку</span>
+            </button>
+          </form>
+
+          <div
+            style="text-align: center; margin-top: 30px; color: #7f8c8d; font-size: 14px;">
+            Мы перезвоним вам в течение 15 минут
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer-info">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Напольные покрытия</h3>
+            <p>Профессиональный подбор и монтаж напольных покрытий любой
+              сложности.
+              Работаем с материалами от ведущих производителей.</p>
+          </div>
+          <div class="footer-section">
+            <h3>Контакты</h3>
+            <p><i class="fas fa-clock"></i> Работаем: 9:00 - 18:00 Пн-Пт</p>
+            <p><i class="fas fa-phone"></i> Телефон: +7 909 36 29 675</p>
+            <p><i class="fas fa-envelope"></i> Email: rabota350882@gmail.com</p>
+          </div>
+          <div class="footer-section">
+            <h3>Быстрые ссылки</h3>
+            <ul>
+              <li><a href="floor.html">Виды покрытий</a></li>
+              <li><a href="floor.html">Гид по выбору</a></li>
+              <li><a href="floor.html">Сравнение материалов</a></li>
+              <li><a href="#contactForm">Консультация</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="social-links">
+            <a href="#"><i class="fab fa-vk"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <p class="copyright">© 2024 Напольные покрытия. Все права
+            защищены.</p>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/floor-calculator.js"></script>

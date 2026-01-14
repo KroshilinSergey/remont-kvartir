@@ -14,10 +14,10 @@
 		<link rel="stylesheet" href="css/floor-calculator.css">
 		<script src="js/burger.js"></script>
 		<script src="js/call-back.js"></script>
-		 <script src="js/footer_form.js"></script>
-		  <script src="js/telegram-proxy.js"></script>
-				<script src="js/ceiling-calculator.js"></script>
-		 
+		<script src="js/footer_form.js"></script>
+		<script src="js/telegram-proxy.js"></script>
+		<script src="js/ceiling-calculator.js"></script>
+
 	</head>
 	<body>
 		<header class="header">
@@ -900,6 +900,16 @@
 				<span>Калькулятор ремонта пола</span>
 			</a>
 		</div>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+  const priceRows = document.querySelectorAll('.floor-price tbody tr');
+  
+  priceRows.forEach((row, index) => {
+    row.style.setProperty('--row-index', index);
+  });
+});
+		</script>
 
 	</body>
 </html>

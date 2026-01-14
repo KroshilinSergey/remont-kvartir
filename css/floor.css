@@ -1,5 +1,8 @@
 /* floor.css - Стили для страницы напольных покрытий */
 
+.floor-section {
+  padding: 60px 0;
+}
 /* Герой секция */
 .hero-section {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -892,5 +895,1389 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+}
+
+/* floor.css - Стили для страницы напольных покрытий и прайса */
+
+/* Герой секция */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path fill="rgba(255,255,255,0.1)" d="M0 500c0-276.1 223.9-500 500-500s500 223.9 500 500-223.9 500-500 500S0 776.1 0 500z"/></svg>') center/cover;
+  opacity: 0.1;
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content .highlight {
+  color: #ffd166;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffd166;
+  margin-bottom: 5px;
+}
+
+.stat-text {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Общие стили для секций */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #3498db;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #fff;
+  max-width: 600px;
+  margin: 20px auto 0;
+}
+
+/* Секция описания */
+.description-section {
+  padding: 20px 0;
+}
+
+.description-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.description-image {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.description-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.description-image:hover img {
+  transform: scale(1.05);
+}
+
+.description-text .lead {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.key-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.key-point {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.key-point:hover {
+  transform: translateY(-5px);
+}
+
+.key-point i {
+  font-size: 2rem;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.key-point h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* Секция прайс-листа */
+.floor-price {
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.floor-price::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+}
+
+.floor-price .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.floor-price h2 {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.floor-price h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+.floor-price table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floor-price table:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.floor-price thead {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.floor-price thead th {
+  color: white;
+  padding: 20px 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  text-align: left;
+}
+
+.floor-price thead th:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.floor-price tbody tr {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.floor-price tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.floor-price tbody tr:hover {
+  background: linear-gradient(90deg, #e3f2fd, #e8f5e9);
+  transform: scale(1.005);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.floor-price tbody td {
+  padding: 18px 15px;
+  color: #34495e;
+  font-size: 1rem;
+  position: relative;
+}
+
+.floor-price tbody td:first-child {
+  font-weight: 500;
+  color: #2c3e50;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.floor-price tbody tr:hover td:first-child {
+  border-left-color: #3498db;
+  padding-left: 20px;
+}
+
+.floor-price tbody td:nth-child(2) {
+  color: #7f8c8d;
+  font-weight: 500;
+  min-width: 80px;
+  text-align: center;
+}
+
+.floor-price tbody td:nth-child(3) {
+  color: #27ae60;
+  font-weight: 700;
+  font-size: 1.1rem;
+  min-width: 120px;
+  text-align: center;
+  position: relative;
+}
+
+.floor-price tbody td:nth-child(3)::after {
+  content: 'руб.';
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #95a5a6;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Категории прайса */
+.price-category {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.price-category:last-child {
+  margin-bottom: 30px;
+}
+
+.price-category h3 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #3498db;
+  position: relative;
+  display: inline-block;
+}
+
+.price-category h3::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+}
+
+/* Анимация появления категорий */
+@keyframes fadeInCategory {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.price-category {
+  animation: fadeInCategory 0.8s ease forwards;
+  opacity: 0;
+}
+
+.price-category:nth-child(1) { animation-delay: 0.1s; }
+.price-category:nth-child(2) { animation-delay: 0.2s; }
+.price-category:nth-child(3) { animation-delay: 0.3s; }
+.price-category:nth-child(4) { animation-delay: 0.4s; }
+.price-category:nth-child(5) { animation-delay: 0.5s; }
+.price-category:nth-child(6) { animation-delay: 0.6s; }
+.price-category:nth-child(7) { animation-delay: 0.7s; }
+.price-category:nth-child(8) { animation-delay: 0.8s; }
+.price-category:nth-child(9) { animation-delay: 0.9s; }
+
+/* Анимация появления строк */
+@keyframes fadeInRow {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.floor-price tbody tr {
+  animation: fadeInRow 0.5s ease forwards;
+}
+
+.floor-price tbody tr:nth-child(1) { animation-delay: 0.05s; }
+.floor-price tbody tr:nth-child(2) { animation-delay: 0.1s; }
+.floor-price tbody tr:nth-child(3) { animation-delay: 0.15s; }
+.floor-price tbody tr:nth-child(4) { animation-delay: 0.2s; }
+.floor-price tbody tr:nth-child(5) { animation-delay: 0.25s; }
+.floor-price tbody tr:nth-child(6) { animation-delay: 0.3s; }
+.floor-price tbody tr:nth-child(7) { animation-delay: 0.35s; }
+.floor-price tbody tr:nth-child(8) { animation-delay: 0.4s; }
+.floor-price tbody tr:nth-child(9) { animation-delay: 0.45s; }
+.floor-price tbody tr:nth-child(10) { animation-delay: 0.5s; }
+.floor-price tbody tr:nth-child(11) { animation-delay: 0.55s; }
+.floor-price tbody tr:nth-child(12) { animation-delay: 0.6s; }
+.floor-price tbody tr:nth-child(13) { animation-delay: 0.65s; }
+.floor-price tbody tr:nth-child(14) { animation-delay: 0.7s; }
+.floor-price tbody tr:nth-child(15) { animation-delay: 0.75s; }
+.floor-price tbody tr:nth-child(16) { animation-delay: 0.8s; }
+.floor-price tbody tr:nth-child(17) { animation-delay: 0.85s; }
+.floor-price tbody tr:nth-child(18) { animation-delay: 0.9s; }
+.floor-price tbody tr:nth-child(19) { animation-delay: 0.95s; }
+.floor-price tbody tr:nth-child(20) { animation-delay: 1s; }
+
+/* Кнопка "Скачать прайс" */
+.download-price-btn {
+  display: block;
+  margin: 40px auto 0;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.download-price-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+
+.download-price-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(52, 152, 219, 0.4);
+}
+
+.download-price-btn:hover::before {
+  left: 0;
+}
+
+.download-price-btn i {
+  margin-right: 10px;
+}
+
+/* Адаптивность для прайса */
+@media (max-width: 768px) {
+  .floor-price {
+    padding: 40px 0;
+  }
+
+  .floor-price h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .floor-price table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 10px;
+  }
+
+  .floor-price thead th {
+    padding: 15px 10px;
+    font-size: 0.9rem;
+  }
+
+  .floor-price tbody td {
+    padding: 15px 10px;
+    font-size: 0.9rem;
+  }
+
+  .floor-price tbody td:nth-child(3) {
+    min-width: 100px;
+    font-size: 1rem;
+  }
+
+  .price-category {
+    margin-bottom: 40px;
+  }
+
+  .price-category h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Секция консультации */
+.recording {
+  margin-bottom: 30px;
+}
+
+/* Остальные стили для страницы напольных покрытий (из оригинального floor.css) */
+
+/* Критерии выбора */
+.criteria-section {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.criteria-section h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.criteria-intro {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.criterion {
+  text-align: center;
+  padding: 30px 20px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.criterion:hover {
+  border-color: #3498db;
+  transform: translateY(-5px);
+}
+
+.criterion-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.criterion-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.criterion h4 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Секция видов покрытий */
+.types-section {
+  padding: 100px 0;
+}
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.material-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.material-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.material-header {
+  padding: 25px 25px 15px;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.material-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.material-icon i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.material-header h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  flex: 1;
+  margin: 0;
+}
+
+.material-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.material-badge.natural {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.material-badge.popular {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.material-badge.budget {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.material-badge.premium {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.material-badge.cozy {
+  background: #e0f7fa;
+  color: #006064;
+}
+
+.material-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.material-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.material-card:hover .material-image img {
+  transform: scale(1.1);
+}
+
+.material-content {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.material-description {
+  color: #546e7a;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.features {
+  margin-bottom: 20px;
+}
+
+.features h4 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.features ul, .features ol {
+  padding-left: 20px;
+  color: #546e7a;
+}
+
+.features li {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.pros h5, .cons h5 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pros h5 {
+  color: #27ae60;
+}
+
+.cons h5 {
+  color: #e74c3c;
+}
+
+.pros ul, .cons ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pros li, .cons li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.material-suitability {
+  margin-top: auto;
+}
+
+.material-suitability h5 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.suitability-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.tag.suitable {
+  background: #d4edda;
+  color: #155724;
+}
+
+.tag.limited {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.tag.not-suitable {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Секция сравнения */
+.comparison-section {
+  margin-bottom: 30px;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table {
+  min-width: 1000px;
+  width: 100%;
+}
+
+.comparison-table table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+}
+
+.comparison-table thead {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.comparison-table th {
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.comparison-table tbody tr {
+  border-bottom: 1px solid #e9ecef;
+  transition: background 0.3s ease;
+}
+
+.comparison-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.comparison-table td {
+  padding: 20px 15px;
+  color: #546e7a;
+  vertical-align: middle;
+}
+
+/* Контейнер для рейтинга */
+.rating-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 120px;
+}
+
+.rating-text {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.rating-bar {
+  height: 10px;
+  border-radius: 5px;
+  width: 100%;
+  min-width: 100px;
+}
+
+.rating-bar.excellent {
+  background: linear-gradient(90deg, #27ae60, #2ecc71);
+}
+
+.rating-bar.good {
+  background: linear-gradient(90deg, #f39c12, #f1c40f);
+}
+
+.rating-bar.medium {
+  background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+.rating-bar.low {
+  background: linear-gradient(90deg, #e74c3c, #c0392b);
+}
+
+.rating-bar.poor {
+  background: linear-gradient(90deg, #95a5a6, #7f8c8d);
+}
+
+.rating-bar.high {
+  background: linear-gradient(90deg, #9b59b6, #8e44ad);
+}
+
+.price-high, .price-medium, .price-low {
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 100px;
+  text-align: center;
+}
+
+.price-high {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.price-medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.price-low {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* Фиксированная кнопка калькулятора пола */
+.fixed-calculator-btn {
+  position: fixed;
+  top: 170px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.calc-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 0 20px rgba(46, 204, 113, 0.6);
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  animation: pulse-color-glow 1.5s infinite ease-in-out;
+}
+
+/* Анимация с изменением цвета (зеленый ⇄ голубой) и пульсацией */
+@keyframes pulse-color-glow {
+  0% {
+    transform: scale(1);
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.6);
+  }
+  50% {
+    transform: scale(1.08);
+    background: linear-gradient(135deg, #1abc9c, #3498db);
+    box-shadow: 0 0 35px rgba(52, 152, 219, 0.9);
+  }
+  100% {
+    transform: scale(1);
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.6);
+  }
+}
+
+/* Эффект при наведении */
+.calc-btn:hover {
+  background: linear-gradient(135deg, #27ae60, #219653);
+  animation-play-state: paused;
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(46, 204, 113, 0.8);
+  color: white;
+}
+
+/* Добавляем внутреннюю подсветку для дополнительного эффекта */
+.calc-btn::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 55px;
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.2), rgba(52, 152, 219, 0.2));
+  z-index: -1;
+  opacity: 0;
+  animation: outer-glow 1.5s infinite ease-in-out;
+}
+
+@keyframes outer-glow {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .fixed-calculator-btn {
+    bottom: 20px;
+    right: 20px;
+    top: auto;
+  }
+  
+  .calc-btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    animation: pulse-color-glow 2s infinite ease-in-out;
+  }
+  
+  .calc-btn::before {
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+  .calc-btn {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+  }
+  
+  .calc-btn i {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Адаптивность для остальных секций */
+@media (max-width: 1200px) {
+  .materials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .description-content {
+    grid-template-columns: 1fr;
+  }
+
+  .criteria-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .key-points {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .comparison-table {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .pros-cons {
+    grid-template-columns: 1fr;
+  }
+
+  .key-points {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-section {
+    padding: 60px 0;
+  }
+
+  .comparison-table {
+    min-width: 700px;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+
+  .rating-text {
+    font-size: 0.85rem;
+  }
+
+  .price-high, .price-medium, .price-low {
+    min-width: 80px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .material-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* Дополнительные улучшения для адаптивности прайса */
+
+@media (max-width: 992px) {
+  .price-category h3 {
+    font-size: 1.6rem;
+  }
+  
+  .floor-price table {
+    border-radius: 12px;
+  }
+  
+  .floor-price thead th {
+    padding: 18px 12px;
+    font-size: 1rem;
+  }
+  
+  .floor-price tbody td {
+    padding: 16px 12px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .floor-price {
+    padding: 40px 0;
+  }
+  
+  .floor-price h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .price-category {
+    margin-bottom: 40px;
+  }
+  
+  .price-category h3 {
+    font-size: 1.5rem;
+    padding-bottom: 8px;
+  }
+  
+  /* Преобразование таблицы в карточки для мобильных */
+  .floor-price table {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  .floor-price thead {
+    display: none; /* Скрываем заголовок таблицы на мобильных */
+  }
+  
+  .floor-price tbody,
+  .floor-price tbody tr,
+  .floor-price tbody td {
+    display: block;
+    width: 100%;
+  }
+  
+  .floor-price tbody tr {
+    margin-bottom: 0;
+    border-bottom: 1px solid #e9ecef;
+    padding: 0;
+    position: relative;
+  }
+  
+  .floor-price tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  .floor-price tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+  
+  .floor-price tbody td {
+    padding: 16px 20px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+  }
+  
+  .floor-price tbody td:first-child {
+    background-color: rgba(52, 152, 219, 0.05);
+    font-weight: 600;
+    color: #2c3e50;
+    border-left: none;
+    padding-left: 20px;
+  }
+  
+  .floor-price tbody td:nth-child(2),
+  .floor-price tbody td:nth-child(3) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  
+  .floor-price tbody td:first-child::before {
+    content: "Услуга:";
+    font-weight: 600;
+    color: #3498db;
+    margin-right: auto;
+    text-align: left;
+  }
+  
+  .floor-price tbody td:nth-child(2)::before {
+    content: "Ед. изм.:";
+    font-weight: 500;
+    color: #7f8c8d;
+    margin-right: auto;
+    text-align: left;
+  }
+  
+  .floor-price tbody td:nth-child(3)::before {
+    content: "Цена:";
+    font-weight: 500;
+    color: #7f8c8d;
+    margin-right: auto;
+    text-align: left;
+  }
+  
+  .floor-price tbody td:nth-child(3)::after {
+    content: 'руб.';
+    position: static;
+    transform: none;
+    color: #95a5a6;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-left: 8px;
+  }
+  
+  /* Убираем полоску слева при наведении на мобильных */
+  .floor-price tbody tr:hover td:first-child {
+    border-left: none;
+    padding-left: 20px;
+  }
+  
+  /* Анимация для мобильных карточек */
+  .floor-price tbody tr {
+    transition: all 0.3s ease;
+  }
+  
+  .floor-price tbody tr:hover {
+    background: linear-gradient(90deg, #e3f2fd, #e8f5e9);
+    transform: none;
+    box-shadow: inset 0 0 0 2px #3498db;
+  }
+  
+  .download-price-btn {
+    padding: 14px 35px;
+    font-size: 1rem;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .floor-price h2 {
+    font-size: 1.8rem;
+  }
+  
+  .price-category h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  
+  .floor-price tbody td {
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+  }
+  
+  .floor-price tbody td:first-child {
+    padding: 16px;
+    font-size: 0.95rem;
+  }
+  
+  .floor-price tbody td:nth-child(3) {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  
+  .floor-price tbody td::before {
+    font-size: 0.85rem;
+    min-width: 70px;
+  }
+  
+  .download-price-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .floor-price tbody td {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 5px;
+  }
+  
+  .floor-price tbody td::before {
+    margin-right: 0;
+    font-size: 0.8rem;
+  }
+  
+  .floor-price tbody td:nth-child(3)::after {
+    margin-left: 4px;
+  }
+  
+  .floor-price h2 {
+    font-size: 1.6rem;
+  }
+  
+  .price-category h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Анимация появления для мобильных карточек */
+@media (max-width: 768px) {
+  @keyframes fadeInMobileCard {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .floor-price tbody tr {
+    animation: fadeInMobileCard 0.4s ease forwards;
+    animation-delay: calc(var(--row-index, 0) * 0.05s);
+    opacity: 0;
+  }
+}
+
+/* Для очень больших экранов */
+@media (min-width: 1400px) {
+  .floor-price .container {
+    max-width: 1320px;
+  }
+  
+  .floor-price table {
+    font-size: 1.05rem;
+  }
+  
+  .floor-price thead th {
+    padding: 22px 20px;
+  }
+  
+  .floor-price tbody td {
+    padding: 20px 20px;
   }
 }
