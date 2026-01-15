@@ -82,8 +82,10 @@
       <div class="container">
         <h2 class="calculator-title">Рассчитайте стоимость ремонта пола
           онлайн</h2>
-        <div class="row calculator-row">
-          <div class="col-lg-8">
+
+        <div class="calculator-container">
+          <!-- Левая часть - калькулятор (2/3 ширины) -->
+          <div class="calculator-left">
             <div class="calculator-card">
               <div class="calculator-header">
                 <h3>Калькулятор стоимости ремонта пола</h3>
@@ -91,118 +93,116 @@
               </div>
 
               <div class="calculator-body">
-                <div class="row mb-4">
-                  <div class="col-md-12">
-                    <div class="calc-input-group">
-                      <label for="area">Площадь пола (м²)</label>
-                      <input type="number" id="area" min="1" max="500"
+                <!-- Площадь пола -->
+                <div class="calc-section">
+                  <h5>Площадь пола (м²)</h5>
+                  <div class="calc-input-group">
+                    <input type="number" id="area" min="1" max="500" value="14"
+                      step="0.1">
+                    <div class="calc-range">
+                      <input type="range" id="area-range" min="1" max="500"
                         value="14" step="0.1">
-                      <div class="calc-range">
-                        <input type="range" id="area-range" min="1" max="500"
-                          value="14" step="0.1">
-                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="additional-section">
-                  <div class="floor-option-category">
-                    <h5>Выберите покрытие</h5>
-                    <div class="coating-options">
-                      <div class="coating-option">
-                        <label class="coating-checkbox">
-                          <input type="radio" name="coating" value="laminate"
-                            data-price="380">
-                          <span class="checkmark"></span>
-                          <span class="coating-name">Ламинат</span>
-                        </label>
-                        <span class="coating-price">380 руб./м²</span>
-                      </div>
+                <!-- Выбор покрытия -->
+                <div class="calc-section">
+                  <h5>Выберите покрытие</h5>
+                  <div class="coating-options">
+                    <div class="coating-option">
+                      <label class="coating-checkbox">
+                        <input type="radio" name="coating" value="laminate"
+                          data-price="380">
+                        <span class="checkmark"></span>
+                        <span class="coating-name">Ламинат</span>
+                      </label>
+                      <span class="coating-price">380 руб./м²</span>
+                    </div>
 
-                      <div class="coating-option">
-                        <label class="coating-checkbox">
-                          <input type="radio" name="coating" value="parquet"
-                            data-price="450">
-                          <span class="checkmark"></span>
-                          <span class="coating-name">Паркетная доска</span>
-                        </label>
-                        <span class="coating-price">450 руб./м²</span>
-                      </div>
+                    <div class="coating-option">
+                      <label class="coating-checkbox">
+                        <input type="radio" name="coating" value="parquet"
+                          data-price="450">
+                        <span class="checkmark"></span>
+                        <span class="coating-name">Паркетная доска</span>
+                      </label>
+                      <span class="coating-price">450 руб./м²</span>
+                    </div>
 
-                      <div class="coating-option">
-                        <label class="coating-checkbox">
-                          <input type="radio" name="coating" value="linoleum"
-                            data-price="200">
-                          <span class="checkmark"></span>
-                          <span class="coating-name">Линолеум</span>
-                        </label>
-                        <span class="coating-price">200 руб./м²</span>
-                      </div>
+                    <div class="coating-option">
+                      <label class="coating-checkbox">
+                        <input type="radio" name="coating" value="linoleum"
+                          data-price="200" checked>
+                        <span class="checkmark"></span>
+                        <span class="coating-name">Линолеум</span>
+                      </label>
+                      <span class="coating-price">200 руб./м²</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Демонтажные работы -->
+                <div class="calc-section">
+                  <h5>Демонтажные работы</h5>
+                  <div class="add-option">
+                    <div class="add-option-info">
+                      <span class="add-name">Демонтаж
+                        линолеума/ламината/паркета</span>
+                      <span class="add-price" data-price="100">100
+                        руб./м²</span>
+                    </div>
+                    <div class="add-controls">
+                      <button class="add-minus">-</button>
+                      <input type="number" class="add-quantity" value="14"
+                        min="0" data-price="100" readonly>
+                      <button class="add-plus">+</button>
                     </div>
                   </div>
 
-                  <!-- Демонтажные работы -->
-                  <div class="floor-option-category">
-                    <h5>Демонтажные работы</h5>
-                    <div class="add-option">
-                      <div class="add-option-info">
-                        <span class="add-name">Демонтаж
-                          линолеума/ламината/паркета</span>
-                        <span class="add-price" data-price="100">100
-                          руб./м²</span>
-                      </div>
-                      <div class="add-controls">
-                        <button class="add-minus">-</button>
-                        <input type="number" class="add-quantity" value="0"
-                          min="0" data-price="100">
-                        <button class="add-plus">+</button>
-                      </div>
+                  <div class="add-option">
+                    <div class="add-option-info">
+                      <span class="add-name">Демонтаж плинтусов</span>
+                      <span class="add-price" data-price="100">100
+                        руб./пог.м</span>
                     </div>
+                    <div class="add-controls">
+                      <button class="add-minus">-</button>
+                      <input type="number" class="add-quantity" value="0"
+                        min="0" data-price="100">
+                      <button class="add-plus">+</button>
+                    </div>
+                  </div>
+                </div>
 
-                    <div class="add-option">
-                      <div class="add-option-info">
-                        <span class="add-name">Демонтаж плинтусов</span>
-                        <span class="add-price" data-price="100">100
-                          руб./пог.м</span>
-                      </div>
-                      <div class="add-controls">
-                        <button class="add-minus">-</button>
-                        <input type="number" class="add-quantity" value="0"
-                          min="0" data-price="100">
-                        <button class="add-plus">+</button>
-                      </div>
+                <!-- Монтажные работы -->
+                <div class="calc-section">
+                  <h5>Монтажные работы</h5>
+                  <div class="add-option">
+                    <div class="add-option-info">
+                      <span class="add-name">Монтаж плинтусов</span>
+                      <span class="add-price" data-price="100">100
+                        руб./пог.м</span>
+                    </div>
+                    <div class="add-controls">
+                      <button class="add-minus">-</button>
+                      <input type="number" class="add-quantity" value="0"
+                        min="0" data-price="100">
+                      <button class="add-plus">+</button>
                     </div>
                   </div>
 
-                  <!-- Монтажные работы -->
-                  <div class="floor-option-category">
-                    <h5>Монтажные работы</h5>
-                    <div class="add-option">
-                      <div class="add-option-info">
-                        <span class="add-name">Монтаж плинтусов</span>
-                        <span class="add-price" data-price="100">100
-                          руб./пог.м</span>
-                      </div>
-                      <div class="add-controls">
-                        <button class="add-minus">-</button>
-                        <input type="number" class="add-quantity" value="0"
-                          min="0" data-price="100">
-                        <button class="add-plus">+</button>
-                      </div>
+                  <div class="add-option">
+                    <div class="add-option-info">
+                      <span class="add-name">Монтаж порожка</span>
+                      <span class="add-price" data-price="100">100
+                        руб./шт</span>
                     </div>
-
-                    <div class="add-option">
-                      <div class="add-option-info">
-                        <span class="add-name">Монтаж порожка</span>
-                        <span class="add-price" data-price="100">100
-                          руб./шт</span>
-                      </div>
-                      <div class="add-controls">
-                        <button class="add-minus">-</button>
-                        <input type="number" class="add-quantity" value="0"
-                          min="0" data-price="100">
-                        <button class="add-plus">+</button>
-                      </div>
+                    <div class="add-controls">
+                      <button class="add-minus">-</button>
+                      <input type="number" class="add-quantity" value="0"
+                        min="0" data-price="100">
+                      <button class="add-plus">+</button>
                     </div>
                   </div>
                 </div>
@@ -210,11 +210,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4">
+          <!-- Правая часть - итоговая стоимость (1/3 ширины) -->
+          <div class="calculator-right">
             <div class="calculator-result">
               <div class="result-header">
                 <h4>Итоговая стоимость</h4>
-                <div class="result-price">0 <span>руб.</span></div>
+                <div class="result-price">8 600 <span>руб.</span></div>
               </div>
 
               <div class="result-breakdown">
@@ -222,27 +223,24 @@
                   <span>Площадь пола (<span id="area-value">14</span> м²)</span>
                   <span class="breakdown-value">0 руб.</span>
                 </div>
-                <div class="breakdown-item breakdown-coating"
-                  style="display: none;">
+                <div class="breakdown-item breakdown-coating">
                   <span>Укладка покрытия</span>
-                  <span class="breakdown-value">0 руб.</span>
+                  <span class="breakdown-value">2 800 руб.</span>
                 </div>
-                <div class="breakdown-item breakdown-demolition"
-                  style="display: none;">
+                <div class="breakdown-item breakdown-demolition">
                   <span>Демонтажные работы</span>
-                  <span class="breakdown-value">0 руб.</span>
+                  <span class="breakdown-value">2 900 руб.</span>
                 </div>
-                <div class="breakdown-item breakdown-mounting"
-                  style="display: none;">
+                <div class="breakdown-item breakdown-mounting">
                   <span>Монтажные работы</span>
-                  <span class="breakdown-value">0 руб.</span>
+                  <span class="breakdown-value">2 900 руб.</span>
                 </div>
               </div>
 
               <div class="result-total">
                 <div class="total-item">
                   <span>Итого:</span>
-                  <span class="total-value">0 руб.</span>
+                  <span class="total-value">8 600 руб.</span>
                 </div>
               </div>
 
