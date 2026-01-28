@@ -1,19 +1,19 @@
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --success-color: #27ae60;
-    --warning-color: #f39c12;
-    --light-color: #f8f9fa;
-    --text-dark: #333;
-    --border-color: #dee2e6;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
-    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-    --gradient-main: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-wood: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --gradient-pvc: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    --gradient-floor: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --light-color: #f8f9fa;
+  --text-dark: #333;
+  --border-color: #dee2e6;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  --gradient-main: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-wood: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-pvc: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-floor: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
 
 .window_plastic {
@@ -417,11 +417,716 @@ img {
   }
 
   .footer-info {
-        padding: 40px 20px;
-        margin-top: 50px;
-    }
-    
-    .footer-info h3 {
-        font-size: 1.9rem;
-    }
+    padding: 40px 20px;
+    margin-top: 50px;
+  }
+
+  .footer-info h3 {
+    font-size: 1.9rem;
+  }
+}
+
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 50px auto;
+  padding-top: 42px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+.profil-img {
+  width: 20%;
+}
+
+.profile-metrics-section {
+  width: 80%;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modal-close {
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #e74c3c;
+}
+
+.modal-body {
+  padding: 30px;
+}
+
+/* Сравнение брендов */
+
+.brands-header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+}
+
+.brand-column {
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-weight: 600;
+  color: #555;
+  border: 2px solid transparent;
+  font-size: 16px;
+  min-width: 120px;
+}
+
+.brand-column:hover {
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  transform: translateY(-3px);
+}
+
+.brand-column.active {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  border-color: #2c3e50;
+}
+
+/* Информация о профиле */
+.profile-info h3 {
+  color: #2c3e50;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.profile-info p {
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Показатели эффективности */
+.performance-metrics {
+  display: flex;
+  justify-content: space-around;
+  padding: 25px;
+  background-color: bisque;
+  border-radius: 12px;
+  border: 2px solid #e3f2fd;
+}
+
+.metric-icon {
+  font-size: 32px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.metric-item {
+  text-align: center;
+  align-items: center;
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 15px;
+}
+
+.metric-value {
+  font-size: 42px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+}
+
+.metric-note {
+  text-align: center;
+  width: 100%;
+  margin-top: 15px;
+  font-style: italic;
+  color: #888;
+  font-size: 14px;
+}
+
+/* Секция с ценой */
+.modal-price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #2c3e50, #1a252f);
+  border-radius: 10px;
+}
+
+.modal-price {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal-calculate-btn {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.modal-calculate-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+  background: linear-gradient(135deg, #c0392b, #a93226);
+}
+
+/* Анимация смены контента */
+.profile-info {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .brands-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .brand-column {
+    width: 80%;
+    max-width: 200px;
+  }
+
+  .performance-metrics {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .metric-value {
+    font-size: 36px;
+  }
+
+  .modal-price-section {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .modal-price {
+    font-size: 28px;
+  }
+
+  .modal-calculate-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Анимация кнопки "Подробнее" */
+.window-item .about_link-one {
+  transition: all 0.3s ease;
+}
+
+.window-item .about_link-one:hover {
+  background: #2c3e50;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/*блок рекламы авито*/
+/* ===== ПРОДАЮЩАЯ СЕКЦИЯ ДЛЯ ОКОН ===== */
+.windows-promo-section {
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.windows-promo-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.1"><rect width="100" height="100" fill="white"/></svg>');
+  background-size: 300px;
+  pointer-events: none;
+}
+
+.promo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.promo-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.promo-subtitle {
+  text-align: center;
+  font-size: 1.3rem;
+  opacity: 0.95;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* КАРТОЧКИ С ПРЕИМУЩЕСТВАМИ */
+.promo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.promo-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 35px 25px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.promo-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: 0.5s;
+}
+
+.promo-card:hover::before {
+  left: 100%;
+}
+
+.promo-icon {
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  display: inline-block;
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+.promo-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #FFD700;
+}
+
+.promo-card p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* СПИСОК УСЛУГ */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.service-item {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  border-left: 4px solid #FFD700;
+}
+
+.service-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(5px);
+}
+
+.service-item i {
+  font-size: 1.5rem;
+  color: #FFD700;
+  min-width: 30px;
+}
+
+.service-item span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* БЛОК С ВЫГОДАМИ */
+.benefits-block {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 50px;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.benefits-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #FFD700;
+}
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.benefit-icon {
+  background: #FFD700;
+  color: #1a2980;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.benefit-content h4 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #FFD700;
+}
+
+.benefit-content p {
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+/* БЛОК ЦТА */
+.cta-block {
+  text-align: center;
+  background: linear-gradient(45deg, #FF8A00, #FFD700);
+  border-radius: 20px;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(255, 140, 0, 0.3);
+}
+
+.cta-block::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: float 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #1a2980;
+}
+
+.cta-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #1a2980;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 18px 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta-button-primary {
+  background: #1a2980;
+  color: white;
+  box-shadow: 0 8px 20px rgba(26, 41, 128, 0.4);
+}
+
+.cta-button-primary:hover {
+  background: #0d1a5c;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(26, 41, 128, 0.5);
+}
+
+.cta-button-secondary {
+  background: white;
+  color: #1a2980;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.cta-button-secondary:hover {
+  background: #f0f0f0;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(255, 255, 255, 0.4);
+}
+
+.cta-note {
+  margin-top: 25px;
+  font-size: 1rem;
+  opacity: 0.9;
+  color: #1a2980;
+  font-weight: 500;
+}
+
+/* КЛЮЧЕВЫЕ СЛОВА */
+.keywords-block {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.keywords-title {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.keyword {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.keyword:hover {
+  background: rgba(255, 215, 0, 0.2);
+  transform: scale(1.05);
+  border-color: #FFD700;
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 992px) {
+  .promo-title {
+    font-size: 2.2rem;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .windows-promo-section {
+    padding: 50px 0;
+  }
+
+  .promo-title {
+    font-size: 1.8rem;
+  }
+
+  .promo-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .benefits-block {
+    padding: 25px;
+  }
+
+  .cta-block {
+    padding: 30px 20px;
+  }
+
+  .keywords {
+    gap: 10px;
+  }
+
+  .keyword {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-title {
+    font-size: 1.5rem;
+  }
+
+  .service-item {
+    padding: 15px;
+  }
+
+  .benefit-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-button {
+    padding: 15px 25px;
+    font-size: 1rem;
+  }
 }

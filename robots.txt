@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Sitemap: https://remont-toliatti.ru/sitemap.xml
+
+# Для Яндекс
+User-agent: Yandex
+Allow: /
+Disallow: /admin/
+
+# Для Google
+User-agent: Googlebot
+Allow: /
+
+# Запрет для агрессивных ботов
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /

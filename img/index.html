@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title"
+      content="Ремонт квартир в Тольятти | Качественный ремонт под ключ">
+    <meta property="og:description"
+      content="Профессиональный ремонт квартир в Тольятти. Отделка, установка окон, натяжные потолки, напольные покрытия. Гарантия качества.">
+    <meta property="og:image"
+      content="https://remont-toliatti.ru/img/og-main.png">
+    <meta property="og:url" content="https://remont-toliatti.ru/">
+    <meta property="og:type" content="website">
+    <title>Ремонт квартир</title>
+    <link rel="icon" href="/img/fav/fav4.png">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main_photo.css">
+    <link rel="stylesheet" href="css/ubout_us.css">
+    <link rel="stylesheet" href="css/accordeon.css">
+    <link rel="stylesheet" href="css/recording.css">
+    <link rel="stylesheet" href="css/service.css">
+    <script src="js/burger.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/footer_form.js"></script>
+    <script src="js/call-back.js"></script>
+    <script src="js/accordeon-price.js"></script>
+    <script src="js/telegram-proxy.js"></script>
+
+  </head>
+
+  <body>
+
+    <header class="header">
+      <nav class="main-nav">
+        <img class="logo_img" src="/img/logo11.jpg"
+          alt>
+
+        <!-- Основное меню -->
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">О нас</a></li>
+          <li><a href="#record" class="nav-link">Записаться на замер</a></li>
+          <li><a href="#servises" class="nav-link">Услуги</a></li>
+          <li><a href="price.html" class="nav-link">Стоимость</a></li>
+          <li>
+            <p class="nav_call"> 9:00 - 18:00 </p>
+            <span class="phone">+7 909 36 29 675</span>
+          </li>
+          <li class="call_back">
+            <div class="call_back-block">Обратный звонок</div>
+            <button class="call_back-button" onclick="showPopup()">
+              <i class="fas fa-phone-alt"></i> Перезвоните мне
+            </button>
+
+            <div id="popup"
+              style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+              <div style="background: #fff; padding: 20px; border-radius: 5px;">
+                <h2>Оставьте ваш номер телефона</h2>
+                <input type="text" id="phoneInput"
+                  placeholder="Ваш номер телефона"
+                  style="width: 100%; padding: 10px; margin-bottom: 10px;"
+                  maxlength="15">
+                <button onclick="hidePopup()">Отправить</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Бургер меню -->
+        <div class="burger-wrapper">
+          <div class="burger" id="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+
+        <!-- Мобильное меню -->
+        <ul class="mobile-menu" id="mobileMenu">
+          <li><a href="#about" class="nav-link">О нас</a></li>
+          <li><a href="#price" class="nav-link">Записаться на замер</a></li>
+          <li><a href="#servises" class="nav-link">Услуги</a></li>
+          <li><a href="price.html" class="nav-link">Стоимость</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="main-photo">
+      <div class="container">
+        <h1 class="title">Ремонт квартир без посредников</h1>
+        <h2 class="title2">И мы "НЕ ЗАБЫВАЕМ" обновлять цены на сайте. Все
+          указанные здесь цены - АКТУАЛЬНЫЕ!</h2>
+
+        <div class="menu">
+          <div class="dropdown-wrapper">
+            <div class="dropdown">
+              <a href="#">Виды ремонтиа</a>
+              <div class="dropdown-content">
+                <a href="kind-of-repair.html#cosmetic">косметический</a>
+                <a href="kind-of-repair.html#capital">Капитальный</a>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-wrapper">
+            <div class="dropdown">
+              <a href="#">Услуги ремонта</a>
+              <div class="dropdown-content">
+                <a href="price.html#accordionContent1">Демонтажные работы</a>
+                <a href="floor.html">Ремонт пола</a>
+                <a href="price.html">Отделочные работы</a>
+                <a href="price.html#accordionContent5">Плиточные работы</a>
+                <a href="stretch-ceiling.html">Натяжные потолки</a>
+                <a href="price.html#accordionContent3">Подготовка стен, поклейка
+                  обоев</a>
+                <a href="price.html#accordionContent6">Монтаж дверей</a>
+                <a href="price.html#accordionContent7">Сантехник, сантехнические
+                  работы</a>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-wrapper">
+            <div class="dropdown">
+              <a href="#">Пластиковые окна</a>
+              <div class="dropdown-content">
+                <a href="window-plastic.html">Стоимость
+                  окон</a>
+                <a href="window-plastic.html#windows-fully">Установка окон</a>
+                <a href="#record">Замер и
+                  консультация</a>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-wrapper">
+            <div class="dropdown">
+              <a href="#">Натяжные потолки</a>
+              <div class="dropdown-content">
+                <a href="stretch-ceiling.html">Виды натяжных потолков</a>
+                <a href="price.html#accordionContent10">Стоимость работ</a>
+                <a href="stretch-ceiling.html#calculator">Калькулятор
+                  стоимости</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="about_container">
+        <div class="about_link">
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-title" aria-expanded="false">
+                <span class="icon-repair">🛠</span> Виды ремонта
+              </button>
+              <div class="accordion-content">
+                <div class="about_link-all">
+                  <a class="about_link-one"
+                    href="kind-of-repair.html#cosmetic">Косметический</a>
+                  <a class="about_link-one"
+                    href="kind-of-repair.html#capital">Капитальный</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-title" aria-expanded="false">
+                <span class="icon-tools">🔧</span> Услуги ремонта
+              </button>
+              <div class="accordion-content">
+                <div class="about_link-all">
+                  <a class="about_link-one"
+                    href="price.html#accordionContent1">Демонтажные работы</a>
+                  <a class="about_link-one"
+                    href="floor.html">Ремонт пола</a>
+                  <a class="about_link-one" href="price.html">Отделочные
+                    работы</a>
+                  <a class="about_link-one"
+                    href="price.html#accordionContent5">Плиточные работы</a>
+                  <a class="about_link-one" href="stretch-ceiling.html">Натяжные
+                    потолки</a>
+                  <a class="about_link-one"
+                    href="price.html#accordionContent3">Подготовка стен,
+                    поклейка обоев</a>
+                  <a class="about_link-one"
+                    href="price.html#accordionContent6">Монтаж дверей</a>
+                  <a class="about_link-one"
+                    href="price.html#accordionContent7">Сантехник,
+                    сантехнические работы</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-title" aria-expanded="false">
+                <span class="icon-ceiling">⛰</span> Натяжные потолки
+              </button>
+              <div class="accordion-content">
+                <div class="about_link-all">
+                  <a class="about_link-one" href="stretch-ceiling.html">Виды
+                    натяжных потолков</a>
+                  <a class="about_link-one"
+                    href="price.html#accordionContent10">Стоимость работ</a>
+                  <a class="about_link-one"
+                    href="stretch-ceiling.html#calculator">Калькулятор
+                    стоимости</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-title" aria-expanded="false">
+                <span class="icon-window">🪟</span> Пластиковые окна
+              </button>
+              <div class="accordion-content">
+                <div class="about_link-all">
+                  <a class="about_link-one" href="window-plastic.html">Стоимость
+                    окон</a>
+                  <a class="about_link-one"
+                    href="window-plastic.html#windows-fully">Установка окон</a>
+                  <a class="about_link-one" href="#record">Замер и
+                    консультация</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-title" aria-expanded="false">
+                <span class="icon-window">🪟</span> Отделка балконов
+              </button>
+              <div class="accordion-content">
+                <div class="about_link-all">
+                  <a class="about_link-one" href="balcon.html">Услуги по
+                    отделке балконов</a>
+                  <a class="about_link-one"
+                    href="balcon-insulation.html">Выбор материалов для утепления
+                    балконов</a>
+                  <a class="about_link-one" href="balcon-finishing.html">Выбор
+                    материалов для отделки балкона</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about_content">
+          <div class="about_header">
+            <h1 class="about_title" id="about">О нас</h1>
+            <div class="title-decoration"></div>
+          </div>
+
+          <div class="about_card">
+            <div class="about_text-section">
+              <p class="about_text">
+                <span class="highlight-text">Мы - частная бригада
+                  специалистов</span>,
+                которые решили объединить свои знания и опыт в единую команду.
+                Все работы производим самостоятельно, без посредников.
+                Выполняем все виды ремонта. Бесплатно выезжаем на замеры,
+                согласовываем перечень и объем работ, составляем смету.
+                Предложим варианты готовых работ, так же можем создать проект
+                дизайна с Вашими материалами по фотографиям, так Вам будет
+                проще выбрать материалы для отделки.
+              </p>
+            </div>
+          </div>
+
+          <div class="benefits-section">
+            <h2 class="benefits-title">Почему стоит выбрать нас</h2>
+            <div class="benefits-grid">
+              <div class="benefit-card">
+                <div class="benefit-icon">📋</div>
+                <div class="benefit-content">
+                  <h3>Работаем по договору</h3>
+                  <p>Все условия сотрудничества зафиксированы документально</p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">💳</div>
+                <div class="benefit-content">
+                  <h3>Работаем без предоплаты</h3>
+                  <p>Вы платите только за выполненные этапы работ</p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">💰</div>
+                <div class="benefit-content">
+                  <h3>Фиксированная стоимость</h3>
+                  <p>Цена ремонта закреплена в договоре и не меняется</p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">📊</div>
+                <div class="benefit-content">
+                  <h3>Оплата по этапам</h3>
+                  <p>Все этапы работ и оплаты прописаны в договоре</p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">📸</div>
+                <div class="benefit-content">
+                  <h3>Ежедневная отчётность</h3>
+                  <p>Фото и видео отчёты о ходе работ каждый день</p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">🛒</div>
+                <div class="benefit-content">
+                  <h3>Помощь с материалами</h3>
+                  <p>Закупим всё необходимое по лучшим ценам с предоставлением
+                    чеков</p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">📐</div>
+                <div class="benefit-content">
+                  <h3>Бесплатный замер</h3>
+                  <p>Выезжаем на замеры бесплатно, составляем детальную
+                    смету</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="service" id="servises">
+      <div class="service_main">
+        <h1 class="service_title">Наши услуги</h1>
+        <div class="cards-container">
+          <div class="card">
+            <img src="/img/wundows.jpg" alt="Пластиковые окна">
+            <h2>ПЛАСТИКОВЫЕ ОКНА</h2>
+            <p>Ищете качественные пластиковые окна? Это тоже у нас, доставим
+              и,
+              при Вашем желании, качественно установим.</p>
+            <a href="window-plastic.html" class="link-page">ПЕРЕЙТИ НА
+              СТРАНИЦУ</a>
+          </div>
+          <div class="card">
+            <img src="/img/balcon.webp" alt="Пластиковые окна">
+            <h2>РЕМОНТ БАЛКОНОВ</h2>
+            <p>Балкон требует обновления? Решим любую задачу!
+              От утепления до полной отделки — качественно и в срок.
+              Оставьте заявку и получите расчёт стоимости за 15 минут.
+            </p>
+            <a href="balcon.html" class="link-page">ПЕРЕЙТИ НА
+              СТРАНИЦУ</a>
+          </div>
+          <div class="card">
+            <img src="/img/streitch-ceiling.jpg" alt="Отделочные работы">
+            <h2>НАТЯЖНЫЕ ПОТОЛКИ</h2>
+            <p>Хотите обновить интерьер дома или офиса? Доверьте работу
+              нашей
+              команде
+              опытных мастеров — мы преобразим ваше пространство!</p>
+            <a href="stretch-ceiling.html" class="link-page">ПЕРЕЙТИ НА
+              СТРАНИЦУ</a>
+          </div>
+          <div class="card">
+            <img src="/img/demontadg.jpg" alt="Демонтажные работы">
+            <h2>ДЕМОНТАЖНЫЕ РАБОТЫ</h2>
+            <p>Если вам необходимо быстро и качественно произвести демонтаж
+              старых конструкций, наши специалисты готовы помочь!
+              Предоставляем широкий спектр услуг.</p>
+            <a href="price.html#accordionContent1" class="link-page">ПЕРЕЙТИ
+              НА СТРАНИЦУ</a>
+          </div>
+          <div class="card">
+            <img src="/img/plitka.jpg" alt="Плиточные работы">
+            <h2>ПЛИТОЧНЫЕ РАБОТЫ</h2>
+            <p>Ищете надёжных мастеров для укладки плитки? Мы — команда
+              профессионалов, готовая предложить вам качественные услуги по
+              плиточным работам.</p>
+            <a href="price.html#accordionContent5" class="link-page">ПЕРЕЙТИ
+              НА СТРАНИЦУ</a>
+          </div>
+
+          <div class="card">
+            <img src="/img/otdelka.jpg" alt="Отделочные работы">
+            <h2>ОТДЕЛОЧНЫЕ РАБОТЫ</h2>
+            <p>Хотите обновить интерьер дома или офиса? Доверьте работу
+              нашей
+              команде
+              опытных мастеров — мы преобразим ваше пространство!</p>
+            <a href="price.html" class="link-page">ПЕРЕЙТИ НА СТРАНИЦУ</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="record" class="recording">
+      <div class="image-section">
+        <img class="measure"
+          src="/img/zameri.jpg"
+          alt="Профессиональные замеры">
+        <div class="free-badge">
+          <h3>Выезд, замер и консультация</h3>
+          <p>БЕСПЛАТНО!</p>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-container">
+          <h2>Записаться на замер</h2>
+          <p class="subtitle">Заполните форму, и мы свяжемся с Вами в ближайшее
+            время</p>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Ваше имя*"
+                required>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" placeholder="Телефон*"
+                required>
+            </div>
+
+            <!-- Чекбоксы услуг -->
+            <div class="services-checkbox-group">
+              <p class="services-title">Выберите услугу:</p>
+              <div class="services-options">
+                <label class="service-option">
+                  <input type="checkbox" name="service"
+                    value="Заявка на замер окон">
+                  <span class="checkmark"></span>
+                  <span class="service-text">Заявка на замер окон</span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="service"
+                    value="Заявка на замер потолка">
+                  <span class="checkmark"></span>
+                  <span class="service-text">Заявка на замер потолка</span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="service"
+                    value="Заявка на плиточные работы">
+                  <span class="checkmark"></span>
+                  <span class="service-text">Заявка на плиточные работы</span>
+                </label>
+                <label class="service-option">
+                  <input type="checkbox" name="service" value="Другое">
+                  <span class="checkmark"></span>
+                  <span class="service-text">Другое</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Поле для дополнительной информации -->
+            <div class="form-group" id="otherField" style="display: none;">
+              <input type="text" id="otherInfo" name="otherInfo"
+                placeholder="Уточните, что именно Вас интересует">
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="agree" name="agree" required>
+              <label for="agree">
+                Отправляя данную форму, вы соглашаетесь с
+                <a href="#" target="_blank">политикой конфиденциальности</a>
+                и <a href="#" target="_blank">пользовательским соглашением</a>
+              </label>
+            </div>
+
+            <div id="successMessage" class="message success"></div>
+            <div id="errorMessage" class="message error"></div>
+
+            <button type="submit" id="submitBtn" class="submit-btn">
+              <span id="btnText">Отправить заявку</span>
+            </button>
+          </form>
+
+          <div
+            style="text-align: center; margin-top: 30px; color: #7f8c8d; font-size: 14px;">
+            Мы перезвоним вам в течение 15 минут
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
