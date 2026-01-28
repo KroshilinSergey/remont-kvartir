@@ -29,12 +29,12 @@
   text-align: center;
 }
 
-
 .window_plastic-title {
   padding-top: 150px;
   color: #fff;
   font-size: 3.5rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .window-item {
@@ -45,17 +45,17 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: white;
   margin: 10px;
+  min-width: 280px;
 }
 
 .window-title {
   font-size: 24px;
   font-weight: bold;
   color: #ff8c00;
-  /* Оранжевый цвет, как на изображении */
   margin-bottom: 10px;
 }
 
-img {
+.window-item img {
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -85,7 +85,6 @@ img {
 
 .order-btn {
   background-color: #4CAF50;
-  /* Зелёный цвет кнопки */
   color: white;
   padding: 10px 20px;
   border: none;
@@ -93,11 +92,11 @@ img {
   cursor: pointer;
   font-size: 16px;
   width: 100%;
+  transition: background-color 0.3s;
 }
 
 .order-btn:hover {
   background-color: #45a049;
-  /* Тёмнее при наведении */
 }
 
 .about_link-one {
@@ -134,32 +133,28 @@ img {
   border-color: #3498db;
   transform: translateX(8px);
   box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+  color: #2c3e50;
+  padding-left: 20px;
 }
 
 .about_link-one:hover::before {
   transform: scaleY(1);
 }
 
-.about_link-one:hover {
-  color: #2c3e50;
-  background: #e3f2fd;
-  padding-left: 20px;
-}
-
-
 .record {
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 15px 30px;
   background: blue;
   border-radius: 10px;
   text-decoration: none;
   color: #fff;
   font-weight: 500;
   transition: all 0.3s ease;
-  font-size: 0.95rem;
+  font-size: 1rem;
   justify-content: center;
-  width: 20%;
+  min-width: 200px;
+  margin: 20px auto;
 }
 
 .record:hover {
@@ -167,16 +162,11 @@ img {
   border-color: #3498db;
   transform: translateX(8px);
   box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
-}
-
-.record:hover {
   color: #2c3e50;
-  background: #e3f2fd;
-  padding-left: 20px;
+  padding-left: 35px;
 }
 
 /* Секция "Шаги заказа" */
-
 .steps-title-alt {
   text-align: center;
   font-size: 36px;
@@ -210,12 +200,14 @@ img {
   margin-right: 30px;
   flex-shrink: 0;
   z-index: 2;
+  transition: all 0.3s;
 }
 
 .step-num {
   font-size: 28px;
   font-weight: 900;
   color: #b0b0b0;
+  transition: color 0.3s;
 }
 
 .step-vertical-content {
@@ -352,23 +344,32 @@ img {
   margin-top: 30px;
   font-weight: 600;
   font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.free-call:hover {
+  background-color: #0056b3;
 }
 
 .record-mesure {
   display: flex;
   justify-content: center;
+  margin: 30px 0;
 }
 
-/* Футер */
+/* Футер - ИСПРАВЛЕНО для полной ширины */
 .footer-info {
   text-align: center;
-  padding: 50px 30px;
+  padding: 50px 20px;
   background: var(--gradient-main);
   color: white;
-  border-radius: 20px;
   margin-top: 80px;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 .footer-info::before {
@@ -401,31 +402,6 @@ img {
   position: relative;
   z-index: 2;
 }
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .pricing-title {
-    font-size: 2rem;
-  }
-
-  .pricing-card {
-    max-width: 100%;
-  }
-
-  .product-title {
-    font-size: 1.5rem;
-  }
-
-  .footer-info {
-    padding: 40px 20px;
-    margin-top: 50px;
-  }
-
-  .footer-info h3 {
-    font-size: 1.9rem;
-  }
-}
-
 
 /* Модальное окно */
 .modal {
@@ -505,7 +481,6 @@ img {
 }
 
 /* Сравнение брендов */
-
 .brands-header {
   display: flex;
   justify-content: center;
@@ -668,49 +643,6 @@ img {
   }
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-  .modal-content {
-    width: 95%;
-    margin: 20px auto;
-  }
-
-  .brands-header {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .brand-column {
-    width: 80%;
-    max-width: 200px;
-  }
-
-  .performance-metrics {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .metric-value {
-    font-size: 36px;
-  }
-
-  .modal-price-section {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .modal-price {
-    font-size: 28px;
-  }
-
-  .modal-calculate-btn {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
 /* Анимация кнопки "Подробнее" */
 .window-item .about_link-one {
   transition: all 0.3s ease;
@@ -722,8 +654,7 @@ img {
   transform: translateY(-2px);
 }
 
-/*блок рекламы авито*/
-/* ===== ПРОДАЮЩАЯ СЕКЦИЯ ДЛЯ ОКОН ===== */
+/* блок рекламы авито */
 .windows-promo-section {
   background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   color: white;
@@ -1058,8 +989,37 @@ img {
   border-color: #FFD700;
 }
 
-/* АДАПТИВНОСТЬ */
+/* ===== АДАПТИВНЫЕ СТИЛИ ===== */
+
+@media (max-width: 1200px) {
+
+  .window_plastic,
+  .pricing-container,
+  .promo-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
 @media (max-width: 992px) {
+  .window_plastic {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .window-item {
+    width: 80%;
+    margin: 15px auto;
+  }
+
+  .promo-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .promo-title {
     font-size: 2.2rem;
   }
@@ -1081,6 +1041,104 @@ img {
 }
 
 @media (max-width: 768px) {
+  .window_plastic {
+    padding: 10px;
+  }
+
+  .window_plastic-title {
+    font-size: 2rem !important;
+    padding-top: 100px !important;
+  }
+
+  .window-item {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+  }
+
+  .window-title {
+    font-size: 1.3rem;
+  }
+
+  .window-price {
+    font-size: 1.2rem;
+  }
+
+  .order-btn {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+
+  .about_link-one {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+
+  /* Шаги заказа */
+  .steps-title-alt {
+    font-size: 1.8rem;
+  }
+
+  .step-vertical {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .step-circle {
+    margin: 0 auto 15px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .step-num {
+    font-size: 24px;
+  }
+
+  .step-connector {
+    display: none;
+  }
+
+  .step-vertical-content {
+    padding: 20px;
+  }
+
+  /* Тарифы */
+  .pricing-title {
+    font-size: 1.8rem;
+  }
+
+  .pricing-card {
+    padding: 20px;
+    margin: 10px 0;
+  }
+
+  .product-title {
+    font-size: 1.3rem;
+  }
+
+  .record {
+    width: 80% !important;
+    margin: 0 auto;
+    padding: 12px 20px;
+  }
+
+  /* Футер */
+  .footer-info {
+    padding: 40px 15px;
+    margin-top: 50px;
+  }
+
+  .footer-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .footer-info p {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+
+  /* Промо секция */
   .windows-promo-section {
     padding: 50px 0;
   }
@@ -1093,12 +1151,47 @@ img {
     font-size: 1.1rem;
   }
 
+  .promo-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .promo-card {
+    padding: 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item {
+    padding: 15px;
+  }
+
   .benefits-block {
     padding: 25px;
   }
 
+  .benefits-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .benefit-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .benefit-icon {
+    margin: 0 auto 10px;
+  }
+
   .cta-block {
     padding: 30px 20px;
+  }
+
+  .cta-title {
+    font-size: 1.8rem;
   }
 
   .keywords {
@@ -1109,9 +1202,75 @@ img {
     padding: 8px 15px;
     font-size: 0.85rem;
   }
+
+  /* Модальное окно */
+  .modal-content {
+    width: 95%;
+    margin: 20px auto;
+    padding: 0;
+  }
+
+  .brands-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .brand-column {
+    width: 100%;
+    max-width: none;
+  }
+
+  .performance-metrics {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .metric-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-price-section {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .modal-price {
+    font-size: 28px;
+  }
+
+  .modal-calculate-btn {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 480px) {
+  .window_plastic-title {
+    font-size: 1.6rem !important;
+    padding-top: 80px !important;
+  }
+
+  .window-item img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .step-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .step-num {
+    font-size: 20px;
+  }
+
+  .record {
+    width: 100% !important;
+    padding: 12px;
+  }
+
   .promo-title {
     font-size: 1.5rem;
   }
@@ -1128,5 +1287,16 @@ img {
   .cta-button {
     padding: 15px 25px;
     font-size: 1rem;
+  }
+
+  .keywords {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .keyword {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
   }
 }
