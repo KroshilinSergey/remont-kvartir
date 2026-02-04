@@ -19,8 +19,20 @@ function hidePopup() {
     return;
   }
 
+  // Форматируем номер телефона
+  const cleanPhone = phone.replace(/\D/g, '');
+  let formattedPhone;
+  
+  if (cleanPhone.length === 11 && (cleanPhone.startsWith('7') || cleanPhone.startsWith('8'))) {
+    formattedPhone = `+7 (${cleanPhone.substring(1, 4)}) ${cleanPhone.substring(4, 7)}-${cleanPhone.substring(7, 9)}-${cleanPhone.substring(9, 11)}`;
+  } else if (cleanPhone.length === 10) {
+    formattedPhone = `+7 (${cleanPhone.substring(0, 3)}) ${cleanPhone.substring(3, 6)}-${cleanPhone.substring(6, 8)}-${cleanPhone.substring(8, 10)}`;
+  } else {
+    formattedPhone = phone;
+  }
+
   // Отправляем номер в Telegram через API
-  sendToTelegram(phone);
+  sendToTelegram(formattedPhone);
 
   // Скрываем поп-ап после отправки
   document.getElementById('popup').style.display = 'none';
@@ -29,7 +41,7 @@ function hidePopup() {
   document.getElementById('phoneInput').value = '';
 
   // Уведомление пользователя
-  alert('Спасибо! Ваш номер отправлен.');
+  alert('Спасибо! Ваш номер отправлен. Мы перезвоним в течение 15 минут!');
 }
 
 // Функция для закрытия попапа при клике вне его области
@@ -68,20 +80,36 @@ document.addEventListener('DOMContentLoaded', function() {
   initPopup();
 });
 
+// НОВАЯ функция для отправки в Telegram через Vercel API
 function sendToTelegram(phone) {
-  const token = '8443660805:AAGxVeBmRBxGsXtlNTKgvwqFdFbboOOG5_Y';
-  const chatId = '596789512';
-  const message = `Новый номер телефона: ${phone}`;
+  const data = {
+    name: "Обратный звонок", // Обязательное поле
+    phone: phone,
+    source: "Форма обратного звонка",
+    timestamp: new Date().toLocaleString("ru-RU")
+  };
 
-  const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+  const url = 'https://remont-kvartir.vercel.app/api/send-to-telegram';
 
-  fetch(url)
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  })
     .then(response => response.json())
     .then(data => {
-      console.log('Сообщение отправлено:', data);
+      if (data.success) {
+        console.log('Сообщение отправлено в Telegram:', data);
+      } else {
+        console.error('Ошибка от API:', data);
+        // Можно показать более информативное сообщение
+        // alert('Произошла ошибка при отправке номера. Пожалуйста, попробуйте позже.');
+      }
     })
     .catch(error => {
       console.error('Ошибка при отправке:', error);
-      alert('Произошла ошибка при отправке номера. Пожалуйста, попробуйте позже.');
+      // alert('Произошла ошибка при отправке номера. Пожалуйста, попробуйте позже.');
     });
-}
+}пше
