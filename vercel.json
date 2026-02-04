@@ -1,13 +1,15 @@
 {
-  "functions": {
-    "api/telegram.js": {
-      "maxDuration": 10
-    }
-  },
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/api/telegram",
-      "destination": "/api/telegram"
+      "src": "telegram-proxy.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "telegram-proxy.js"
     }
   ]
 }
