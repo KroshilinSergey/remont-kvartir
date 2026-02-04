@@ -255,9 +255,11 @@
   color: white;
 }
 
-/* Стили для новой секции с тарифами */
+/* Стили для новой секции с тарифами - ИСПРАВЛЕНО */
 .pricing-section {
   padding: 60px 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .pricing-title {
@@ -267,58 +269,76 @@
   margin-bottom: 50px;
   color: #fff;
   text-transform: uppercase;
+  padding: 0 20px;
 }
 
 .pricing-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .pricing-card {
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
   width: 100%;
   max-width: 350px;
+  min-width: 280px;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid #e9ecef;
+  flex: 1 1 300px;
 }
 
 .pricing-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .product-title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 25px;
-  color: #333;
-  border-bottom: 2px solid #007bff;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 3px solid #007bff;
   padding-bottom: 10px;
 }
 
 .tariff-plan {
-  margin: 25px 0;
+  margin: 20px 0;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
   transition: all 0.3s ease;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .tariff-plan:hover {
-  background-color: #f0f8ff;
+  background-color: #e9ecef;
+  transform: scale(1.02);
 }
 
-.tariff-name {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #333;
+.tariff-plan img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
 }
 
 .tariff-price {
@@ -326,30 +346,41 @@
   font-weight: 700;
   color: #007bff;
   margin: 15px 0;
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px dashed #007bff;
 }
 
 .tariff-description {
-  color: #666;
+  color: #555;
   font-size: 1rem;
   line-height: 1.5;
-  min-height: 60px;
+  margin: 15px 0;
+  flex-grow: 1;
 }
 
 .free-call {
-  background-color: #007bff;
+  background: linear-gradient(135deg, #007bff, #0056b3);
   color: white;
-  padding: 15px;
+  padding: 15px 25px;
   border-radius: 8px;
   border: none;
-  margin-top: 30px;
+  margin-top: 20px;
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  width: 100%;
 }
 
 .free-call:hover {
-  background-color: #0056b3;
+  background: linear-gradient(135deg, #0056b3, #004085);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
 }
 
 .record-mesure {
@@ -1103,18 +1134,34 @@
     padding: 20px;
   }
 
-  /* Тарифы */
+  /* Тарифы - ИСПРАВЛЕНО */
   .pricing-title {
     font-size: 1.8rem;
+    margin-bottom: 30px;
   }
 
   .pricing-card {
     padding: 20px;
     margin: 10px 0;
+    max-width: 100%;
+    min-width: 250px;
+  }
+
+  .tariff-plan img {
+    height: 180px;
   }
 
   .product-title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+  }
+
+  .tariff-price {
+    font-size: 1.5rem;
+  }
+
+  .free-call {
+    padding: 12px 20px;
+    font-size: 1rem;
   }
 
   .record {
@@ -1264,6 +1311,10 @@
 
   .step-num {
     font-size: 20px;
+  }
+
+  .pricing-title {
+    font-size: 1.5rem;
   }
 
   .record {

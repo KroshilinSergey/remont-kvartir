@@ -435,9 +435,8 @@ html {
 
 /* FAQ секция */
 .faq-section {
-    background: #fff;
     border-radius: 15px;
-    padding: 40px;
+   /*  padding: 40px; */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     margin-bottom: 60px;
 }

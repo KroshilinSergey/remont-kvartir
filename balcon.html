@@ -1,35 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!-- ОСНОВНЫЕ META ТЕГИ -->
-		<title>Ремонт балконов в Тольятти | Утепление и отделка балконов под
-			ключ</title>
+		<title>Ремонт и утепление балконов в Тольятти под ключ | Цены 2025</title>
 		<meta name="description"
-			content="🏠 Профессиональный ремонт и отделка балконов в Тольятти. Утепление, остекление, превращение в жилое пространство. Гарантия 3 года. Бесплатный выезд замерщика по Тольятти.">
+			content="✅ Ремонт балконов в Тольятти под ключ от 20 000 руб. Утепление, остекление, отделка. Гарантия 3 года. Бесплатный замер + смета. Звоните: +7 (909) 362-96-75">
 		<meta name="keywords"
-			content="ремонт балконов Тольятти, утепление балконов Тольятти, отделка балконов Тольятти, остекление балконов Тольятти, балкон под ключ Тольятти">
+			content="ремонт балкона, утепление балкона, ремонт балкона под ключ, утепление балкона своими руками, утепление балкона пеноплексом, обшивка балкона, ремонт балкона цена, утепление балкона цена, ремонт крыши балкона, ремонт балкона последнего этажа, остекление и утепление балкона, обшивка балкона ламинатом, обшивка балкона вагонкой, ремонт балкона в Тольятти">
 
 		<!-- OPEN GRAPH -->
 		<meta property="og:title"
-			content="Ремонт балконов в Тольятти | Утепление и отделка под ключ">
+			content="Ремонт и утепление балконов в Тольятти под ключ | Цены 2025">
 		<meta property="og:description"
-			content="Ремонт и утепление балконов в Тольятти. Остекление, отделка, превращение в жилое пространство. Бесплатный замер.">
+			content="Профессиональный ремонт и утепление балконов в Тольятти. Остекление, отделка, крыша. Гарантия 3 года. Бесплатный выезд замерщика">
 		<meta property="og:image"
-			content="https://remont-toliatti.ru/img/og-main.png">
+			content="https://remont-toliatti.ru/img/og-balcon.png">
 		<meta property="og:url" content="https://remont-toliatti.ru/balcon.html">
 		<meta property="og:type" content="website">
 		<meta property="og:locale" content="ru_RU">
 
-		<title>Ремонт и отделка балконов в Тольятти под ключ</title>
+		<link rel="canonical" href="https://remont-toliatti.ru/balcon.html">
+
+		<!-- JSON-LD структурированные данные -->
+		<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Ремонт и утепление балконов в Тольятти",
+        "description": "Ремонт, утепление и отделка балконов под ключ в Тольятти",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Ремонт Тольятти",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Тольятти",
+                "addressRegion": "Самарская область"
+            },
+            "telephone": "+79093629675",
+            "openingHours": "Mo-Su 09:00-18:00"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Тольятти"
+        },
+        "serviceType": "Ремонт балконов",
+        "offers": {
+            "@type": "Offer",
+            "price": "20000",
+            "priceCurrency": "RUB",
+            "description": "Утепление балкона от 20 000 руб"
+        }
+    }
+    </script>
+
+		<!-- Хлебные крошки -->
+		<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://remont-toliatti.ru/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Ремонт балконов",
+            "item": "https://remont-toliatti.ru/balcon.html"
+        }]
+    }
+    </script>
+
 		<link rel="icon" href="/img/fav/fav4.png">
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-			crossorigin="anonymous">
+			rel="stylesheet">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 		<link rel="stylesheet" href="css/common.css">
 		<link rel="stylesheet" href="css/header.css">
 		<link rel="stylesheet" href="css/recording.css">
@@ -37,21 +86,43 @@
 		<script src="js/burger.js"></script>
 		<script src="js/balcon.js"></script>
 		<script src="js/call-back.js"></script>
+		<style>
+        .read-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #43e97b);
+            z-index: 9999;
+            transition: width 0.3s ease;
+        }
+    </style>
 	</head>
 	<body>
+		<!-- Прогресс бар -->
+		<div class="read-progress" id="readProgress"></div>
+
+		<script>
+    // Прогресс чтения
+    window.addEventListener('scroll', function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("readProgress").style.width = scrolled + "%";
+    });
+    </script>
+
 		<header class="header">
 			<nav class="main-nav">
-				<img class="logo_img" src="/img/logo11.jpg"
-					alt>
+				<img class="logo_img" src="/img/logo11.jpg" alt="Логотип компании">
 
 				<!-- Основное меню -->
 				<ul class="nav-list">
 					<li><a href="index.html" class="nav-link">Главная</a></li>
-					<li><a href="index.html#record" class="nav-link">Записаться
-							на
+					<li><a href="index.html#record" class="nav-link">Записаться на
 							замер</a></li>
-					<li><a href="index.html#servises"
-							class="nav-link">Услуги</a></li>
+					<li><a href="index.html#servises" class="nav-link">Услуги</a></li>
 					<li><a href="price.html" class="nav-link">Стоимость</a></li>
 					<li>
 						<p class="nav_call">9:00 - 18:00 </p>
@@ -62,18 +133,6 @@
 						<button class="call_back-button" onclick="showPopup()">
 							<i class="fas fa-phone-alt"></i> Перезвоните мне
 						</button>
-
-						<div id="popup"
-							style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
-							<div
-								style="background: #fff; padding: 20px; border-radius: 5px;">
-								<h2>Оставьте ваш номер телефона</h2>
-								<input type="text" id="phoneInput"
-									placeholder="Ваш номер телефона"
-									style="width: 100%; padding: 10px; margin-bottom: 10px;">
-								<button onclick="hidePopup()">Отправить</button>
-							</div>
-						</div>
 					</li>
 				</ul>
 
@@ -88,32 +147,36 @@
 
 				<!-- Мобильное меню -->
 				<ul class="mobile-menu" id="mobileMenu">
-					<li><a href="index.html#about" class="nav-link">О
-							нас</a></li>
-					<li><a href="index.html#price" class="nav-link">Записаться
-							на
+					<li><a href="index.html" class="nav-link">Главная</a></li>
+					<li><a href="index.html#record" class="nav-link">Записаться на
 							замер</a></li>
-					<li><a href="index.html#servises"
-							class="nav-link">Услуги</a></li>
+					<li><a href="index.html#servises" class="nav-link">Услуги</a></li>
 					<li><a href="price.html" class="nav-link">Стоимость</a></li>
 				</ul>
 			</nav>
 		</header>
 
+		<!-- Хлебные крошки -->
+		<nav class="breadcrumbs container">
+			<ol>
+				<li><a href="index.html">Главная</a></li>
+				<li>Ремонт балконов в Тольятти</li>
+			</ol>
+		</nav>
+
 		<section>
 			<div class="container">
-				<h1 class="balcon_title">Услуги по отделке балкона</h1>
+				<h1 class="balcon_title">Услуги по отделке балкона в Тольятти</h1>
 				<div class="cards-container balcon_service">
 					<div class="card">
 						<img src="/img/balcon-warming.jfif" alt="утепление балкона">
 						<h2>Утепление балкона</h2>
-						<p class="balcon_text">Обеспечивает создание оптимального
-							микроклимата
-							в течение всего года. Заказчик получает дополнительное помещение,
-							которое
-							можно использовать зимой и летом. </p>
+						<p class="balcon_text">Обеспечивает создание оптимального микроклимата в
+							течение всего года. Заказчик получает дополнительное помещение, которое
+							можно использовать зимой и летом.</p>
 						<p class="balcon_price">Стоимость: от 20 000 руб.</p>
-						<a href="balcon-insulation.html" class="link-page">Подробнее</a>
+						<a href="balcon-insulation.html" class="link-page">Подробнее об
+							утеплении</a>
 					</div>
 
 					<div class="card">
@@ -122,7 +185,7 @@
 						<p class="balcon_text">Тёплое, холодное и панорамное в зависимости от
 							ваших потребностей и желаний. Также сделаем новую крышу</p>
 						<p class="balcon_price">Стоимость: от 30 000 руб.</p>
-						<a href="#" class="link-page">Подробнее</a>
+						<a href="#" class="link-page">Подробнее об остеклении</a>
 					</div>
 
 					<div class="card">
@@ -132,93 +195,487 @@
 							квартире с использованием различных материалов: обшивка вагонкой,
 							ламинатом, стеновым паркетом</p>
 						<p class="balcon_price">Стоимость: от 35 000 руб.</p>
-						<a href="balcon-finishing.html" class="link-page">Подробнее</a>
-
+						<a href="balcon-finishing.html" class="link-page">Подробнее об обшивке</a>
 					</div>
 					<div class="card">
 						<img src="/img/balcon/balcon-pod-kluch.jpeg" alt="Балкон под ключ">
 						<h2>Балкон под ключ</h2>
-						<p class="balcon_text">В отделку под ключ входит: демонтаж,
-							подготовка стен и пола, утепление, внутренняя отделка и электрика</p>
+						<p class="balcon_text">В отделку под ключ входит: демонтаж, подготовка
+							стен и пола, утепление, внутренняя отделка и электрика</p>
 						<p class="balcon_price">Стоимость: от 80 000 руб.</p>
-						<a href="balcon-finishing.html" class="link-page">Подробнее</a>
+						<a href="balcon-finishing.html" class="link-page">Подробнее о ремонте под
+							ключ</a>
 					</div>
-
-				</div>
-				<h2 class="balcon_title2 ">ИДЕИ ВАШЕГО БАЛКОНА</h2>
-				<div class="gallery">
-					<div class="gallery-item">
-						<img src="/img/balcon/1.1.jpg" alt="Фото 1">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/1.6.jpg" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/1.3..jpg" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/1.4..webp" alt="Фото 1">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/1.5..jpg" alt="Фото 2">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/1.2..jpg" alt="Фото 2">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/1.7.jpg" alt="Фото 2">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/1.8.webp" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/1.18.jpg" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/1.16.jpg" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/1.17.webp" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/1.19.jpg" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/2.3.jpg" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/2.4.jpg" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/2.5.webp" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/2.6.jpg" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/2.7.jpg" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/2.12.jpg" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/2.14.jpg" alt="Фото 3">
-					</div>
-					<div class="gallery-item">
-						<img src="/img/balcon/2.10.jpg" alt="Фото 3">
-					</div>
-					<!-- Добавьте столько .gallery-item, сколько нужно -->
-				</div>
-
-				<div class="lightbox" id="lightbox">
-					<button class="close-btn" id="closeBtn">×</button>
-					<button class="nav-btn prev" id="prevBtn">‹</button>
-					<button class="nav-btn next" id="nextBtn">›</button>
-					<img alt="Полноразмерное фото" id="lightboxImg">
 				</div>
 			</div>
-
 		</section>
 
+		<!-- Блок популярных запросов -->
+		<section class="seo-keywords-section">
+			<h2
+				style="text-align: center; color: #2c3e50; margin-bottom: 30px; font-size: 2rem;">Популярные
+				запросы по ремонту балконов</h2>
+			<div class="seo-keywords-container">
+				<a href="#faq" class="seo-keyword">ремонт балкона</a>
+				<a href="#faq" class="seo-keyword">утепление балкона</a>
+				<a href="#faq" class="seo-keyword">ремонт балкона под ключ</a>
+				<a href="#faq" class="seo-keyword">утепление балкона своими руками</a>
+				<a href="#faq" class="seo-keyword">утепление балкона пеноплексом</a>
+				<a href="#faq" class="seo-keyword">обшивка балкона</a>
+				<a href="#faq" class="seo-keyword">ремонт балкона цена</a>
+				<a href="#faq" class="seo-keyword">утепление балкона цена</a>
+				<a href="#faq" class="seo-keyword">ремонт крыши балкона</a>
+				<a href="#faq" class="seo-keyword">ремонт балкона последнего этажа</a>
+				<a href="#faq" class="seo-keyword">остекление и утепление балкона</a>
+				<a href="#faq" class="seo-keyword">обшивка балкона ламинатом</a>
+				<a href="#faq" class="seo-keyword">обшивка балкона вагонкой</a>
+			</div>
+		</section>
+
+		<section class="faq-section" id="faq">
+			<div class="container">
+				<h2 class="section-title">Часто задаваемые вопросы</h2>
+				<div class="faq-container">
+					<div class="faq-item">
+						<div class="faq-question">
+							<i class="fas fa-question-circle"></i>
+							<span>Сколько стоит ремонт балкона под ключ?</span>
+							<div class="faq-arrow">
+								<i class="fas fa-chevron-down"></i>
+							</div>
+						</div>
+						<div class="faq-answer">
+							Стоимость ремонта балкона под ключ в Тольятти зависит от площади,
+							материалов и сложности работ.
+							Точную цену назовет наш специалист после бесплатного замера.
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-question">
+							<i class="fas fa-question-circle"></i>
+							<span>Можно ли утеплить балкон самостоятельно?</span>
+							<div class="faq-arrow">
+								<i class="fas fa-chevron-down"></i>
+							</div>
+						</div>
+						<div class="faq-answer">
+							Да, но профессиональное утепление гарантирует долговечность, отсутствие
+							мостиков холода и правильный микроклимат.
+							Наши мастера имеют опыт работы с разными материалами (пеноплекс,
+							минеральная вата).
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-question">
+							<i class="fas fa-question-circle"></i>
+							<span>Нужно ли делать крышу на балконе последнего этажа?</span>
+							<div class="faq-arrow">
+								<i class="fas fa-chevron-down"></i>
+							</div>
+						</div>
+						<div class="faq-answer">
+							Обязательно! Крыша защищает от осадков, ультрафиолета и продлевает срок
+							службы остекления.
+							Мы делаем качественные крыши из сэндвич-панелей, металлочерепицы и других
+							материалов.
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-question">
+							<i class="fas fa-question-circle"></i>
+							<span>Какой материал лучше для обшивки балкона?</span>
+							<div class="faq-arrow">
+								<i class="fas fa-chevron-down"></i>
+							</div>
+						</div>
+						<div class="faq-answer">
+							Для влажных помещений рекомендуем пластиковые панели, для жилых зон -
+							вагонку или МДФ панели.
+							Для пола лучше всего подходит ламинат или плитка. Поможем выбрать
+							оптимальный вариант.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Секция "ПРИМЕРЫ НАШИХ РАБОТ" -->
+		<section class="our-works-section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title">ПРИМЕРЫ НАШИХ РАБОТ</h2>
+					<div class="guarantee-badge">
+						<i class="fas fa-calendar-check"></i> Гарантия на работы: 3 года
+					</div>
+					<div class="verification-text">
+						<strong>Все фотографии можно проверить на аутентичность через поиск по
+							изображению в браузере — это 100% наши работы.</strong>
+					</div>
+				</div>
+
+				<div class="slider-wrapper">
+					<div class="slider-container">
+						<div class="slider-track" id="sliderTrack"></div>
+					</div>
+					<button class="arrow-btn" id="sliderPrev"><i
+							class="fas fa-chevron-left"></i></button>
+					<button class="arrow-btn" id="sliderNext"><i
+							class="fas fa-chevron-right"></i></button>
+				</div>
+				<div class="slider-dots-container" id="sliderDots"></div>
+			</div>
+		</section>
+
+		<!-- Блок преимуществ -->
+		<section class="benefits-block">
+			<h2 class="benefits-title">Почему выбирают нас</h2>
+			<div class="benefits-grid">
+				<div class="benefit-item">
+					<i class="fas fa-medal benefit-icon"></i>
+					<h4>Гарантия 3 года</h4>
+					<p>Даем официальную гарантию на все виды работ по ремонту балконов</p>
+				</div>
+				<div class="benefit-item">
+					<i class="fas fa-ruler-combined benefit-icon"></i>
+					<h4>Бесплатный замер</h4>
+					<p>Выезд специалиста по Тольятти бесплатно. Точный расчет сметы на
+						месте</p>
+				</div>
+				<div class="benefit-item">
+					<i class="fas fa-clock benefit-icon"></i>
+					<h4>Сжатые сроки</h4>
+					<p>Ремонт балкона под ключ от 3 до 7 дней в зависимости от сложности</p>
+				</div>
+				<div class="benefit-item">
+					<i class="fas fa-dollar-sign benefit-icon"></i>
+					<h4>Прозрачные цены</h4>
+					<p>Фиксированная стоимость в договоре. Никаких скрытых платежей</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Ценовой акцентный блок -->
+		<section class="price-highlight">
+			<h3>Утепление балкона от 30 000 руб!</h3>
+			<p>Получите точный расчет стоимости ремонта вашего балкона уже сегодня.
+				Бесплатный выезд замерщика по Тольятти!</p>
+			<a href="tel:+79093629675" class="phone-call">
+				<i class="fas fa-phone-alt"></i> +7 (900) 177 27 18
+			</a>
+			<p style="margin-top: 20px; font-size: 1rem; opacity: 0.9;">Звоните с 9:00 до
+				18:00 без выходных</p>
+		</section>
+
+		<section>
+			<div class="container">
+				<h2 class="balcon_title2">ИДЕИ ДЛЯ ВАШЕГО БАЛКОНА</h2>
+				<div class="gallery">
+					<!-- Галерея изображений -->
+					<div class="gallery-item"><img src="/img/balcon/1.1.jpg"
+							alt="Утепленный балкон с панорамным остеклением"></div>
+					<div class="gallery-item"><img src="/img/balcon/1.6.jpg"
+							alt="Балкон-кабинет с рабочим местом"></div>
+					<div class="gallery-item"><img src="/img/balcon/1.3..jpg"
+							alt="Балкон-оранжерея с растениями"></div>
+					<div class="gallery-item"><img src="/img/balcon/1.4..webp"
+							alt="Современный балкон с LED подсветкой"></div>
+					<div class="gallery-item"><img src="/img/balcon/1.5..jpg"
+							alt="Балкон-спальня с раскладным диваном"></div>
+					<div class="gallery-item"><img src="/img/balcon/1.2..jpg"
+							alt="Мини-кухня на балконе"></div>
+					<div class="gallery-item"><img src="/img/balcon/1.7.jpg"
+							alt="Детский игровой уголок на балконе"></div>
+					<div class="gallery-item"><img src="/img/balcon/1.8.webp"
+							alt="Балкон-гардеробная с системами хранения"></div>
+					<div class="gallery-item"><img src="/img/balcon/1.18.jpg"
+							alt="Балкон с французским остеклением"></div>
+					<div class="gallery-item"><img src="/img/balcon/1.16.jpg"
+							alt="Балкон с обшивкой вагонкой"></div>
+					<div class="gallery-item"><img src="/img/balcon/1.17.webp"
+							alt="Балкон с ковровым покрытием"></div>
+					<div class="gallery-item"><img src="/img/balcon/1.19.jpg"
+							alt="Балкон с системой умного дома"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Процесс работы -->
+		<section class="process-section">
+			<div class="container">
+				<h2
+					style="text-align: center; color: #2c3e50; margin-bottom: 50px; font-size: 2.5rem;">Как
+					мы работаем</h2>
+				<div class="process-steps">
+					<div class="process-step">
+						<div class="step-number">1</div>
+						<h4>Бесплатный замер</h4>
+						<p>Выезд специалиста, консультация, точные замеры и расчет сметы</p>
+					</div>
+					<div class="process-step">
+						<div class="step-number">2</div>
+						<h4>Подписание договора</h4>
+						<p>Фиксируем сроки, стоимость и материалы. Предоплата 30%</p>
+					</div>
+					<div class="process-step">
+						<div class="step-number">3</div>
+						<h4>Выполнение работ</h4>
+						<p>Демонтаж, подготовка, монтаж, отделка. Соблюдение сроков</p>
+					</div>
+					<div class="process-step">
+						<div class="step-number">4</div>
+						<h4>Сдача объекта</h4>
+						<p>Прием работы, окончательный расчет, выдача гарантийного талона</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Секция с блогами -->
+		<section class="blogs-section">
+			<div class="blogs-container">
+				<h2 class="section-title">Полезные статьи по ремонту балконов</h2>
+				<p class="section-subtitle">Экспертные советы и руководства от
+					профессионалов. Узнайте, как правильно выполнить ремонт балкона, выбрать
+					материалы и сэкономить на работах</p>
+
+				<div class="blogs-grid">
+					<!-- Блог 1: Утепление пеноплексом -->
+					<article class="blog-card">
+						<img
+							src="img/balcon/penoplex.jpg"
+							alt="Утепление балкона пеноплексом" class="blog-image">
+						<div class="blog-content">
+							<span class="blog-category category-uteplenie">Утепление</span>
+							<h3 class="blog-title">Полное руководство по самостоятельному утеплению
+								балкона пеноплексом</h3>
+							<p class="blog-excerpt">Пошаговая инструкция по выбору материалов,
+								подготовке поверхности и профессиональному монтажу пеноплекса. Узнайте,
+								как избежать распространенных ошибок и добиться максимальной
+								теплоизоляции.</p>
+							<div class="blog-meta">
+								<span class="read-time">
+									<i class="far fa-clock"></i> 8 мин чтения
+								</span>
+								<a href="balcon-info.html#uteplenie" class="read-btn">
+									Читать статью
+									<i class="fas fa-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+					</article>
+
+					<!-- Блог 2: Крыша на балконе -->
+					<article class="blog-card">
+						<img
+							src="/img/balcon/roofBalcon.jfif"
+							alt="Крыша балкона последнего этажа" class="blog-image">
+						<div class="blog-content">
+							<span class="blog-category category-krysha">Крыша</span>
+							<h3 class="blog-title">Как правильно сделать крышу на балконе последнего
+								этажа?</h3>
+							<p class="blog-excerpt">Обзор современных материалов и технологий для
+								устройства крыши. Рассматриваем стоимость работ в Тольятти, преимущества
+								разных решений и важные нюансы монтажа.</p>
+							<div class="blog-meta">
+								<span class="read-time">
+									<i class="far fa-clock"></i> 6 мин чтения
+								</span>
+								<a href="balcon-info.html#krysha" class="read-btn">
+									Читать статью
+									<i class="fas fa-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+					</article>
+
+					<!-- Блог 3: Сравнение материалов -->
+					<article class="blog-card">
+						<img
+							src="/img/balcon/materialBalcon.png"
+							alt="Обшивка балкона вагонкой" class="blog-image">
+						<div class="blog-content">
+							<span class="blog-category category-materialy">Материалы</span>
+							<h3 class="blog-title">Сравнение вагонки с другими материалами для
+								обшивки балкона</h3>
+							<p class="blog-excerpt">Детальный анализ плюсов и минусов вагонки,
+								пластиковых панелей, ламината и МДФ. Как выбрать качественный материал и
+								сохранить его надолго - практические советы от мастеров.</p>
+							<div class="blog-meta">
+								<span class="read-time">
+									<i class="far fa-clock"></i> 10 мин чтения
+								</span>
+								<a href="balcon-info.html#materialy" class="read-btn">
+									Читать статью
+									<i class="fas fa-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Футер с контактами -->
+		<footer class="footer-info">
+			<h3>Нужна консультация или точный расчет?</h3>
+			<p>Наши специалисты бесплатно проконсультируют вас, помогут выбрать
+				оптимальный вариант отделки и рассчитают точную стоимость работ</p>
+			<p>Работаем ежедневно с 9:00 до 18:00</p>
+			<div class="record-mesure">
+				<a class="record" href="index.html#record"> записаться на замер</a>
+			</div>
+		</footer>
+
+		<!-- Скрипт для слайдера -->
+		<script>
+    // СЛАЙДЕР С HOVER УВЕЛИЧЕНИЕМ
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = [
+            '1.1.jpg', '1.2.jpg', '1.3.jpg', '1.4.jpg', '1.5.jpg', 
+            '1.6.jpg', '1.7.jpg', '1.9.jpg', '2.1.jpg', '3.1.jpg',
+            '3.2.jpg', '4.1.jpg', '6.jpg', '12.jpg', 'balcon2.2.jpg',
+            'balcon2.3.jpg', 'balcon2.4.jpg', 'balcon2.jpg', 'balcon3.1.jpg',
+            'balcon3.jpg', 'balcon4.jpg', 'balcon5.process.jpg', 'balcon6.jpg',
+            'balcon8.1.jpg', 'balcon8.jpg', 'balcon9.1.jpg', 'balcon9.jpg',
+            'balcon10.jpg', 'balcon12.1.jpg', 'balcon13.3.jpg', 'balcon13.4.jpg',
+            'balcon13.jpg', 'balcon14.jpg', 'balcRama2.1.jpg', 'balcon45.jpg', 'balron44.jpg'
+        ];
+        
+        const IMG_PATH = 'img/balcon/worckOur/';
+        const sliderTrack = document.getElementById('sliderTrack');
+        const prevBtn = document.getElementById('sliderPrev');
+        const nextBtn = document.getElementById('sliderNext');
+        const dotsContainer = document.getElementById('sliderDots');
+        
+        let currentPosition = 0;
+        let cardsPerView = 3;
+        
+        function createCards() {
+            sliderTrack.innerHTML = '';
+            
+            images.forEach((imgName, index) => {
+                const card = document.createElement('div');
+                card.className = 'slide-card';
+                
+                const imgUrl = IMG_PATH + imgName;
+                const projectNum = index + 1;
+                
+                card.innerHTML = `
+                    <div class="slide-image">
+                        <img src="${imgUrl}" alt="Наш проект ${projectNum} - ремонт балкона в Тольятти" loading="lazy">
+                    </div>
+                    <div class="slide-info">
+                        Подведите курсор для увеличения
+                    </div>
+                `;
+                
+                card.style.zIndex = images.length - index;
+                
+                sliderTrack.appendChild(card);
+            });
+            
+            createDots();
+            updateSlider();
+        }
+        
+        function createDots() {
+            if (!dotsContainer) return;
+            
+            const totalGroups = Math.ceil(images.length / cardsPerView);
+            dotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalGroups; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'dot';
+                if (i === 0) dot.classList.add('active');
+                
+                dot.addEventListener('click', function() {
+                    currentPosition = i;
+                    updateSlider();
+                });
+                
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        function updateSlider() {
+            const cards = sliderTrack.querySelectorAll('.slide-card');
+            if (cards.length === 0) return;
+            
+            const cardWidth = cards[0].offsetWidth;
+            const gap = 25;
+            const translateX = currentPosition * (cardWidth + gap) * cardsPerView;
+            
+            sliderTrack.style.transform = `translateX(-${translateX}px)`;
+            
+            const dots = dotsContainer.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentPosition);
+            });
+        }
+        
+        function nextSlide() {
+            const totalGroups = Math.ceil(images.length / cardsPerView);
+            
+            if (currentPosition < totalGroups - 1) {
+                currentPosition++;
+            } else {
+                currentPosition = 0;
+            }
+            
+            updateSlider();
+        }
+        
+        function prevSlide() {
+            if (currentPosition > 0) {
+                currentPosition--;
+            } else {
+                const totalGroups = Math.ceil(images.length / cardsPerView);
+                currentPosition = totalGroups - 1;
+            }
+            
+            updateSlider();
+        }
+        
+        prevBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            prevSlide();
+        });
+        
+        nextBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            nextSlide();
+        });
+        
+        function adaptToScreen() {
+            const width = window.innerWidth;
+            
+            if (width < 768) cardsPerView = 1;
+            else if (width < 992) cardsPerView = 2;
+            else cardsPerView = 3;
+            
+            createDots();
+            updateSlider();
+        }
+        
+        let autoSlide = setInterval(nextSlide, 5000);
+        
+        sliderTrack.addEventListener('mouseenter', function() {
+            clearInterval(autoSlide);
+        });
+        
+        sliderTrack.addEventListener('mouseleave', function() {
+            autoSlide = setInterval(nextSlide, 5000);
+        });
+        
+        window.addEventListener('resize', adaptToScreen);
+        
+        createCards();
+        adaptToScreen();
+    });
+    </script>
 	</body>
 </html>

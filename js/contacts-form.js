@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const otherField = document.getElementById("otherField");
   const otherInfo = document.getElementById("otherInfo");
 
-  const PROXY_URL =
-    "https://telegram-proxy-xumy.onrender.com/api/send-to-telegram";
+  const PROXY_URL = "/api/telegram";
 
   // Маска телефона
   const phoneInput = document.getElementById("phone");
