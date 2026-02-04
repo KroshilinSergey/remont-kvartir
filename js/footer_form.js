@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // URL прокси-сервера
 
-  const PROXY_URL =
-    "https://telegram-proxy-xumy.onrender.com/api/send-to-telegram";
+  const PROXY_URL = "https://remont-kvartir.vercel.app/api/send-to-telegram";
 
   // Функция для получения Самарского времени (UTC+4)
   function getSamaraTime() {
@@ -61,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('input[name="service"]').forEach((checkbox) => {
     checkbox.addEventListener("change", function () {
       const otherCheckbox = document.querySelector(
-        'input[name="service"][value="Другое"]'
+        'input[name="service"][value="Другое"]',
       );
       if (otherCheckbox.checked) {
         otherField.style.display = "block";
@@ -89,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Получаем выбранные услуги
     const selectedServices = Array.from(
-      document.querySelectorAll('input[name="service"]:checked')
+      document.querySelectorAll('input[name="service"]:checked'),
     ).map((checkbox) => checkbox.value);
 
     const otherInfoValue = otherInfo.value.trim();
@@ -97,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Валидация
     if (!name || !phone || !agree) {
       showError(
-        "Пожалуйста, заполните все обязательные поля и согласитесь с условиями"
+        "Пожалуйста, заполните все обязательные поля и согласитесь с условиями",
       );
       return;
     }
@@ -114,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!phoneRegex.test(cleanPhone)) {
       showError(
-        "Пожалуйста, введите корректный номер телефона в формате +7 (XXX) XXX-XX-XX"
+        "Пожалуйста, введите корректный номер телефона в формате +7 (XXX) XXX-XX-XX",
       );
       return;
     }
@@ -129,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (selectedServices.includes("Другое") && otherInfoValue) {
         servicesText = servicesText.replace(
           "Другое",
-          `Другое: ${otherInfoValue}`
+          `Другое: ${otherInfoValue}`,
         );
       }
 
@@ -159,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (result.success) {
         showSuccess(
-          "✅ Спасибо! Ваша заявка успешно отправлена. Мы свяжемся с вами в течение 15 минут!"
+          "✅ Спасибо! Ваша заявка успешно отправлена. Мы свяжемся с вами в течение 15 минут!",
         );
         form.reset();
         otherField.style.display = "none";
@@ -174,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Дополнительно: можно сохранить в localStorage для статистики
         const submissions = JSON.parse(
-          localStorage.getItem("formSubmissions") || "[]"
+          localStorage.getItem("formSubmissions") || "[]",
         );
         submissions.push({
           name: name,
@@ -206,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
           });
       } else {
         showError(
-          "❌ Ошибка отправки. Пожалуйста, попробуйте еще раз или позвоните нам напрямую."
+          "❌ Ошибка отправки. Пожалуйста, попробуйте еще раз или позвоните нам напрямую.",
         );
       }
     } finally {

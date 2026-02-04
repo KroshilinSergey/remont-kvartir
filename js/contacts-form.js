@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const otherField = document.getElementById("otherField");
   const otherInfo = document.getElementById("otherInfo");
 
-  const PROXY_URL = "/api/telegram";
+  const PROXY_URL = "https://remont-kvartir.vercel.app/api/send-to-telegram";
 
   // Маска телефона
   const phoneInput = document.getElementById("phone");
