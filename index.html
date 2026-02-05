@@ -30,6 +30,21 @@
     <meta name="geo.position" content="53.5078;49.4204">
     <meta name="ICBM" content="53.5078, 49.4204">
 
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106651811', 'ym');
+
+    ym(106651811, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/106651811"
+          style="position:absolute; left:-9999px;" alt /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
     <link rel="canonical" href="https://remont-toliatti.ru/">
     <link rel="preload" as="image"
       href="img/main-foto.webp"
@@ -59,7 +74,6 @@
     <script src="js/burger.js" defer></script>
     <script src="js/accordion.js" defer></script>
     <script src="js/footer_form.js" defer></script>
-    <script src="js/call-back.js" defer></script>
     <script src="js/accordeon-price.js" defer></script>
     <script src="js/telegram-proxy.js" defer></script>
 
@@ -178,21 +192,9 @@
           </li>
           <li class="call_back">
             <div class="call_back-block">Обратный звонок</div>
-            <button class="call_back-button" onclick="showPopup()">
+            <button class="call_back-button" onclick="showCallbackPopup()">
               <i class="fas fa-phone-alt"></i> Перезвоните мне
             </button>
-
-            <div id="popup"
-              style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
-              <div style="background: #fff; padding: 20px; border-radius: 5px;">
-                <h2>Оставьте ваш номер телефона</h2>
-                <input type="text" id="phoneInput"
-                  placeholder="Ваш номер телефона"
-                  style="width: 100%; padding: 10px; margin-bottom: 10px;"
-                  maxlength="15">
-                <button onclick="hidePopup()">Отправить</button>
-              </div>
-            </div>
           </li>
         </ul>
 
@@ -590,8 +592,8 @@
               <input type="checkbox" id="agree" name="agree" required>
               <label for="agree">
                 Отправляя данную форму, вы соглашаетесь с
-                <a href="#" target="_blank">политикой конфиденциальности</a>
-                и <a href="#" target="_blank">пользовательским соглашением</a>
+                <a href="#" class="privacy-link">политикой
+                  конфиденциальности и пользовательским соглашением</a>
               </label>
             </div>
 
@@ -610,5 +612,563 @@
         </div>
       </div>
     </section>
+
+    <!-- Модальное окно политики конфиденциальности -->
+    <div id="privacyModal" class="privacy-modal">
+      <div class="privacy-modal-content">
+        <div class="privacy-modal-header">
+          <h2>Политика конфиденциальности и пользовательское соглашение</h2>
+          <button class="privacy-modal-close">&times;</button>
+        </div>
+        <div class="privacy-modal-body">
+          <h3>1. Общие положения</h3>
+          <p>Настоящая политика конфиденциальности и пользовательское соглашение
+            (далее — «Соглашение») регулируют порядок сбора, хранения, передачи
+            и иной обработки персональных данных пользователей сайта.</p>
+
+          <h3>2. Персональные данные</h3>
+          <p>2.1. Под персональными данными понимается любая информация,
+            относящаяся к прямо или косвенно определенному или определяемому
+            физическому лицу.</p>
+          <p>2.2. Мы собираем следующие персональные данные:
+            <ul>
+              <li>Имя</li>
+              <li>Номер телефона</li>
+              <li>Адрес электронной почты (если указан)</li>
+              <li>Выбранные услуги</li>
+              <li>Текстовые сообщения, оставленные в форме</li>
+            </ul>
+          </p>
+
+          <h3>3. Цели сбора данных</h3>
+          <p>3.1. Ваши персональные данные используются исключительно для:
+            <ul>
+              <li>Обработки ваших заявок</li>
+              <li>Связи с вами для уточнения деталей</li>
+              <li>Предоставления информации об услугах</li>
+              <li>Улучшения качества наших услуг</li>
+            </ul>
+          </p>
+
+          <h3>4. Обработка данных</h3>
+          <p>4.1. Все данные, введенные в формы на сайте, отправляются напрямую
+            в мессенджер Telegram и не хранятся на серверах сайта.</p>
+          <p>4.2. Данные хранятся в Telegram-чате администратора и используются
+            только для связи с клиентом.</p>
+          <p>4.3. Мы не передаем ваши данные третьим лицам, за исключением
+            случаев, предусмотренных законодательством РФ.</p>
+
+          <h3>5. Срок хранения данных</h3>
+          <p>5.1. Ваши персональные данные хранятся в течение времени,
+            необходимого для обработки заявки, но не более 1 года с момента
+            последнего взаимодействия.</p>
+
+          <h3>6. Ваши права</h3>
+          <p>6.1. Вы имеете право:
+            <ul>
+              <li>Запросить информацию о ваших персональных данных</li>
+              <li>Требовать удаления ваших персональных данных</li>
+              <li>Отозвать согласие на обработку персональных данных</li>
+            </ul>
+          </p>
+
+          <h3>7. Контакты</h3>
+          <p>7.1. По всем вопросам, касающимся обработки персональных данных, вы
+            можете связаться с нами:</p>
+          <p>Крошилин Сергей Викторович<br>
+            Телефон: +7 (900) 177-27-18<br>
+            Электронная почта: rabota350882@gmail.com</p>
+
+          <h3>8. Заключительные положения</h3>
+          <p>8.1. Отправляя форму на сайте, вы подтверждаете, что ознакомились с
+            настоящим Соглашением и согласны на обработку ваших персональных
+            данных в соответствии с его условиями.</p>
+          <p>8.2. Настоящее Соглашение может быть изменено в одностороннем
+            порядке. Актуальная версия всегда доступна по ссылке в форме
+            заявки.</p>
+
+          <p class="privacy-date">Дата последнего обновления: 05.02.2026</p>
+        </div>
+        <div class="privacy-modal-footer">
+          <button class="privacy-modal-agree" id="privacyAgreeBtn">Я
+            согласен</button>
+          <button class="privacy-modal-close-btn">Закрыть</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Новое стилизованное модальное окно для обратного звонка -->
+    <div id="callbackPopup" class="callback-popup">
+      <div class="callback-popup-content">
+        <button class="callback-popup-close"
+          onclick="hideCallbackPopup()">&times;</button>
+
+        <h2>Заказать обратный звонок</h2>
+        <p class="callback-popup-subtitle">Мы перезвоним вам в течение 15
+          минут</p>
+
+        <form id="callbackForm" class="callback-form">
+          <div class="callback-form-group">
+            <input type="text" id="callbackName" name="name"
+              placeholder="Ваше имя*" required>
+          </div>
+
+          <div class="callback-form-group">
+            <input type="tel" id="callbackPhone" name="phone"
+              placeholder="Ваш номер телефона*" required>
+          </div>
+
+          <div class="callback-form-checkbox">
+            <input type="checkbox" id="callbackAgree" name="agree" required>
+            <label for="callbackAgree">
+              Соглашаюсь с
+              <a href="#" class="privacy-link">политикой конфиденциальности</a>*
+            </label>
+          </div>
+
+          <div id="callbackSuccessMessage"
+            class="callback-message callback-success"></div>
+          <div id="callbackErrorMessage"
+            class="callback-message callback-error"></div>
+
+          <button type="submit" class="callback-submit-btn"
+            id="callbackSubmitBtn">
+            <span id="callbackBtnText">Отправить заявку</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Объединенный скрипт для всех форм и модальных окон -->
+    <script>
+      // ============== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ И ФУНКЦИИ ==============
+      const PROXY_URL = "https://remont-kvartir.vercel.app/api/send-to-telegram";
+      
+      // Функция для открытия модального окна политики
+      function openPrivacyModal() {
+        const modal = document.getElementById('privacyModal');
+        if (modal) {
+          modal.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      // Функция для закрытия модального окна политики
+      function closePrivacyModal() {
+        const modal = document.getElementById('privacyModal');
+        if (modal) {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      // Функция для показа попапа обратного звонка
+      function showCallbackPopup() {
+        const popup = document.getElementById('callbackPopup');
+        if (popup) {
+          popup.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      // Функция для скрытия попапа обратного звонка
+      function hideCallbackPopup() {
+        const popup = document.getElementById('callbackPopup');
+        if (popup) {
+          popup.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      // Общая функция для маски телефона
+      function setupPhoneMask(phoneInput) {
+        if (phoneInput) {
+          phoneInput.addEventListener("input", function (e) {
+            let value = e.target.value.replace(/\D/g, "");
+            if (value.length > 0) {
+              if (!value.startsWith("7") && !value.startsWith("8")) {
+                value = "7" + value;
+              }
+              let formattedValue = "+7";
+              if (value.length > 1) formattedValue += " (" + value.substring(1, 4);
+              if (value.length >= 4) formattedValue += ") " + value.substring(4, 7);
+              if (value.length >= 7) formattedValue += "-" + value.substring(7, 9);
+              if (value.length >= 9) formattedValue += "-" + value.substring(9, 11);
+              e.target.value = formattedValue;
+            }
+          });
+        }
+      }
+
+      // Общая функция для отправки формы
+      async function sendForm(data, successCallback, errorCallback) {
+        try {
+          const response = await fetch(PROXY_URL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
+
+          const result = await response.json();
+          if (result.success) {
+            successCallback();
+          } else {
+            throw new Error(result.error || "Ошибка сервера");
+          }
+        } catch (error) {
+          errorCallback(error);
+        }
+      }
+
+      // ============== ИНИЦИАЛИЗАЦИЯ ПРИ ЗАГРУЗКЕ СТРАНИЦЫ ==============
+      document.addEventListener("DOMContentLoaded", function () {
+        // ============== ИНИЦИАЛИЗАЦИЯ МОДАЛЬНОГО ОКНА ПОЛИТИКИ ==============
+        
+        // Находим все ссылки на политику конфиденциальности
+        const privacyLinks = document.querySelectorAll('a.privacy-link');
+        
+        // Заменяем стандартное поведение ссылок на открытие модального окна
+        privacyLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            openPrivacyModal();
+          });
+        });
+        
+        // Закрытие модального окна при клике на крестик
+        const closeBtn = document.querySelector('.privacy-modal-close');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closePrivacyModal);
+        }
+        
+        // Закрытие модального окна при клике на кнопку "Закрыть"
+        const closeBtn2 = document.querySelector('.privacy-modal-close-btn');
+        if (closeBtn2) {
+          closeBtn2.addEventListener('click', closePrivacyModal);
+        }
+        
+        // Закрытие модального окна при клике на кнопку "Я согласен" и установка галочки
+        const agreeBtn = document.getElementById('privacyAgreeBtn');
+        if (agreeBtn) {
+          agreeBtn.addEventListener('click', function() {
+            closePrivacyModal();
+            // Устанавливаем галочку в чекбоксах согласия во всех формах
+            const agreeCheckboxes = document.querySelectorAll('input[type="checkbox"][name="agree"]');
+            agreeCheckboxes.forEach(checkbox => {
+              checkbox.checked = true;
+              checkbox.parentElement.classList.add('checked');
+            });
+          });
+        }
+        
+        // Закрытие модального окна при клике вне его области
+        const modal = document.getElementById('privacyModal');
+        if (modal) {
+          modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+              closePrivacyModal();
+            }
+          });
+        }
+        
+        // Закрытие модального окна при нажатии Escape
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            const modal = document.getElementById('privacyModal');
+            if (modal && modal.style.display === 'block') {
+              closePrivacyModal();
+            }
+            const callbackPopup = document.getElementById('callbackPopup');
+            if (callbackPopup && callbackPopup.style.display === 'flex') {
+              hideCallbackPopup();
+            }
+          }
+        });
+
+        // Закрытие попапа обратного звонка при клике вне его области
+        const callbackPopup = document.getElementById('callbackPopup');
+        if (callbackPopup) {
+          callbackPopup.addEventListener('click', function(e) {
+            if (e.target === callbackPopup) {
+              hideCallbackPopup();
+            }
+          });
+        }
+        
+        // ============== ФОРМА ЗАПИСИ НА ЗАМЕР (ОСНОВНАЯ) ==============
+        
+        const form = document.getElementById("contactForm");
+        if (form) {
+          const submitBtn = document.getElementById("submitBtn");
+          const btnText = document.getElementById("btnText");
+          const successMessage = document.getElementById("successMessage");
+          const errorMessage = document.getElementById("errorMessage");
+          const otherField = document.getElementById("otherField");
+          const otherInfo = document.getElementById("otherInfo");
+
+          // Маска телефона для основной формы
+          const phoneInput = document.getElementById("phone");
+          setupPhoneMask(phoneInput);
+
+          // Чекбокс "Другое"
+          document.querySelectorAll('input[name="service"]').forEach((checkbox) => {
+            checkbox.addEventListener("change", function () {
+              const otherCheckbox = document.querySelector('input[name="service"][value="Другое"]');
+              if (otherCheckbox && otherCheckbox.checked) {
+                if (otherField) otherField.style.display = "block";
+                if (otherInfo) otherInfo.required = true;
+              } else {
+                if (otherField) otherField.style.display = "none";
+                if (otherInfo) otherInfo.required = false;
+                if (otherInfo) otherInfo.value = "";
+              }
+            });
+          });
+
+          // Отправка основной формы
+          form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+            if (successMessage) successMessage.style.display = "none";
+            if (errorMessage) errorMessage.style.display = "none";
+
+            const name = document.getElementById("name").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const agree = document.getElementById("agree")
+              ? document.getElementById("agree").checked
+              : false;
+            const otherInfoValue = otherInfo ? otherInfo.value.trim() : "";
+
+            const selectedServices = Array.from(
+              document.querySelectorAll('input[name="service"]:checked'),
+            ).map((checkbox) => checkbox.value);
+
+            // Валидация
+            if (!name || !phone || !agree) {
+              showError(errorMessage, "Пожалуйста, заполните все обязательные поля и согласитесь с условиями");
+              return;
+            }
+
+            if (selectedServices.length === 0) {
+              showError(errorMessage, "Пожалуйста, выберите хотя бы одну услугу");
+              return;
+            }
+
+            const phoneRegex = /^\+7\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}$/;
+            const cleanPhone = phone.replace(/\s+/g, "");
+            if (!phoneRegex.test(cleanPhone)) {
+              showError(errorMessage, "Пожалуйста, введите корректный номер телефона в формате +7 (XXX) XXX-XX-XX");
+              return;
+            }
+
+            // Блокируем кнопку
+            if (submitBtn) {
+              submitBtn.disabled = true;
+              if (btnText) btnText.textContent = "Отправка...";
+            }
+
+            // Формируем сообщение
+            let servicesText = selectedServices.join(", ");
+            if (selectedServices.includes("Другое") && otherInfoValue) {
+              servicesText = servicesText.replace(
+                "Другое",
+                `Другое: ${otherInfoValue}`,
+              );
+            }
+
+            const now = new Date();
+            const samaraTime = new Date(now.getTime() + 4 * 60 * 60000);
+            const timestamp = `${String(samaraTime.getDate()).padStart(2, "0")}.${String(samaraTime.getMonth() + 1).padStart(2, "0")}.${samaraTime.getFullYear()} ${String(samaraTime.getHours()).padStart(2, "0")}:${String(samaraTime.getMinutes()).padStart(2, "0")}`;
+
+            let fullMessage = `📋 НОВАЯ ЗАЯВКА С САЙТА\n`;
+            fullMessage += `📍 Страница: Главная (Замер)\n\n`;
+            fullMessage += `👤 Имя: ${name}\n`;
+            fullMessage += `📞 Телефон: ${cleanPhone}\n`;
+            fullMessage += `🛠 Услуги: ${servicesText}\n`;
+            fullMessage += `⏰ Время отправки (Самара): ${timestamp}\n`;
+            fullMessage += `🌐 Источник: ${window.location.href}`;
+
+            const messageData = {
+              name: name,
+              phone: cleanPhone,
+              services: servicesText,
+              timestamp: timestamp,
+              source: "Главная (Замер)",
+              fullMessage: fullMessage,
+            };
+
+            // Отправка данных
+            await sendForm(
+              messageData,
+              // successCallback
+              () => {
+                showSuccess(successMessage, "✅ Спасибо! Ваша заявка успешно отправлена. Мы свяжемся с вами в течение 15 минут!");
+                form.reset();
+                if (otherField) otherField.style.display = "none";
+                if (otherInfo) {
+                  otherInfo.required = false;
+                  otherInfo.value = "";
+                }
+                document
+                  .querySelectorAll('input[name="service"]:checked')
+                  .forEach((checkbox) => {
+                    checkbox.checked = false;
+                  });
+                // Снимаем галочку согласия
+                const agreeCheckbox = document.getElementById('agree');
+                if (agreeCheckbox) agreeCheckbox.checked = false;
+              },
+              // errorCallback
+              (error) => {
+                console.error("Ошибка при отправке формы:", error);
+                if (error.message.includes("Failed to fetch")) {
+                  showError(errorMessage, "❌ Сервер временно недоступен. Пожалуйста, позвоните нам напрямую по телефону: +7 909 36 29 675");
+                } else if (error.message.includes("Network")) {
+                  showError(errorMessage, "❌ Проблемы с сетью. Проверьте подключение к интернету.");
+                } else {
+                  showError(errorMessage, "❌ Ошибка отправки: " + error.message);
+                }
+              }
+            );
+
+            // Разблокируем кнопку
+            setTimeout(() => {
+              if (submitBtn) {
+                submitBtn.disabled = false;
+                if (btnText) btnText.textContent = "Отправить заявку";
+              }
+            }, 2000);
+          });
+        }
+        
+        // ============== ФОРМА ОБРАТНОГО ЗВОНКА ==============
+        
+        const callbackForm = document.getElementById("callbackForm");
+        if (callbackForm) {
+          const callbackSubmitBtn = document.getElementById("callbackSubmitBtn");
+          const callbackBtnText = document.getElementById("callbackBtnText");
+          const callbackSuccessMessage = document.getElementById("callbackSuccessMessage");
+          const callbackErrorMessage = document.getElementById("callbackErrorMessage");
+
+          // Маска телефона для формы обратного звонка
+          const callbackPhoneInput = document.getElementById("callbackPhone");
+          setupPhoneMask(callbackPhoneInput);
+
+          // Отправка формы обратного звонка
+          callbackForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+            if (callbackSuccessMessage) callbackSuccessMessage.style.display = "none";
+            if (callbackErrorMessage) callbackErrorMessage.style.display = "none";
+
+            const name = document.getElementById("callbackName").value.trim();
+            const phone = document.getElementById("callbackPhone").value.trim();
+            const agree = document.getElementById("callbackAgree")
+              ? document.getElementById("callbackAgree").checked
+              : false;
+
+            // Валидация
+            if (!name || !phone || !agree) {
+              showError(callbackErrorMessage, "Пожалуйста, заполните все обязательные поля и согласитесь с условиями");
+              return;
+            }
+
+            const phoneRegex = /^\+7\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}$/;
+            const cleanPhone = phone.replace(/\s+/g, "");
+            if (!phoneRegex.test(cleanPhone)) {
+              showError(callbackErrorMessage, "Пожалуйста, введите корректный номер телефона в формате +7 (XXX) XXX-XX-XX");
+              return;
+            }
+
+            // Блокируем кнопку
+            if (callbackSubmitBtn) {
+              callbackSubmitBtn.disabled = true;
+              if (callbackBtnText) callbackBtnText.textContent = "Отправка...";
+            }
+
+            const now = new Date();
+            const samaraTime = new Date(now.getTime() + 4 * 60 * 60000);
+            const timestamp = `${String(samaraTime.getDate()).padStart(2, "0")}.${String(samaraTime.getMonth() + 1).padStart(2, "0")}.${samaraTime.getFullYear()} ${String(samaraTime.getHours()).padStart(2, "0")}:${String(samaraTime.getMinutes()).padStart(2, "0")}`;
+
+            let fullMessage = `📞 ЗАЯВКА НА ОБРАТНЫЙ ЗВОНОК\n`;
+            fullMessage += `📍 Страница: ${window.location.pathname}\n\n`;
+            fullMessage += `👤 Имя: ${name}\n`;
+            fullMessage += `📞 Телефон: ${cleanPhone}\n`;
+            fullMessage += `⏰ Время отправки (Самара): ${timestamp}\n`;
+            fullMessage += `🌐 Источник: ${window.location.href}`;
+
+            const messageData = {
+              name: name,
+              phone: cleanPhone,
+              services: "Обратный звонок",
+              timestamp: timestamp,
+              source: "Обратный звонок",
+              fullMessage: fullMessage,
+            };
+
+            // Отправка данных
+            await sendForm(
+              messageData,
+              // successCallback
+              () => {
+                showSuccess(callbackSuccessMessage, "✅ Спасибо! Ваша заявка успешно отправлена. Мы перезвоним вам в течение 15 минут!");
+                callbackForm.reset();
+                // Снимаем галочку согласия
+                const agreeCheckbox = document.getElementById('callbackAgree');
+                if (agreeCheckbox) agreeCheckbox.checked = false;
+                
+                // Закрываем попап через 3 секунды
+                setTimeout(() => {
+                  hideCallbackPopup();
+                }, 3000);
+              },
+              // errorCallback
+              (error) => {
+                console.error("Ошибка при отправке формы обратного звонка:", error);
+                if (error.message.includes("Failed to fetch")) {
+                  showError(callbackErrorMessage, "❌ Сервер временно недоступен. Пожалуйста, позвоните нам напрямую по телефону: +7 909 36 29 675");
+                } else if (error.message.includes("Network")) {
+                  showError(callbackErrorMessage, "❌ Проблемы с сетью. Проверьте подключение к интернету.");
+                } else {
+                  showError(callbackErrorMessage, "❌ Ошибка отправки: " + error.message);
+                }
+              }
+            );
+
+            // Разблокируем кнопку
+            setTimeout(() => {
+              if (callbackSubmitBtn) {
+                callbackSubmitBtn.disabled = false;
+                if (callbackBtnText) callbackBtnText.textContent = "Отправить заявку";
+              }
+            }, 2000);
+          });
+        }
+      });
+
+      // ============== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ==============
+      
+      function showSuccess(messageElement, message) {
+        if (messageElement) {
+          messageElement.textContent = message;
+          messageElement.style.display = "block";
+          messageElement.scrollIntoView({ behavior: "smooth", block: "center" });
+          setTimeout(() => {
+            messageElement.style.display = "none";
+          }, 15000);
+        }
+      }
+
+      function showError(messageElement, message) {
+        if (messageElement) {
+          messageElement.textContent = message;
+          messageElement.style.display = "block";
+          messageElement.scrollIntoView({ behavior: "smooth", block: "center" });
+          setTimeout(() => {
+            messageElement.style.display = "none";
+          }, 10000);
+        }
+      }
+    </script>
   </body>
 </html>

@@ -1,15 +1,7 @@
+/* ===== ОБЩИЕ СТИЛИ ===== */
 html {
     scroll-behavior: smooth;
-    /*offset: 50px;*/
     scroll-padding-top: 150px;
-}
-
-#about {
-    scroll-margin-top: -20px;
-}
-
-#servises {
-    scroll-margin-top: -20px;
 }
 
 body {
@@ -17,11 +9,6 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
-
-/* a:hover, button:hover, [onclick]:hover {
- cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><rect fill='%238B4513' x='24' y='12' width='4' height='20' transform='rotate(45 24 12)'/><rect fill='white' x='6' y='6' width='20' height='8' rx='4'/><rect fill='%23f5f5f5' x='8' y='8' width='16' height='4' rx='2'/></svg>"), pointer;
-} */
-/* Обновления для напольных покрытий */
 
 .container {
     max-width: 1200px;
@@ -42,16 +29,21 @@ body {
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .fade-in-up {
     animation: fadeInUp 0.6s ease-out;
 }
 
-/* Плавная прокрутка */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Дополнительные утилиты */
+/* Утилиты */
 .text-center {
     text-align: center;
 }
@@ -80,13 +72,7 @@ html {
     margin-top: 40px;
 }
 
-
-
-
-
 /* ===== СТИЛИ ДЛЯ СТРАНИЦЫ КОНТАКТОВ ===== */
-
-/* Основной контейнер */
 .contacts-container {
     max-width: 1200px;
     margin: 80px auto 40px;
@@ -172,14 +158,16 @@ html {
     border-top: 1px solid #eee;
 }
 
-.phone-link, .email-link {
+.phone-link,
+.email-link {
     color: #3498db;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
-.phone-link:hover, .email-link:hover {
+.phone-link:hover,
+.email-link:hover {
     color: #2980b9;
     text-decoration: underline;
 }
@@ -191,12 +179,6 @@ html {
     gap: 40px;
     margin-bottom: 60px;
     align-items: start;
-}
-
-@media (max-width: 992px) {
-    .map-form-section {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Карта */
@@ -280,12 +262,6 @@ html {
     margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-}
-
 .form-group {
     margin-bottom: 20px;
 }
@@ -304,7 +280,7 @@ html {
     border: 2px solid rgba(255, 255, 255, 0.2);
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    color: white;
+    color: #111;
     font-size: 1rem;
     transition: all 0.3s;
 }
@@ -333,12 +309,6 @@ html {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-    .services-checkbox {
-        grid-template-columns: 1fr;
-    }
 }
 
 .checkbox-item {
@@ -436,14 +406,13 @@ html {
 /* FAQ секция */
 .faq-section {
     border-radius: 15px;
-   /*  padding: 40px; */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     margin-bottom: 60px;
 }
 
 .faq-title {
     text-align: center;
-    color: #2c3e50;
+    color: #fff;
     margin-bottom: 30px;
     font-size: 1.8rem;
 }
@@ -489,84 +458,48 @@ html {
 
 .faq-answer p {
     margin: 0;
-    color: #555;
+    color: #7274db;
     line-height: 1.6;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .contacts-container {
-        margin: 60px auto 30px;
-        padding: 0 15px;
-    }
-
-    .contacts-title {
-        font-size: 1.8rem;
-    }
-
-    .contact-form-section {
-        padding: 25px 20px;
-    }
-
-    .form-title {
-        font-size: 1.6rem;
-    }
-
-    .faq-section {
-        padding: 25px;
-    }
-
-    .contact-card {
-        padding: 20px;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .contact-icon {
-        margin: 0 auto 15px;
-    }
-
-    .map-block {
-        padding: 20px;
-    }
-
-    .map-form-section {
-        gap: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .contacts-title {
-        font-size: 1.5rem;
-    }
-
-    .contact-card {
-        padding: 15px;
-    }
-
-    .submit-btn {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-/* ===== АДАПТИВНЫЕ СТИЛИ ДЛЯ КОНТАКТОВ ===== */
-
+/* ===== АДАПТИВНЫЕ СТИЛИ ===== */
 @media (max-width: 992px) {
     .map-form-section {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-
-    .contact-form-section {
-        order: -1;
-        /* Форма будет выше карты на мобильных */
-    }
 }
 
 @media (max-width: 768px) {
+
+    /* Общие адаптивные стили */
+    section {
+        padding: 30px 0 !important;
+    }
+
+    h1, h2, h3 {
+        margin-bottom: 15px !important;
+    }
+
+    /* Улучшение для тач-устройств */
+    button,
+    .order-btn,
+    .submit-btn,
+    .cta-button {
+        min-height: 44px;
+        /* Минимальный размер для касания */
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 16px !important;
+        /* Предотвращает увеличение в iOS */
+    }
+
+    /* Стили для страницы контактов */
     .contacts-container {
-        margin: 60px auto 20px;
+        margin: 60px auto 30px;
         padding: 0 15px;
     }
 
@@ -611,24 +544,14 @@ html {
         font-size: 1.5rem;
     }
 
-    .form-row {
+    .form-row,
+    .services-checkbox {
         grid-template-columns: 1fr;
         gap: 15px;
     }
 
-    .services-checkbox {
-        grid-template-columns: 1fr;
-    }
-
     .checkbox-item {
         padding: 12px;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-        font-size: 16px;
-        /* Предотвращает увеличение в iOS */
     }
 
     .submit-btn {
@@ -648,9 +571,34 @@ html {
         font-size: 1rem;
         margin-right: 15px;
     }
+
+    /* Хедер и навигация */
+    .main-nav {
+        padding: 10px 15px;
+    }
+
+    .logo_img {
+        max-width: 120px;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: white;
+        z-index: 1000;
+    }
 }
 
 @media (max-width: 480px) {
+
+    /* Общие стили */
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Стили для страницы контактов */
     .contacts-title {
         font-size: 1.5rem !important;
     }
@@ -670,58 +618,9 @@ html {
     .faq-title {
         font-size: 1.5rem;
     }
-}
 
-/* ===== ОБЩИЕ АДАПТИВНЫЕ СТИЛИ ===== */
-
-@media (max-width: 768px) {
-
-    /* Хедер и навигация */
-    .main-nav {
-        padding: 10px 15px;
-    }
-
-    .logo_img {
-        max-width: 120px;
-    }
-
-    .mobile-menu {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: white;
-        z-index: 1000;
-    }
-
-    /* Улучшение для тач-устройств */
-    button,
-    .order-btn,
-    .submit-btn,
-    .cta-button {
-        min-height: 44px;
-        /* Минимальный размер для касания */
-    }
-
-    input,
-    select,
-    textarea {
-        font-size: 16px !important;
-        /* Предотвращает увеличение в iOS */
-    }
-
-    /* Улучшение отступов */
-    section {
-        padding: 30px 0 !important;
-    }
-
-    h1, h2, h3 {
-        margin-bottom: 15px !important;
-    }
-
-    /* Анимации для мобильных */
-    * {
-        -webkit-tap-highlight-color: transparent;
+    .contact-form-section {
+        padding: 15px;
     }
 }
 
